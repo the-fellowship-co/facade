@@ -19,7 +19,7 @@ const features = [
     ),
   },
   {
-    title: <>Ready to use services</>,
+    title: <>Ready to use kits</>,
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
@@ -73,7 +73,7 @@ function Home() {
                 'button button--outline button--secondary button--lg button--blue',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/')}>
+              to={useBaseUrl('docs/quick_start')}>
               Get started for free
             </Link>
             <Link
@@ -81,7 +81,7 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/')}>
+              to={useBaseUrl('docs/quick_start')}>
               Request Demo
             </Link>
           </div>

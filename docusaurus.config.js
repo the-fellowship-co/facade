@@ -25,7 +25,7 @@ module.exports = {
           className: 'link--click'
         },
         {
-          to: 'docs/',
+          to: 'docs/quick_start',
           activeBasePath: 'docs',
           label: 'Get started for free',
           position: 'right',
@@ -41,12 +41,8 @@ module.exports = {
           items: [
             {
               label: 'Get started for free',
-              to: 'docs/',
+              to: 'docs/quick_start',
               className: 'footer--blue',
-            },
-            {
-              label: 'Guides',
-              to: 'docs/doc2/',
             },
           ],
         },
@@ -57,10 +53,6 @@ module.exports = {
               label: 'Slack',
               href: 'https://stackoverflow.com/questions/tagged/docusaurus',
             },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
           ],
         },
         {
@@ -70,10 +62,6 @@ module.exports = {
               label: 'Request Demo',
               to: 'blog',
             },
-            {
-              label: 'Feedback',
-              to: 'blog',
-            }
           ],
         },
       ],
