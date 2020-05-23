@@ -4,51 +4,41 @@ title: Truss Concepts
 sidebar_label: Concepts
 ---
 
-Truss is a developer platform for building backends to power businesses. It
-enables developers to quickly build backend services without compromising on
-the right architecture, best practices and scalability.
+Truss is built based on Domain Driven Design(DDD) to organize backends.
+In DDD, you organize codes based on business domains. For example, Identity,
+Catalog, Order, Payment, Communication are common domains of an e-commerce
+business. Each domain exposes mutliple methods to other domains and gateway.
+Gateway acts like a proxy layer between UI and domains.
 
-:::note
+### Domain
++ Domain abstracts all business logic related to a business domain.
++ Domain can have multiple services inside it. Each service exposes a specific
+set of methods to other domains.
++ Inter domain communications are abstracted as simple function calls.
++ Whenever you create a model, persisted in db, we automatically expose CRUD
+methods as a service. Ex: User model will be exposed as UserService with
+get_user, list_user, create_user!, delete_user!, update_user! methods by
+default.
++ You can also create a custom service to expose domain level methods.
 
-We currently supports only **Ruby** based backend development with
-**sqlite** database. Truss is in a pre-release stage and our products
-might change to improve our user experience and quality.
+### Gateway
++ Gateway acts like a proxy layer for expose all domains to UI.
++ Gateway exposes all the domains via GraphQL interface.
++ Gateway supports joins to automatically fetch data across domains.
+For example, get_order can automatically fetch payment details when order and
+payment domains are joined based on order_id.
++ Gateway can be used implement complex inter domain orchestration logic.
++ Gateway can be used for request throttling, authentication/ authorization.
 
-Our platform is ideal to build and deploy internal applications.
+### Messages
 
-:::
++ Non persistent models are known as messages
++ Messages can be used to abstract non persistent data inside the domain.
+Ex: request/ response classes.
 
 
-### Truss Framework
-Abstracts away the complexity involved in backend engineering, makes it easy
-to build backends with right architecture and best practices. All you need to
-do is focus on the business logic and we will take care of the rest.
 
-#### CRUD interfaces
-We expose create, get, list, update, delete methods by default based on your
-models.
 
-#### Pub/Sub
-We provide support to publish and subscribe to events across services. We also
-publish default CRUD events on model objects to subscribe and process.
 
-#### Client generation
-We auto generate client with introspection. Inter service communication is
-simply a function call. <code>CommunicationService.client.send(message)</code>
 
-#### Config
-We provide configs for different environments like dev, prod. Configs can be
-accessed anywhere in your code. Ex: Settings.db_connection
-
-### Ready made kits
-Use our **identity**, **payment** and **communication** kits, built using
-our framework, to assemble your backend rather than coding everything from
-scratch. These kits are ready to use with right set of customizable options.
-You can also add features after forking them.
-
-### No setup infrastructure
-Instantly deploy, read and write databases, publish and subscribe to queues
-and auto scale to loads without any setups. We internally use kubernetes to
-deploy your backends. You can also view logs, access ruby console and run
-database migrations from command line.
 

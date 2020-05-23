@@ -17,12 +17,6 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Guides',
-          position: 'left',
-        },
         // {to: 'blog', label: 'Blog', position: 'left'},
         {
           to: 'login/',
@@ -92,7 +86,7 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'quick_start',
+          homePageId: 'intro',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
