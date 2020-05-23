@@ -4,8 +4,8 @@ module.exports = {
   url: 'https://particle.codes/',
   baseUrl: '/',
   favicon: 'favicon/ico',
-  organizationName: 'truss', // Usually your GitHub org/user name.
-  projectName: 'landing', // Usually your repo name.
+  organizationName: 'alphas-co', // Usually your GitHub org/user name.
+  projectName: 'facade', // Usually your repo name.
   themeConfig: {
     disableDarkMode: true,
     navbar: {
