@@ -52,6 +52,10 @@
   background-color: var(--color-blue);
 }
 
+.button--blue-border {
+  border-color: var(--color-blue);
+}
+
 .link--blue {
   background-color: var(--color-blue);
   border-radius: var(--ifm-button-border-radius);

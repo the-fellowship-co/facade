@@ -78,7 +78,7 @@ function Home() {
             </Link>
             <Link
               className={classnames(
-                'button button--outline button--secondary button--lg',
+                'button button--outline button--secondary button--lg button--blue-border',
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/quick_start')}>
