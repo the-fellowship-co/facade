@@ -81,7 +81,8 @@ function Home() {
                 'button button--outline button--secondary button--lg button--blue-border',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/quick_start')}>
+              to="https://calendly.com/trytruss/platform-demo"
+              target="_blank">
               Request Demo
             </Link>
           </div>

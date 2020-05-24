@@ -60,7 +60,8 @@ module.exports = {
           items: [
             {
               label: 'Request Demo',
-              to: 'blog',
+              to: "https://calendly.com/trytruss/platform-demo",
+              target: "_blank",
             },
           ],
         },
