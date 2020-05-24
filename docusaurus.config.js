@@ -6,6 +6,7 @@ module.exports = {
   favicon: 'favicon/ico',
   organizationName: 'alphas-co', // Usually your GitHub org/user name.
   projectName: 'facade', // Usually your repo name.
+  plugins: ['@docusaurus/plugin-google-analytics'],
   themeConfig: {
     disableDarkMode: true,
     navbar: {
@@ -67,6 +68,10 @@ module.exports = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Truss`,
+    },
+    googleAnalytics: {
+      trackingID: 'UA-55212147-2',
+      anonymizeIP: true,
     },
   },
   presets: [
