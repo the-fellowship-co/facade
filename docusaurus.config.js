@@ -16,15 +16,21 @@ module.exports = {
           to: 'docs/',
           activeBasePath: 'docs',
           label: 'Docs',
-          position: 'left',
-        },
-        // {to: 'blog', label: 'Blog', position: 'left'},
-        {
-          to: 'login/',
-          label: 'Sign In',
           position: 'right',
-          className: 'link--click'
         },
+        // {
+        //   to: 'pricing/',
+        //   // activeBasePath: 'facade',
+        //   label: 'Pricing',
+        //   position: 'right',
+        // },
+        // {to: 'blog', label: 'Blog', position: 'left'},
+        // {
+        //   to: 'login/',
+        //   label: 'Sign In',
+        //   position: 'right',
+        //   className: 'link--click'
+        // },
         {
           to: 'docs/quick_start',
           activeBasePath: 'docs',
@@ -52,7 +58,8 @@ module.exports = {
           items: [
             {
               label: 'Slack',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: 'https://join.slack.com/t/trusstalk/shared_invite/zt-eihpmvs6-w3mVxeKbtvwynF0qpcVwkQ',
+              target: "_blank",
             },
           ],
         },

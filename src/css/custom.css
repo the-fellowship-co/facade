@@ -74,3 +74,28 @@
 .link--click {
   color: #1a73e8
 }
+
+.pricing--title {
+  text-align: center;
+  align-items: center;
+  margin-bottom: var(--ifm-heading-margin-bottom);
+}
+
+.pricing--box {
+  border-style: solid;
+  border-color: var(--color-blue);
+  border-radius: var(--ifm-button-border-radius);
+}
+
+.pricing--cost {
+  font-size: 4rem;
+  margin-bottom: 0px;
+}
+
+.pricing--items {
+  text-align: left;
+  align-items: center;
+  width: fit-content;
+  width: fit-content;
+  margin-bottom: 0px;
+}

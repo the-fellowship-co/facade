@@ -41,6 +41,18 @@ const features = [
   },
 ];
 
+// const pricing = [
+//   {
+//     title: <>Free for 1 month</>,
+//     price: <>$0</>,
+//     domains: <>4 domains</>,
+//     gateway: <>1 gateway</>,
+//     kits: <>All kits</>,
+//     users: <>1 user / project</>,
+//     project: <>1 project</>
+//   }
+// ];
+
 function Feature({imageUrl, title, description}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
@@ -52,6 +64,25 @@ function Feature({imageUrl, title, description}) {
       )}
       <h3>{title}</h3>
       <p>{description}</p>
+    </div>
+  );
+}
+
+function Pricing({title, price, domains, gateway, kits, users,
+  project}) {
+  return (
+    <div className={classnames('col col--3 pricing--box', styles.pricing)}>
+      <h2>{title}</h2>
+      <p className="pricing--cost">{price}</p>
+      <p>Thanks for trying us :)</p>
+      <ul className="pricing--items">
+        <li>{project}</li>
+        <li>{users}</li>
+        <li>{domains}</li>
+        <li>{gateway}</li>
+        <li>{kits}</li>
+      </ul>
+
     </div>
   );
 }
