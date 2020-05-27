@@ -299,9 +299,11 @@ function Home() {
             <div className="col col--2 "></div>
             <div className="col col--8 ">
               <p className="highlight__title">Infrastructure</p>
-              <h1 className="feature__text">Don't sweat to deploy and scale seamlessly.</h1>
-              <p><code>truss deploy</code> is all it takes to deploy your
-              backends. We automatically scale your backends based on demands.</p>
+              <h1 className="feature__text">Don't sweat to deploy and
+              scale seamlessly.</h1>
+              <p>Simply run <code>truss deploy</code> to deploy your
+              backends. We automatically scale your backends based on
+              demands.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
