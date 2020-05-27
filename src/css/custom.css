@@ -85,10 +85,20 @@
 }
 
 
+.navbar__title {
+  font-size: 1.9rem;
+}
 .navbar__brand {
   margin-left: 1rem;
   font-size: 1.35rem;
 }
+
+.navbar__inner {
+  max-width: var(--ifm-container-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .button--blue {
   background-color: var(--color-blue);
@@ -141,8 +151,4 @@
   width: fit-content;
   width: fit-content;
   margin-bottom: 0px;
-}
-
-.navbar__brand {
-  font-size: 1.35rem;
 }
