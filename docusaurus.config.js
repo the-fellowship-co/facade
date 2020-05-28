@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Better way to build backends',
-  tagline: 'Build. Ship. 10x faster.',
+  tagline: 'Byld helps teams develop and deploy backends 10x faster.',
   url: 'https://particle.codes/',
   baseUrl: '/facade/',
   favicon: 'favicon/ico',
@@ -10,7 +10,7 @@ module.exports = {
   themeConfig: {
     disableDarkMode: true,
     navbar: {
-      title: 'Truss',
+      title: 'byld',
       links: [
         {
           to: 'docs/',
