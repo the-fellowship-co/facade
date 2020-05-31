@@ -58,10 +58,15 @@
 }
 
 .feature__text {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: left;
   align-items: center;
   margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.feature__detail {
+  margin-top: 10px;
 }
 
 .highlight__block {
@@ -75,7 +80,8 @@
 
 .highlight__section {
   min-height: 300px;
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .hero__button {

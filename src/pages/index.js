@@ -27,17 +27,6 @@ const highlights = [
     ),
   }
 ];
-// const pricing = [
-//   {
-//     title: <>Free for 1 month</>,
-//     price: <>$0</>,
-//     domains: <>4 domains</>,
-//     gateway: <>1 gateway</>,
-//     kits: <>All kits</>,
-//     users: <>1 user / project</>,
-//     project: <>1 project</>
-//   }
-// ];
 
 function Feature({imageUrl, title, description}) {
   const imgUrl = useBaseUrl(imageUrl);
@@ -155,11 +144,10 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--2 "></div>
-            <div className="col col--8 ">
-              <p className="highlight__title">Architect</p>
-              <h1 className="feature__text">Abstract your organization in minutes.</h1>
-              <p>Easily organize and create different blocks using our framework.
+            <div className="col col--12 ">
+              <p className="highlight__title">Design</p>
+              <h1 className="feature__text">Abstract your organization in minutes</h1>
+              <p className="feature__detail">Easily organize and create different blocks using our framework.
               Focus on your business logic and our framework handles the rest.</p>
             </div>
             <div className="col col--2 "></div>
@@ -171,14 +159,10 @@ function Home() {
         <div className="row">
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--2 "></div>
-            <div className="col col--8 ">
+            <div className="col col--12 ">
               <p className="highlight__title">Communicate</p>
-              <h1 className="feature__text">We make it look simple. We do listen.</h1>
-              <p>Inter domain communication is a simple function call.
-              No setup pub/sub system. We don't stop there,
-              we also publish CRUD operations by default and provide a simple
-              way to process them.</p>
+              <h1 className="feature__text">Communicate with ease</h1>
+              <p className="feature__detail">Easily communicate between blocks in both sync and async manner with zero setups and overheads.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -189,7 +173,7 @@ function Home() {
             <div className="col col--8 ">
               <img className={styles.featureImage}
               src="img/undraw_docusaurus_react.svg"
-              alt="We build. You reuse infinite times" />
+              alt="We build. You reuse infinite times." />
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -211,14 +195,10 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--2 "></div>
-            <div className="col col--8 ">
+            <div className="col col--12">
               <p className="highlight__title">Expose</p>
-              <h1 className="feature__text">Write code that matters. We
-              generate the rest.</h1>
-              <p>You focus on core business logic. Our framework generates
-              everything else. Default CRUD apis for your
-              models. Automatically exposes your domains via GraphQL. </p>
+              <h1 className="feature__text">Expose with a lot of flexibility</h1>
+              <p className="feature__detail">Power different user interfaces with a lot of flexibility.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -229,12 +209,10 @@ function Home() {
         <div className="row">
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--2 "></div>
-            <div className="col col--8 ">
+            <div className="col col--12">
               <p className="highlight__title">Reuse</p>
-              <h1 className="feature__text">We build. You reuse infinite times</h1>
-              <p>We provide prebuilt domain kits. It comes with right amount of
-              configurations. If you need more, adding features is simple.</p>
+              <h1 className="feature__text">Assemble from our library of blocks</h1>
+              <p className="feature__detail">Use our library of blocks to assemble your organization’s software rather than coding everything from scratch.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -267,14 +245,10 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--2 "></div>
-            <div className="col col--8 ">
+            <div className="col col--12">
               <p className="highlight__title">Deploy</p>
-              <h1 className="feature__text">Don't sweat to deploy and
-              scale seamlessly.</h1>
-              <p>Simply run <code>truss deploy</code> to deploy your
-              backends. We automatically scale your backends based on
-              demands.</p>
+              <h1 className="feature__text">Deploy without any setups</h1>
+              <p className="feature__detail">Deploy all of your backend code without any setups.</p>
             </div>
             <div className="col col--2 "></div>
             </div>

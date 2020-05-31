@@ -10,7 +10,7 @@ module.exports = {
   themeConfig: {
     disableDarkMode: true,
     navbar: {
-      title: 'byld',
+      title: 'Byld',
       links: [
         {
           to: 'docs/',
