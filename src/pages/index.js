@@ -147,7 +147,9 @@ function Home() {
             <div className="col col--8 ">
               <p className="highlight__title">Design</p>
               <h1 className="feature__text">Architect in minutes</h1>
-              <p className="feature__detail">Use byld's blocks to architect your domains in minutes. <b>block</b> is our software abstraction similar to service.</p>
+              <p className="feature__detail">Use <b>byld blocks</b> to model
+              your business domains. Block let's you write code that matters
+              and eliminates the rest.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -161,7 +163,8 @@ function Home() {
             <div className="col col--8 ">
               <p className="highlight__title">Communicate</p>
               <h1 className="feature__text">Communicate with ease</h1>
-              <p className="feature__detail">Easily communicate between blocks in both sync and async manner with zero overheads.</p>
+              <p className="feature__detail">Synchronous and asynchronous communication
+              between blocks is always a simple function call. </p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -196,8 +199,10 @@ function Home() {
             <div className="row">
             <div className="col col--8">
               <p className="highlight__title">Expose</p>
-              <h1 className="feature__text">Flexible to all frontend needs.</h1>
-              <p className="feature__detail">Power a variety of user interfaces with a great deal of flexibility.</p>
+              <h1 className="feature__text">Flexible to all frontends.</h1>
+              <p className="feature__detail">Power different web and mobile
+              user interfaces with a great deal of flexibility using our
+              GraphQL based gateway.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -247,8 +252,8 @@ function Home() {
             <div className="col col--8">
               <p className="highlight__title">Deploy</p>
               <h1 className="feature__text">Don't sweat to deploy and scale.</h1>
-              <p className="feature__detail">Use <code>byld deploy</code> to instantly deploy
-              and scale blocks seamlessly.</p>
+              <p className="feature__detail">Instantly deploy
+              and scale without any infrastructure setups.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
