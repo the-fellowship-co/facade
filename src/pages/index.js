@@ -248,7 +248,7 @@ function Home() {
             <div className="col col--12">
               <p className="highlight__title">Deploy</p>
               <h1 className="feature__text">Deploy without any setups</h1>
-              <p className="feature__detail">Deploy all of your backend code without any setups.</p>
+              <p className="feature__detail">Don't sweat to deploy and scale seamlessly.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
