@@ -144,10 +144,10 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--12 ">
+            <div className="col col--8 ">
               <p className="highlight__title">Design</p>
-              <h1 className="feature__text">Abstract your organization in minutes</h1>
-              <p className="feature__detail">Use byld's blocks to abstract your entire organization’s domains in minutes.</p>
+              <h1 className="feature__text">Architect in minutes</h1>
+              <p className="feature__detail">Use byld's blocks to architect your domains in minutes. <b>block</b> is our software abstraction similar to service.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -158,7 +158,7 @@ function Home() {
         <div className="row">
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--12 ">
+            <div className="col col--8 ">
               <p className="highlight__title">Communicate</p>
               <h1 className="feature__text">Communicate with ease</h1>
               <p className="feature__detail">Easily communicate between blocks in both sync and async manner with zero overheads.</p>
@@ -194,9 +194,9 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--12">
+            <div className="col col--8">
               <p className="highlight__title">Expose</p>
-              <h1 className="feature__text">Expose with a lot of flexibility</h1>
+              <h1 className="feature__text">Flexible to all frontend needs.</h1>
               <p className="feature__detail">Power a variety of user interfaces with a great deal of flexibility.</p>
             </div>
             <div className="col col--2 "></div>
@@ -208,10 +208,10 @@ function Home() {
         <div className="row">
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--12">
+            <div className="col col--8">
               <p className="highlight__title">Reuse</p>
-              <h1 className="feature__text">Assemble from our library</h1>
-              <p className="feature__detail">Use our library of blocks to assemble your organization’s software rather than coding everything from scratch.</p>
+              <h1 className="feature__text">We build. You reuse infinite times.</h1>
+              <p className="feature__detail">Use our prebuilt blocks to assemble your backend rather than coding it from scratch.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -244,10 +244,11 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--12">
+            <div className="col col--8">
               <p className="highlight__title">Deploy</p>
-              <h1 className="feature__text">Deploy instantly</h1>
-              <p className="feature__detail">Don't sweat to deploy and scale seamlessly.</p>
+              <h1 className="feature__text">Don't sweat to deploy and scale.</h1>
+              <p className="feature__detail">Use <code>byld deploy</code> to instantly deploy
+              and scale blocks seamlessly.</p>
             </div>
             <div className="col col--2 "></div>
             </div>

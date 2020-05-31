@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Better way to build backends',
-  tagline: 'Byld helps teams develop and deploy backends 10x faster.',
+  tagline: 'Design, develop and deploy backends 10x faster.',
   url: 'https://particle.codes/',
   baseUrl: '/facade/',
   favicon: 'favicon/ico',
