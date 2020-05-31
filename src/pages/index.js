@@ -97,7 +97,7 @@ function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Truss, a better way to build backends<head />">
+      description="Byld, a better way to build backends<head />">
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
         <div className="row">
@@ -147,8 +147,7 @@ function Home() {
             <div className="col col--12 ">
               <p className="highlight__title">Design</p>
               <h1 className="feature__text">Abstract your organization in minutes</h1>
-              <p className="feature__detail">Easily organize and create different blocks using our framework.
-              Focus on your business logic and our framework handles the rest.</p>
+              <p className="feature__detail">Use byld's blocks to abstract your entire organization’s domains in minutes.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -162,7 +161,7 @@ function Home() {
             <div className="col col--12 ">
               <p className="highlight__title">Communicate</p>
               <h1 className="feature__text">Communicate with ease</h1>
-              <p className="feature__detail">Easily communicate between blocks in both sync and async manner with zero setups and overheads.</p>
+              <p className="feature__detail">Easily communicate between blocks in both sync and async manner with zero overheads.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -198,7 +197,7 @@ function Home() {
             <div className="col col--12">
               <p className="highlight__title">Expose</p>
               <h1 className="feature__text">Expose with a lot of flexibility</h1>
-              <p className="feature__detail">Power different user interfaces with a lot of flexibility.</p>
+              <p className="feature__detail">Power a variety of user interfaces with a great deal of flexibility.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -211,7 +210,7 @@ function Home() {
             <div className="row">
             <div className="col col--12">
               <p className="highlight__title">Reuse</p>
-              <h1 className="feature__text">Assemble from our library of blocks</h1>
+              <h1 className="feature__text">Assemble from our library</h1>
               <p className="feature__detail">Use our library of blocks to assemble your organization’s software rather than coding everything from scratch.</p>
             </div>
             <div className="col col--2 "></div>
@@ -247,7 +246,7 @@ function Home() {
             <div className="row">
             <div className="col col--12">
               <p className="highlight__title">Deploy</p>
-              <h1 className="feature__text">Deploy without any setups</h1>
+              <h1 className="feature__text">Deploy instantly</h1>
               <p className="feature__detail">Don't sweat to deploy and scale seamlessly.</p>
             </div>
             <div className="col col--2 "></div>
