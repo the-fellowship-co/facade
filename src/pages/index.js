@@ -146,10 +146,9 @@ function Home() {
             <div className="row">
             <div className="col col--8 ">
               <p className="highlight__title">Design</p>
-              <h1 className="feature__text">Architect in minutes</h1>
-              <p className="feature__detail">Use <b>byld blocks</b> to model
-              your business domains. Block let's you write code that matters
-              and eliminates the rest.</p>
+              <h1 className="feature__text">Architect in minutes.</h1>
+              <p className="feature__detail">Model the different domains of your business instantly using <b>byld blocks</b>, an abstraction that only lets you write code that matters and eliminates the rest.
+              </p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -162,9 +161,9 @@ function Home() {
             <div className="row">
             <div className="col col--8 ">
               <p className="highlight__title">Communicate</p>
-              <h1 className="feature__text">Communicate with ease</h1>
+              <h1 className="feature__text">Communicate with ease.</h1>
               <p className="feature__detail">Synchronous and asynchronous communication
-              between blocks is always a simple function call. </p>
+              between blocks is always a simple function call.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
@@ -201,7 +200,7 @@ function Home() {
               <p className="highlight__title">Expose</p>
               <h1 className="feature__text">Flexible to all frontends.</h1>
               <p className="feature__detail">Power different web and mobile
-              user interfaces with a great deal of flexibility using our
+              user interfaces with a great deal of flexibility using <b>byld gates</b>, a
               GraphQL based gateway.</p>
             </div>
             <div className="col col--2 "></div>
