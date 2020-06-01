@@ -144,7 +144,7 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--2"></div>
+            <div className="col col--4"></div>
             <div className="col col--8 ">
               <p className="highlight__title">Design</p>
               <h1 className="feature__text">Architect in minutes.</h1>
@@ -197,7 +197,7 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--2"></div>
+            <div className="col col--4"></div>
             <div className="col col--8">
               <p className="highlight__title">Expose</p>
               <h1 className="feature__text">Flexible to all frontends.</h1>
@@ -219,7 +219,7 @@ function Home() {
               <h1 className="feature__text">We build. You reuse infinite times.</h1>
               <p className="feature__detail">Use our prebuilt blocks to assemble your backend rather than coding it from scratch.</p>
             </div>
-            <div className="col col--2 "></div>
+            <div className="col col--2"></div>
             </div>
           </div>
           <div className="col col--6 ">
@@ -239,7 +239,7 @@ function Home() {
         <div className="row">
           <div className="col col--6 ">
             <div className="row">
-            <div className="col col--2 "></div>
+            <div className="col col--2"></div>
             <div className="col col--8 ">
               <img className={styles.featureImage}
               src="img/undraw_docusaurus_react.svg"
@@ -250,7 +250,7 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--2"></div>
+            <div className="col col--4"></div>
             <div className="col col--8">
               <p className="highlight__title">Deploy</p>
               <h1 className="feature__text">Don't sweat to deploy and scale.</h1>
