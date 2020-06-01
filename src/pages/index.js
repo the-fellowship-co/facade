@@ -96,7 +96,7 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`${siteConfig.title}`}
+      title="Byld"
       description="Byld, a better way to build backends<head />">
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
@@ -144,6 +144,7 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
+            <div className="col col--2"></div>
             <div className="col col--8 ">
               <p className="highlight__title">Design</p>
               <h1 className="feature__text">Architect in minutes.</h1>
@@ -196,6 +197,7 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
+            <div className="col col--2"></div>
             <div className="col col--8">
               <p className="highlight__title">Expose</p>
               <h1 className="feature__text">Flexible to all frontends.</h1>
@@ -248,6 +250,7 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
+            <div className="col col--2"></div>
             <div className="col col--8">
               <p className="highlight__title">Deploy</p>
               <h1 className="feature__text">Don't sweat to deploy and scale.</h1>
