@@ -40,7 +40,7 @@
 }
 
 .hero__title {
-  font-size: 4.5rem;
+  font-size: 5rem;
   /*margin-block-start: 0em;*/
   /*margin-block-end: 0em;*/
 }
@@ -48,9 +48,18 @@
   font-size: 2.5rem;
 }
 
-.hero__text {
+/*.hero__text {
   text-align: left;
   align-items: left;
+}*/
+
+/*.hero__button {
+  text-align: left;
+  align-items: left;
+}*/
+
+.heroBanner_src-pages- {
+  padding: 10rem 0 !important;
 }
 
 .feature__block {
@@ -83,11 +92,6 @@
   min-height: 300px;
   padding-top: 50px;
   padding-bottom: 100px;
-}
-
-.hero__button {
-  text-align: left;
-  align-items: left;
 }
 
 
@@ -158,4 +162,8 @@
   width: fit-content;
   width: fit-content;
   margin-bottom: 0px;
+}
+
+.pills__item--active {
+  color: black;
 }

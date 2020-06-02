@@ -7,6 +7,108 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
+const architect_tabs = [{
+      title: "Project",
+      code: `amazon/
+|-- identity/
+|-- orders/
+|-- payments/
+|-- communication/
+|-- inventory/
+|-- catalog/
+|-- shipping/
+|-- gateway/
+`
+
+    },{
+      title: "Block",
+      code: `orders
+|-- models/
+|    |-- order.rb
+|    |-- line_items.rb
+|-- Gemfile
+`
+
+    },{
+      title: "Model",
+      code: `class Order < ActiveRecord::Base
+
+  expose allow: [:get, :create, :update, :delete]
+  publisher on: :order_events
+
+  inf([ID]) {[Order]}
+  def self.list(ids)
+    Order.find(ids)
+  end
+
+end
+`
+    }];
+
+const expose_tabs = [{
+      title: "Gateway",
+      code: `gateway
+|-- edges/
+|   |-- identity_edge.rb
+|   |-- order_edge.rb
+|   |-- payments_edge.rb
+|   |-- communication_edge.rb
+|   |-- inventory_edge.rb
+|   |-- catalog_edge.rb
+|   |-- shipping_edge.rb
+|-- Gemfile
+`
+
+    },{
+      title: "Edge",
+      code: `
+# Auto-generated. Modify as you need.
+class OrderEdge < Particle::Edge
+  include Orders
+
+  inf(ID) {Order}
+  def get_order(id)
+    OrderService.client.get(id)
+  end
+
+  inf(CreateOrderReq) {Order}
+  def create_order!(create_order_req)
+    OrderService.client.create!(create_order_req)
+  end
+
+  ...
+
+end
+`
+    }];
+
+const deploy_tabs = [{
+      title: "Deploy",
+      code: `$ byld deploy`
+
+    }];
+
+const comms_tabs = [{
+      title: "Sync",
+      code: `# Inter block communication
+CommunicationService.Send(ordered_msg)`
+    },{
+      title: "Async",
+      code: `class Order < ActiveRecord::Base
+
+  publisher on: :order_events
+
+end
+
+class Inventory < ActiveRecord::Base
+
+  subscriber
+  def self.handle_order_events(event)
+    #TODO: process order confirmation
+  end
+
+end`
+    }];
 
 class TabbedCodeBlock extends React.Component {
 
@@ -14,28 +116,17 @@ class TabbedCodeBlock extends React.Component {
     this.setState({activeTab:idx})
   }
   constructor(props) {
+    console.log(props)
     super(props);
     this.state = {activeTab : 0};
   }
   render() {
-    const tabs = [{
-      title: "Project",
-      code: `class project`
 
-    },{
-      title: "Block",
-      code: `class block`
-
-    },{
-      title: "Model",
-      code: `class model`
-
-    }];
     return (<><ul class="pills">
-      {tabs.map((tab, idx) => (<li onClick={()=>this.handleOnClick(idx)} className={`pills__item ${idx == this.state.activeTab ? "pills__item--active" : ""}`}>{tab.title}</li>))}
+      {this.props.tabs.map((tab, idx) => (<li key={idx} onClick={()=>this.handleOnClick(idx)} className={`pills__item ${idx == this.state.activeTab ? "pills__item--active" : ""}`}>{tab.title}</li>))}
       </ul>
     <CodeBlock className="python">
-      {tabs[this.state.activeTab].code}
+      {this.props.tabs[this.state.activeTab].code}
     </CodeBlock>
     </>);
   }
@@ -78,21 +169,6 @@ function Feature({imageUrl, title, description}) {
   );
 }
 
-function Tab({title, content}) {
-  const imgUrl = useBaseUrl(imageUrl);
-  return (
-    <div className={classnames('col col--3', styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
-      <h3>{title}</h3>
-
-    </div>
-  );
-}
-
 function Highlights({imageUrl, title, description}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
@@ -121,10 +197,7 @@ function Highlights({imageUrl, title, description}) {
     </div>
   );
 }
-const codeString = `Class Sample
-  def method():
-  end
-end`;
+
 function Pricing({title, price, domains, gateway, kits, users,
   project}) {
   return (
@@ -149,11 +222,11 @@ function Home() {
   return (
     <Layout
       title="Byld"
-      description="Byld, a better way to build backends<head />">
+      description="Byld, a better way to build backends<head/>">
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
         <div className="row">
-          <div className="col col--6 hero__text">
+          <div className="col col--12 hero__text">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className="hero__button">
@@ -186,7 +259,7 @@ function Home() {
           <div className="col col--6 ">
             <div className="row">
             <div className="col col--12 ">
-            <TabbedCodeBlock/>
+            <TabbedCodeBlock tabs={architect_tabs} />
             </div>
             </div>
           </div>
@@ -219,13 +292,9 @@ function Home() {
           </div>
           <div className="col col--6 ">
             <div className="row">
-            <div className="col col--2 "></div>
-            <div className="col col--8 ">
-              <img className={styles.featureImage}
-              src="img/undraw_docusaurus_react.svg"
-              alt="We build. You reuse infinite times." />
+            <div className="col col--12 ">
+            <TabbedCodeBlock tabs={comms_tabs} />
             </div>
-            <div className="col col--2 "></div>
             </div>
           </div>
         </div>
@@ -234,13 +303,9 @@ function Home() {
         <div className="row">
           <div className="col col--6 ">
             <div className="row">
-            <div className="col col--2 "></div>
-            <div className="col col--8 ">
-              <img className={styles.featureImage}
-              src="img/undraw_docusaurus_react.svg"
-              alt="We build. You reuse infinite times." />
+            <div className="col col--12 ">
+              <TabbedCodeBlock tabs={expose_tabs} />
             </div>
-            <div className="col col--2 "></div>
             </div>
           </div>
           <div className="col col--6 feature__block">
@@ -263,7 +328,7 @@ function Home() {
           <div className="col col--6 feature__block">
             <div className="row">
             <div className="col col--8">
-              <p className="highlight__title">Reuse</p>
+              <p className="highlight__title">Reuse <span class="badge badge--info">Coming Soon</span></p>
               <h1 className="feature__text">We build. You reuse infinite times.</h1>
               <p className="feature__detail">Use our prebuilt blocks to assemble your backend rather than coding it from scratch.</p>
             </div>
@@ -287,13 +352,9 @@ function Home() {
         <div className="row">
           <div className="col col--6 ">
             <div className="row">
-            <div className="col col--2"></div>
-            <div className="col col--8 ">
-              <img className={styles.featureImage}
-              src="img/undraw_docusaurus_react.svg"
-              alt="We build. You reuse infinite times." />
+            <div className="col col--12 ">
+            <TabbedCodeBlock tabs={deploy_tabs} />
             </div>
-            <div className="col col--2 "></div>
             </div>
           </div>
           <div className="col col--6 feature__block">
