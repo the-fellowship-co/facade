@@ -1,10 +1,45 @@
 import React from 'react';
 import classnames from 'classnames';
 import Layout from '@theme/Layout';
+import CodeBlock from '@theme/CodeBlock';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+
+
+class TabbedCodeBlock extends React.Component {
+
+  handleOnClick(idx){
+    this.setState({activeTab:idx})
+  }
+  constructor(props) {
+    super(props);
+    this.state = {activeTab : 0};
+  }
+  render() {
+    const tabs = [{
+      title: "Project",
+      code: `class project`
+
+    },{
+      title: "Block",
+      code: `class block`
+
+    },{
+      title: "Model",
+      code: `class model`
+
+    }];
+    return (<><ul class="pills">
+      {tabs.map((tab, idx) => (<li onClick={()=>this.handleOnClick(idx)} className={`pills__item ${idx == this.state.activeTab ? "pills__item--active" : ""}`}>{tab.title}</li>))}
+      </ul>
+    <CodeBlock className="python">
+      {tabs[this.state.activeTab].code}
+    </CodeBlock>
+    </>);
+  }
+}
 
 const highlights = [
   {
@@ -29,6 +64,21 @@ const highlights = [
 ];
 
 function Feature({imageUrl, title, description}) {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (
+    <div className={classnames('col col--3', styles.feature)}>
+      {imgUrl && (
+        <div className="text--center">
+          <img className={styles.featureImage} src={imgUrl} alt={title} />
+        </div>
+      )}
+      <h3>{title}</h3>
+
+    </div>
+  );
+}
+
+function Tab({title, content}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={classnames('col col--3', styles.feature)}>
@@ -71,7 +121,10 @@ function Highlights({imageUrl, title, description}) {
     </div>
   );
 }
-
+const codeString = `Class Sample
+  def method():
+  end
+end`;
 function Pricing({title, price, domains, gateway, kits, users,
   project}) {
   return (
@@ -86,7 +139,6 @@ function Pricing({title, price, domains, gateway, kits, users,
         <li>{gateway}</li>
         <li>{kits}</li>
       </ul>
-
     </div>
   );
 }
@@ -133,18 +185,14 @@ function Home() {
         <div className="row">
           <div className="col col--6 ">
             <div className="row">
-            <div className="col col--2 "></div>
-            <div className="col col--8 ">
-              <img className={styles.featureImage}
-              src="img/undraw_docusaurus_react.svg"
-              alt="We build. You reuse infinite times." />
+            <div className="col col--12 ">
+            <TabbedCodeBlock/>
             </div>
-            <div className="col col--2 "></div>
             </div>
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--4"></div>
+            <div className="col col--2"></div>
             <div className="col col--8 ">
               <p className="highlight__title">Design</p>
               <h1 className="feature__text">Architect in minutes.</h1>
