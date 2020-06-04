@@ -6,22 +6,20 @@ sidebar_label: Quick Start
 
 ## Installation
 
-Install truss command line to start building backend for your business.
+Install byld command line to start building backend for your business.
 
 ```ruby
-rvm install 2.6.6
-rvm use 2.6.6
-gem install truss
+gem install byld-cli
 ```
 
 Woohoo!! That's all the setup you need to build your backend.
 
-## Let's build Doordash backend.
+## Let's byld your first backend.
 
-First, we need to login to truss platform.
+First, we need to login.
 
 ```ruby
-truss login
+byld login
 ```
 
 Now we are all set to build our simple Doordash backend. For this we will create
@@ -31,51 +29,51 @@ Now we are all set to build our simple Doordash backend. For this we will create
 
 ### Doordash Project
 ```ruby
-truss new doordash
+byld new doordash
 cd doordash
 export $PROJECT_DIR=`pwd`
 ```
-### Identity Domain
+### Identity Block
 ```ruby
 cd $PROJECT_DIR
-truss domain create identity
-cd identity
-truss g:model user
+byld block new identity
+cd identity/
+byld block g:model user
 ```
 
 ```ruby
 truss deploy
 ```
 
-### Restaurant Domain
+### Restaurant Block
 ```ruby
 cd $PROJECT_DIR
-truss domain create restaurants
+byld domain create restaurants
 cd restaurant
-truss g:model restaurant
-truss g:model menu_item
+byld block g:model restaurant
+byld block g:model menu_item
 ```
 
 ```ruby
 truss deploy
 ```
-### Inventory Domain
+### Inventory Block
 ```ruby
 cd $PROJECT_DIR
-truss domain create inventory
+byld block new inventory
 cd inventory
-truss g:model menu_item
+byld block g:model menu_item
 ```
 
 ```ruby
-truss deploy
+byld deploy
 ```
-### Order Domain
+### Order Block
 ```ruby
 cd $PROJECT_DIR
-truss domain create orders
+byld block new orders
 cd orders
-truss g:model order
+byld block g:model order
 ```
 
 ```ruby
@@ -84,15 +82,15 @@ truss deploy
 ### Gateway
 ```ruby
 cd $PROJECT_DIR
-truss gateway create
+byld gate new
 cd gateway
-truss connect inventory
-truss expose identity
-truss expose restaurants
-truss expose inventory
-truss expose orders
+byld connect inventory
+byld expose identity
+byld expose restaurants
+byld expose inventory
+byld expose orders
 ```
 
 ```ruby
-truss deploy
+byld deploy
 ```
