@@ -1,6 +1,6 @@
 ---
 id: quick_start
-title: Quickstart
+title: Quick start
 sidebar_label: Quick Start
 ---
 
@@ -42,7 +42,7 @@ byld block g:model user
 ```
 
 ```ruby
-truss deploy
+byld deploy
 ```
 
 ### Restaurant Block
@@ -55,7 +55,7 @@ byld block g:model menu_item
 ```
 
 ```ruby
-truss deploy
+byld deploy
 ```
 ### Inventory Block
 ```ruby
@@ -77,7 +77,7 @@ byld block g:model order
 ```
 
 ```ruby
-truss deploy
+byld deploy
 ```
 ### Gateway
 ```ruby

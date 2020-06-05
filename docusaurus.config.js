@@ -32,7 +32,7 @@ module.exports = {
         //   className: 'link--click'
         // },
         {
-          to: 'docs/quick_start',
+          to: 'docs/getting_started/quick_start',
           activeBasePath: 'docs',
           label: 'Get started for free',
           position: 'right',
@@ -48,7 +48,7 @@ module.exports = {
           items: [
             {
               label: 'Get started for free',
-              to: 'docs/quick_start',
+              to: 'docs/getting_started/quick_start',
               className: 'footer--blue',
             },
           ],

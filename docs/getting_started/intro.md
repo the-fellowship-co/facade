@@ -1,17 +1,17 @@
 ---
 id: intro
-title: Introduction to Truss
-sidebar_label: Introduction
+title: What's Byld ?
+sidebar_label: What's Byld ?
 ---
 
-Truss is a developer platform for building backends to power businesses. It
+Byld is a developer platform for building backends to power businesses. It
 enables developers to quickly build backend services without compromising on
 the right architecture, best practices and scalability.
 
 :::note
 
 We currently supports only **Ruby** based backend development with
-**sqlite** database. Truss is in a pre-release stage and our products
+**sqlite** database. Byld is in a pre-release stage and our products
 might change to improve our user experience and quality.
 
 Our platform is ideal to build and deploy internal applications.
@@ -19,7 +19,7 @@ Our platform is ideal to build and deploy internal applications.
 :::
 
 
-### Truss Framework
+### Byld Framework
 Abstracts away the complexity involved in backend engineering, makes it easy
 to build backends with right architecture and best practices. All you need to
 do is focus on the business logic and we will take care of the rest.

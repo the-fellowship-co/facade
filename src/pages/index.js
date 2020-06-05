@@ -235,7 +235,7 @@ function Home() {
                 'button button--outline button--secondary button--lg button--blue',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/quick_start')}>
+              to={useBaseUrl('docs/getting_started/quick_start')}>
               Get started for free
             </Link>
             <Link

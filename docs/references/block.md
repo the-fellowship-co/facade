@@ -1,7 +1,7 @@
 ---
-id: commands
-title: CLI Commands
-sidebar_label: Commands
+id: block
+title: Block API
+sidebar_label: Block API
 ---
 ## Login
 Run this from project directory

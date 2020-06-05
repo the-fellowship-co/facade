@@ -1,7 +1,7 @@
 ---
-id: example
-title: Amazon Go Example
-sidebar_label: Amazon Go Example
+id: doordash
+title: Building a doordash clone
+sidebar_label: Building a doordash clone
 ---
 
 Amazon Go business would organize their backends logic as follows
