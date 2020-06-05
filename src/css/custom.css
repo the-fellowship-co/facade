@@ -167,3 +167,15 @@
 .pills__item--active {
   color: black;
 }
+
+.card {
+  margin-top: 1rem;
+}
+
+.avatar__photo {
+  border-radius: 20%;
+}
+.icon__avatar {
+  /*margin: 2px;*/
+
+}

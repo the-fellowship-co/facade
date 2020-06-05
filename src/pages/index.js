@@ -6,6 +6,9 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+import { FaUsersCog } from 'react-icons/fa';
+import { FaRegCreditCard } from 'react-icons/fa';
+import { FaMailBulk } from 'react-icons/fa';
 
 const architect_tabs = [{
       title: "Project",
@@ -325,25 +328,89 @@ function Home() {
       </div>
       <div className="container highlight__section">
         <div className="row">
-          <div className="col col--6 feature__block">
+          <div className="col col--4 feature__block">
             <div className="row">
-            <div className="col col--8">
+            <div className="col col--12">
               <p className="highlight__title">Reuse <span class="badge badge--info">Coming Soon</span></p>
               <h1 className="feature__text">We build. You reuse infinite times.</h1>
               <p className="feature__detail">Use our prebuilt blocks to assemble your backend rather than coding it from scratch.</p>
             </div>
-            <div className="col col--2"></div>
             </div>
           </div>
-          <div className="col col--6 ">
+          <div className="col col--8 ">
             <div className="row">
-            <div className="col col--2 "></div>
-            <div className="col col--8 ">
-              <img className={styles.featureImage}
-              src="img/undraw_docusaurus_react.svg"
-              alt="We build. You reuse infinite times" />
+            <div className="col">
+              <div class="card">
+                <div class="card__header">
+                  <div class="avatar">
+                    <div class="avatar__photo"><FaUsersCog size="46px" className="icon__avatar"/></div>
+                    <div class="avatar__intro">
+                      <h4 class="avatar__name">Identity</h4>
+                      <small class="avatar__subtitle">
+                        User Management
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__body">
+                    <p>Login. Authentication. Authorization.</p>
+                </div>
+                <div class="card__footer">
+                  <div class="button-group button-group--block">
+                    <button class="button button--info">Use</button>
+                    <button class="button button--outline button--info">Fork</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="col col--2 "></div>
+            <div className="col">
+              <div class="card">
+                <div class="card__header">
+                  <div class="avatar">
+                    <div class="avatar__photo"><FaRegCreditCard size="46px" className="icon__avatar"/></div>
+                    <div class="avatar__intro">
+                      <h4 class="avatar__name">Payment</h4>
+                      <small class="avatar__subtitle">
+                        Stripe Integration
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__body">
+                    <p>Visa. Mastercard. Discover. Refunds. Reconciliation.</p>
+                </div>
+                <div class="card__footer">
+                  <div class="button-group button-group--block">
+                    <button class="button button--info">Use</button>
+                    <button class="button button--outline button--info">Fork</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div class="card">
+                <div class="card__header">
+                  <div class="avatar">
+                    <div class="avatar__photo"><FaMailBulk size="46px" className="icon__avatar"/></div>
+                    <div class="avatar__intro">
+                      <h4 class="avatar__name">Communication</h4>
+                      <small class="avatar__subtitle">
+                        SendGrid Integration
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__body">
+                    <p>Emails. Text Messages. Retries. Reconciliation.</p>
+                </div>
+                <div class="card__footer">
+                  <div class="button-group button-group--block">
+                  <button class="button button--info">Use</button>
+                  <button class="button button--outline button--info">Fork</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
