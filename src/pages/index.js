@@ -64,8 +64,7 @@ const expose_tabs = [{
 
     },{
       title: "Edge",
-      code: `
-# Auto-generated. Modify as you need.
+      code: `# Auto-generated. Modify as you need.
 class OrderEdge < Particle::Edge
   include Orders
 
@@ -94,7 +93,7 @@ const deploy_tabs = [{
 const comms_tabs = [{
       title: "Sync",
       code: `# Inter block communication
-CommunicationService.Send(ordered_msg)`
+Order.client.create(customer_id: 'Bezos', status: 'Active')`
     },{
       title: "Async",
       code: `class Order < ActiveRecord::Base
@@ -107,7 +106,7 @@ class Inventory < ActiveRecord::Base
 
   subscriber
   def self.handle_order_events(event)
-    #TODO: process order confirmation
+    
   end
 
 end`
