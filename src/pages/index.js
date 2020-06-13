@@ -106,7 +106,7 @@ class Inventory < ActiveRecord::Base
 
   subscriber
   def self.handle_order_events(event)
-    
+
   end
 
 end`
@@ -245,7 +245,7 @@ function Home() {
                 'button button--outline button--secondary button--lg button--blue-border',
                 styles.getStarted,
               )}
-              to="https://calendly.com/trytruss/platform-demo"
+              to="https://calendly.com/trytruss/demo"
               target="_blank">
               Request Demo
             </Link>
