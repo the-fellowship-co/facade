@@ -1,6 +1,6 @@
 ---
 id: gates
-title: Exposing to UI with gates
+title: Exposing to frontends with gates
 sidebar_label: Exposing to UI with gates
 ---
 
