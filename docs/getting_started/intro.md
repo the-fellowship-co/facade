@@ -20,10 +20,10 @@ Synchronous and asynchronous communication between blocks is always a simple fun
 
 Power different web and mobile user interfaces with a great deal of flexibility using byld gates, a GraphQL based gateway.
 
-### Use our kits
+#### Use our kits
 
 Use our prebuilt blocks to assemble your backend rather than coding it from scratch.
 
-### Deploy instantly
+#### Deploy instantly
 
 Instantly deploy and scale without any infrastructure setups.
