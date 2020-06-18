@@ -8,7 +8,7 @@ Byld lets you create backends in fast, easy and clean way.
 
 ## How does this work?
 
-### Architect your backend using blocks
+#### Architect your backend using blocks
 
 Model the different domains of your business instantly using byld blocks, an abstraction that only lets you write code that matters and eliminates the rest.
 
