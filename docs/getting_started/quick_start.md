@@ -6,9 +6,9 @@ sidebar_label: Quick Start
 
 ## Installation
 
-Install byld command line to start building backend for your business.
+Install byld cli to start building backend.
 
-```ruby
+```sh
 gem install byld-cli
 ```
 
@@ -18,7 +18,7 @@ Woohoo!! That's all the setup you need to build your backend.
 
 First, we need to login.
 
-```ruby
+```sh
 byld login
 ```
 
@@ -28,25 +28,29 @@ Now we are all set to build our simple Doordash backend. For this we will create
 - one gateway to expose all the domains to the UI.
 
 ### Doordash Project
-```ruby
+
+```sh
 byld new doordash
 cd doordash
 export $PROJECT_DIR=`pwd`
 ```
+
 ### Identity Block
-```ruby
+
+```sh
 cd $PROJECT_DIR
 byld block new identity
 cd identity/
 byld block g:model user
 ```
 
-```ruby
+```sh
 byld deploy
 ```
 
 ### Restaurant Block
-```ruby
+
+```sh
 cd $PROJECT_DIR
 byld domain create restaurants
 cd restaurant
@@ -54,36 +58,42 @@ byld block g:model restaurant
 byld block g:model menu_item
 ```
 
-```ruby
+```sh
 byld deploy
 ```
+
 ### Inventory Block
-```ruby
+
+```sh
 cd $PROJECT_DIR
 byld block new inventory
 cd inventory
 byld block g:model menu_item
 ```
 
-```ruby
+```sh
 byld deploy
 ```
+
 ### Order Block
-```ruby
+
+```sh
 cd $PROJECT_DIR
 byld block new orders
 cd orders
 byld block g:model order
 ```
 
-```ruby
+```sh
 byld deploy
 ```
-### Gateway
-```ruby
+
+### Gate
+
+```sh
 cd $PROJECT_DIR
 byld gate new
-cd gateway
+cd gate
 byld connect inventory
 byld expose identity
 byld expose restaurants
@@ -91,6 +101,6 @@ byld expose inventory
 byld expose orders
 ```
 
-```ruby
+```sh
 byld deploy
 ```
