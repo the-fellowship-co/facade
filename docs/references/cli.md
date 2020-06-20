@@ -14,7 +14,7 @@ $ byld new [project-name]
 ```
 ## Blocks
 ### Create block
-Run this from project directory
+Run this from project directory,
 ```sh
 $ byld block new [block-name]
 ```
@@ -28,25 +28,10 @@ Run this from block directory in which you need to generate the model,
 ```sh
 $ byld b g:model [model-name]
 ```
-### Deploy block
-Run this from block directory,
-```sh
-$ byld deploy
-```
 ### Connect block
 Run this from block in which you need to generate the client,
 ```sh
 $ byld connect [block-name]
-```
-### Logs
-Run this from block directory,
-```sh
-$ byld logs
-```
-### Console
-Run this from block directory,
-```sh
-$ byld console
 ```
 
 ## Gate
@@ -60,23 +45,30 @@ Run this from gate directory,
 ```sh
 $ byld expose [block-name]
 ```
-### Deploy gate
-Run this from gate directory,
-```sh
-$ byld deploy
-```
 ### Connect block
 Run this from gate directory,
 ```sh
 $ byld connect [block-name]
 ```
+
+## Deployment
+### Deploy
+Run this from block/ gate directory,
+```sh
+$ byld deploy
+```
+### Status
+Run this from block/ gate directory,
+```sh
+$ byld status
+```
 ### Logs
-Run this from gate directory,
+Run this from block/ gate directory,
 ```sh
 $ byld logs
 ```
 ### Console
-Run this from gate directory,
+Run this from block/ gate directory,
 ```sh
 $ byld console
 ```
