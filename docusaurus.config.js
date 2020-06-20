@@ -4,7 +4,7 @@ module.exports = {
   url: 'https://particle.codes/',
   baseUrl: '/facade/',
   favicon: 'favicon/ico',
-  organizationName: 'alphas-co', // Usually your GitHub org/user name.
+  organizationName: 'the-fellowship-co', // Usually your GitHub org/user name.
   projectName: 'facade', // Usually your repo name.
   plugins: ['@docusaurus/plugin-google-analytics'],
   themeConfig: {
@@ -68,7 +68,7 @@ module.exports = {
           items: [
             {
               label: 'Request Demo',
-              to: "https://calendly.com/trytruss/platform-demo",
+              to: "https://calendly.com/trytruss/demo",
               target: "_blank",
             },
           ],
@@ -91,7 +91,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/alphas-co/facade/edit/master/',
+            'https://github.com/the-fellowship-co/facade/edit/master/',
         },
         blog: {
           showReadingTime: true,
