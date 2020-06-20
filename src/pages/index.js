@@ -376,7 +376,7 @@ function Home() {
                   </div>
                 </div>
                 <div class="card__body">
-                    <p>Visa. Mastercard. Discover. Refunds. Reconciliation.</p>
+                    <p>Visa. Mastercard. Discover. Refunds.</p>
                 </div>
                 <div class="card__footer">
                   <div class="button-group button-group--block">

@@ -4,28 +4,26 @@ title: Quick start
 sidebar_label: Quick Start
 ---
 
-## Installation
+**Setup**
 
-Install byld cli to start building backend.
+**Installation**
 
-```sh
-gem install byld-cli
-```
 
-Woohoo!! That's all the setup you need to build your backend.
+    $ gem install byld-cli
 
-## Let's byld your first backend.
+If you don’t have ruby on your machine. We recommend to using RVM…
 
-First, we need to login.
+**Login**
 
-```sh
-byld login
-```
+Use `byld login`. Get your token here.
 
-Now we are all set to build our simple Doordash backend. For this we will create
-- a project named doordash
-- identity, restaurants, inventory, order domains.
-- one gateway to expose all the domains to the UI.
+
+    $ byld login
+
+    Your email: xxx@xxx.com
+    Your token: xxxxx
+
+You’re all set to start building your first project.
 
 ### Doordash Project
 

@@ -3,52 +3,80 @@ id: cli
 title: CLI Command
 sidebar_label: CLI
 ---
-## Login
+## Setup
+### Login
+```
+$ byld login
+```
+### Create project
+```sh
+$ byld new [project-name]
+```
+## Blocks
+### Create block
 Run this from project directory
-```ruby
-truss login
+```sh
+$ byld block new [block-name]
 ```
-## Create project
-```ruby
-truss new your-project-namecd
+or you can also use a short version
+
+```sh
+$ byld b new [block-name]
 ```
-## Create domain
+### Create model
+Run this from block directory in which you need to generate the model,
+```sh
+$ byld b g:model [model-name]
+```
+### Deploy block
+Run this from block directory,
+```sh
+$ byld deploy
+```
+### Connect block
+Run this from block in which you need to generate the client,
+```sh
+$ byld connect [block-name]
+```
+### Logs
+Run this from block directory,
+```sh
+$ byld logs
+```
+### Console
+Run this from block directory,
+```sh
+$ byld console
+```
+
+## Gate
+### Create gate
 Run this from project directory
-```ruby
-truss domain new your-domain-name
+```sh
+$ byld gate create
 ```
-## Connect domain
-Run this from domain in which you need to generate the client,
-```ruby
-truss g:client domain-name
+### Expose block
+Run this from gate directory,
+```sh
+$ byld expose [block-name]
 ```
-## Create gateway
-Run this from project directory
-```ruby
-truss gateway create
+### Deploy gate
+Run this from gate directory,
+```sh
+$ byld deploy
 ```
-## Expose domain
-Run this from gateway directory,
-```ruby
-truss expose domain-name
+### Connect block
+Run this from gate directory,
+```sh
+$ byld connect [block-name]
 ```
-## Create model
-Run this from domain directory in which you need to generate the model,
-```ruby
-truss g:model model_name
+### Logs
+Run this from gate directory,
+```sh
+$ byld logs
 ```
-## Deploy
-Run this from domain/ gateway directory,
-```ruby
-truss deploy
-```
-## Logs
-Run this from domain/ gateway directory,
-```ruby
-truss logs
-```
-## Console
-Run this from domain/ gateway directory,
-```ruby
-truss console
+### Console
+Run this from gate directory,
+```sh
+$ byld console
 ```

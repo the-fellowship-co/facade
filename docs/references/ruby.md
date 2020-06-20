@@ -3,22 +3,13 @@ id: ruby
 title: Ruby Development
 sidebar_label: Ruby Development
 ---
-## Active Record Migration
-Run this from project directory
-```ruby
-truss login
-```
+## Install
+[Install ruby 2.6.6 using RVM](https://rvm.io/rvm/install)
+
+## Learn
+[Ruby beginner guide](https://rubymonk.com/learning/books/1-ruby-primer)
+
 ## Active Record
-```ruby
-truss new your-project-namecd
-```
-## Ruby Primer
-Run this from project directory
-```ruby
-truss domain new your-domain-name
-```
-## Installing Ruby
-Run this from domain in which you need to generate the client,
-```ruby
-truss g:client domain-name
-```
+[Active Record](https://guides.rubyonrails.org/active_record_basics.html)
+
+[Active Record Migration](https://guides.rubyonrails.org/active_record_migrations.html)
