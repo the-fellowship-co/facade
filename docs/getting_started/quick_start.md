@@ -171,7 +171,7 @@ end
 ```
 #### Subscriber
 
-Use the `subscribe` markup and name the method this way `handle_[channel_name]`
+Use the `subscriber` markup and name the method this way `handle_[channel_name]`
 to subscribe events from a particular channel. Event object passed to the
 subscriber method contains `type` and `source_id` of the model publishing it.
 
