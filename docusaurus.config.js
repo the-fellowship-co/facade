@@ -8,6 +8,8 @@ module.exports = {
   projectName: 'facade', // Usually your repo name.
   plugins: ['@docusaurus/plugin-google-analytics'],
   themeConfig: {
+    usePrism: true,
+    defaultLang: 'js',
     disableDarkMode: true,
     navbar: {
       title: 'Byld',
