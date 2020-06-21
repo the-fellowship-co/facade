@@ -39,10 +39,11 @@ $ byld new amazon
 
 Now there is a new directory created with the name `amazon/`. Switch into the newly created directory.
 
-
 ### Create your first block
 
-Use `byld block new [block-name]` to create a new block. Block are fundamental units of abstractions of your business/organizations. Lets start with identity block which abstracts users, roles and groups.
+Block are fundamental units of abstractions of your business/organizations. Lets start with identity block which abstracts users, roles and groups. 
+
+Use `byld block new [block-name]` to create a new block.
 
 ```sh
 $ byld b new identity
