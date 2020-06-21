@@ -119,21 +119,40 @@ Similarily other blocks could be created this way.
 ## Communicating between blocks
 
 ### Synchronous Communication
+Blocks could access the marked up interface methods from the another block in a synchronous manner. In below case `Stock` model in `inventory` block exposes a bunch of methods.
 
-Use `byld connect [block-name]` to enable sync communication between blocks. In our case
+```ruby
+
+class Stock < ActiveRecord::Base
+  expose only: [:get, :update]
+
+  inf(ID) {Bool}
+  def self.available?(product_id)
+    stock = Stock.find(product_id: id)
+    stock.qty > 0
+  end
+
+end
+```
+
+Use `byld connect [block-name]` to enable sync communication between blocks.
 
 ```sh
 $ byld connect inventory
 ```
-After this you should be able to call all the exposed methods from `inventory` this way:
 
+After this you should be able to call all the exposed methods (`:get`, `:update`, `:available?`) from `Stock` in another block using the `[Model]Service.client`.
 
-    product_available = StockService.client.available?(productId)
+```ruby
+StockService.client.available?(productId)
+```
 
 ### Asynchronous Communication
 
-You can publish and subscribe to events across blocks without any
-additional setup.
+Mark any model as publisher using the `publisher on: [channel_name]` markup.
+By default model’s creation, update and deletion events are published when the
+model is marked. Use `publish(:event_name, model)`  to publish custom events
+on the channel.
 
 #### Publisher
 
@@ -146,13 +165,15 @@ class Order < ActiveRecord::Base
 
   def place!
     ...
-    publish(:order_placed, self)
+    publish(:order_placed)
   end
 end
 ```
 #### Subscriber
 
-Use `subscriber` to register and receive the events to process them.
+Use the `subscribe` markup and name the method this way `handle_[channel_name]`
+to subscribe events from a particular channel. Event object passed to the
+subscriber method contains `type` and `source_id` of the model publishing it.
 
 ```ruby
 class Stock < ActiveRecord::Base
@@ -232,6 +253,20 @@ class OrderEdge < Byld::Edge
   end
 end
 ```
+
+### Joining blocks
+
+```ruby
+class OrderEdge < Byld::Edge
+
+  join User
+  def customer(order)
+    UserService.client.get(order.user_id)
+  end
+
+end
+```
+
 ### Deploy your gate
 
 Use `byld deploy` to deploy the gate. This exposes all the blocks to the frontends via GraphQL endpoints.
