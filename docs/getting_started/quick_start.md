@@ -81,7 +81,7 @@ class User < ActiveRecord::Base
 end
 ```
 The model by default has `get`, `create`, `update`, `delete` and `list`
-implemented. You could add additional methods using this markup
+implemented. You could add additional methods using this interface markup
 `inf(RequestType) {ReturnType}` over it.
 
 ```ruby
@@ -205,7 +205,7 @@ gate/
     └── payment_edge.rb
     └── communication_edge.rb
 ```
-You could add additional methods using this markup `inf(RequestType) {ReturnType}` over it.
+You could add additional methods using this interface markup `inf(RequestType) {ReturnType}` over it.
 
 ```ruby
 class OrderEdge < Byld::Edge
