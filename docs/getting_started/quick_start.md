@@ -27,6 +27,7 @@ Your token: xxxxx
 ```
 You’re all set to start building your first project.
 
+
 ## Architecting with blocks
 
 ### Create your first project
@@ -36,7 +37,9 @@ Use `byld new [project-name]` to create a new project.
 ```sh
 $ byld new amazon
 ```
+
 Now there is a new directory created with the name `amazon/`. Switch into to the newly created directory.
+
 
 ### Create your first block
 
@@ -110,6 +113,7 @@ end
 That’s pretty much it. You’re all set up to deploy your first block. Use `byld deploy` from the block directory to deploy it.
 
 Similarily other blocks could be created this way.
+
 
 
 ## Communicating between blocks
@@ -247,29 +251,29 @@ Use the `/graphiql` endpoint to interact with the endpoints in browser.
 You can use the`/graphql` endpoint to power your UI across different platforms.
 
 ```graphql
-    query {
-      getOrder(id: "z3dsbjn3223") {
+query {
+  getOrder(id: "z3dsbjn3223") {
+    id
+    totalPrice
+    lineItems {
+      id
+      qty
+      unitPrice
+      totalPrice
+      product {
         id
-        totalPrice
-        lineItems {
-          id
-          qty
-          unitPrice
-          totalPrice
-          product {
-            id
-            title
-          }
-          customer {
-            firstName
-            lastName
-            address {
-              street
-              city
-              state
-            }
-          }
+        title
+      }
+      customer {
+        firstName
+        lastName
+        address {
+          street
+          city
+          state
         }
       }
     }
+  }
+}
 ```
