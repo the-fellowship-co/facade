@@ -67,7 +67,7 @@ $ byld b g:model users
 
 It creates two files the actual model and the db migration for the model.
 
-```
+```ruby
 class User < ActiveRecord::Base
   expose only: [:get, :create, :update, :delete, :list]
 end
