@@ -15,7 +15,7 @@ module.exports = {
       title: 'Byld',
       links: [
         {
-          to: 'docs/',
+          to: 'docs/getting_started/intro',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'right',
