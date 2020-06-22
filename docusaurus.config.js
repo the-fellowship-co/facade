@@ -15,6 +15,11 @@ module.exports = {
       title: 'Byld',
       links: [
         {
+          label: 'Alpha',
+          position: 'left',
+          className: 'badge badge--warning'
+        },
+        {
           to: 'docs/getting_started/intro',
           activeBasePath: 'docs',
           label: 'Docs',
