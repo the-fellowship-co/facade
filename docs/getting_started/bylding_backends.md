@@ -1,31 +1,8 @@
 ---
-id: quick_start
-title: Quick start
-sidebar_label: Quick Start
+id: bylding_backends
+title: Bylding Backends
+sidebar_label: Bylding Backends
 ---
-
-## Setup
-
-### Installation
-
-```sh
-$ gem install byld-cli
-```
-If you don’t have ruby on your machine. We recommend to using RVM…
-
-### Login
-
-Use `byld login`.
-
-[Request your token](https://forms.gle/2VGp3jgdndogwM939)
-
-```sh
-$ byld login
-
-Your email: xxx@xxx.com
-Your token: xxxxx
-```
-You’re all set to start building your first project.
 
 ## Architecting with blocks
 

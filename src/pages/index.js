@@ -39,19 +39,18 @@ const architect_tabs = [{
   publisher on: :order_events
 
   inf(ID) {Order}
-  def place!(id)
+  def confirm!(id)
     order = Order.find(id)
     ...
   end
-
 
 end
 `
     }];
 
 const expose_tabs = [{
-      title: "Gateway",
-      code: `gateway
+      title: "Gate",
+      code: `gate
 |-- edges/
 |   |-- identity_edge.rb
 |   |-- order_edge.rb
@@ -67,22 +66,26 @@ const expose_tabs = [{
       title: "Edge",
       code: `class OrderEdge < Particle::Edge
   include Orders
-
+  
   inf(ID) {Order}
   def get_order(id)
     OrderService.client.get(id)
   end
 
-  inf(CreateOrderReq) {Order}
-  def create_order!(req)
-    OrderService.client.create!(req)
-  end
-
   ...
+end` }, {
+  title: "Join",
+  code: `class OrderEdge < Particle::Edge
+  include Identity
 
-end
-`
-    }];
+  join Customer
+  def customer(order)
+    UserService.client.get(order.customer_id)
+  end
+  
+  ...
+end`
+}];
 
 const deploy_tabs = [{
       title: "Deploy",
@@ -92,22 +95,39 @@ const deploy_tabs = [{
 
 const comms_tabs = [{
       title: "Sync",
-      code: `Order.client.create(customer_id: 'Bezos', status: 'Active')`
-    },{
-      title: "Async",
       code: `class Order < ActiveRecord::Base
 
-  publisher on: :order_events
+  inf(ID) {Order}
+  def confirm!(id)
+    order = Order.find(id)
+    if StockService.client.available? order.lineitems
+      ...
+    end
+  end
+end`
+    },{
+      title: "Async: Publisher",
+      code: `class Order < ActiveRecord::Base
+  publisher on: order_events
 
-end
-
-class Inventory < ActiveRecord::Base
+  def confirm!
+    ...
+    publish(:order_confirmed)
+  end
+end`
+    },
+    {
+      title: 'Async: Subscriber',
+      code: `class Stock < ActiveRecord::Base
 
   subscriber
   def self.handle_order_events(event)
-
+    case event.type
+    when :order_confirmed
+      order = OrderService.client.get(event.source_id)
+      Stock.decrement_qty! order.lineitem
+    ...
   end
-
 end`
     }];
 
