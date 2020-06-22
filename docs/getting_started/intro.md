@@ -24,7 +24,7 @@ If you don’t have ruby on your machine. We recommend using RVM for installing 
 
 ### Login
 
-Use `byld login` to authenicate. If you don't have a token yet it: [Request your token](https://forms.gle/2VGp3jgdndogwM939).
+Use `byld login` to authenicate. If you don't have a token yet it. [Request your token](https://forms.gle/2VGp3jgdndogwM939).
 
 ```sh
 $ byld login
@@ -32,5 +32,5 @@ $ byld login
 Your email: xxx@xxx.com
 Your token: xxxxx
 ```
-You’re all set to start building your first project.
+You’re all set for building your first project.
 
