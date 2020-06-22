@@ -2,7 +2,7 @@ module.exports = {
   title: 'Better way to build backends',
   tagline: 'Design, develop and deploy backends incredibly faster.',
   url: 'https://particle.codes/',
-  baseUrl: '/facade/',
+  baseUrl: '/',
   favicon: 'favicon/ico',
   organizationName: 'the-fellowship-co', // Usually your GitHub org/user name.
   projectName: 'facade', // Usually your repo name.
