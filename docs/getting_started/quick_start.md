@@ -108,10 +108,10 @@ That’s pretty much it. You’re all set up to deploy your first block.
 
 ### Deploy your block
 
-Use `byld deploy` from the block directory to deploy it.  And  `byld console` and `byld logs` commands would come in handy to test and debug the block after deploying.
-
+Use `byld deploy` from the block directory to deploy it. Use `byld console` and `byld logs` commands to test and debug the block after deploying.
 
 Similarily other blocks could be created this way.
+
 
 ## Communicating between blocks
 
