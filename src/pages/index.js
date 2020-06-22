@@ -401,7 +401,7 @@ function Home() {
                   </div>
                 </div>
                 <div class="card__body">
-                    <p>Payments. Payouts. Refunds.</p>
+                    <p>Payins. Payouts. Refunds. Ledgers.</p>
                 </div>
                 <div class="card__footer">
                   <div class="button-group button-group--block">
