@@ -35,14 +35,15 @@ const architect_tabs = [{
     },{
       title: "Model",
       code: `class Order < ActiveRecord::Base
-
-  expose allow: [:get, :create, :update, :delete]
+  expose allow: [:get, :create, :update, :delete, :list]
   publisher on: :order_events
 
-  inf([ID]) {[Order]}
-  def self.list(ids)
-    Order.find(ids)
+  inf(ID) {Order}
+  def place!(id)
+    order = Order.find(id)
+    ...
   end
+
 
 end
 `
@@ -64,8 +65,7 @@ const expose_tabs = [{
 
     },{
       title: "Edge",
-      code: `# Auto-generated. Modify as you need.
-class OrderEdge < Particle::Edge
+      code: `class OrderEdge < Particle::Edge
   include Orders
 
   inf(ID) {Order}
@@ -74,8 +74,8 @@ class OrderEdge < Particle::Edge
   end
 
   inf(CreateOrderReq) {Order}
-  def create_order!(create_order_req)
-    OrderService.client.create!(create_order_req)
+  def create_order!(req)
+    OrderService.client.create!(req)
   end
 
   ...
@@ -92,8 +92,7 @@ const deploy_tabs = [{
 
 const comms_tabs = [{
       title: "Sync",
-      code: `# Inter block communication
-Order.client.create(customer_id: 'Bezos', status: 'Active')`
+      code: `Order.client.create(customer_id: 'Bezos', status: 'Active')`
     },{
       title: "Async",
       code: `class Order < ActiveRecord::Base
