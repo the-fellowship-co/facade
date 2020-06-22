@@ -20,13 +20,11 @@ Byld is a tool to design, develop and deploy backends in a incredibly fast way.
 ```sh
 $ gem install byld-cli
 ```
-If you don’t have ruby on your machine. We recommend to using RVM for it.
+If you don’t have ruby on your machine. We recommend using RVM for installing it.
 
 ### Login
 
-Use `byld login`.
-
-[Request your token](https://forms.gle/2VGp3jgdndogwM939)
+Use `byld login` to authenicate. If you don't have a token yet it: [Request your token](https://forms.gle/2VGp3jgdndogwM939).
 
 ```sh
 $ byld login
