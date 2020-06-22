@@ -52,15 +52,15 @@
 /*.hero__text {
   text-align: left;
   align-items: left;
-}*/
+}
 
-/*.hero__button {
+.hero__button {
   text-align: left;
   align-items: left;
 }*/
 
 .heroBanner_src-pages- {
-  padding: 10rem 0 !important;
+  padding: 8rem 0 !important;
 }
 
 .feature__block {
@@ -177,5 +177,14 @@
 .icon__avatar {
   /*margin: 2px;*/
 
+}
+
+.install_text {
+  font-size: 1.5rem;
+}
+
+.install {
+  margin-top: 2.5rem;
+  text-align: center;
 }
 

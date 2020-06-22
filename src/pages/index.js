@@ -252,6 +252,13 @@ function Home() {
           </div>
           </div>
           </div>
+          <div className="row install">
+            <div className="col col--4"></div>
+            <div className="col col--4">
+              <CodeBlock className="sh">gem install byld-cli</CodeBlock>
+            </div>
+            <div className="col col--4"></div>
+          </div>
         </div>
       </header>
       <main>
@@ -330,8 +337,8 @@ function Home() {
           <div className="col col--4 feature__block">
             <div className="row">
             <div className="col col--12">
-              <p className="highlight__title">Reuse <span class="badge badge--info">Coming Soon</span></p>
-              <h1 className="feature__text">We build. You reuse infinite times.</h1>
+              <p className="highlight__title">Assemble <span class="badge badge--info">Coming Soon</span></p>
+              <h1 className="feature__text">We build. You use.</h1>
               <p className="feature__detail">Use our prebuilt blocks to assemble your backend rather than coding it from scratch.</p>
             </div>
             </div>
@@ -344,7 +351,7 @@ function Home() {
                   <div class="avatar">
                     <div class="avatar__photo"><FaUsersCog size="46px" className="icon__avatar"/></div>
                     <div class="avatar__intro">
-                      <h4 class="avatar__name">Identity</h4>
+                      <h4 class="avatar__name">Identity kit</h4>
                       <small class="avatar__subtitle">
                         User Management
                       </small>
@@ -357,7 +364,6 @@ function Home() {
                 <div class="card__footer">
                   <div class="button-group button-group--block">
                     <button class="button button--info">Use</button>
-                    <button class="button button--outline button--info">Fork</button>
                   </div>
                 </div>
               </div>
@@ -368,20 +374,19 @@ function Home() {
                   <div class="avatar">
                     <div class="avatar__photo"><FaRegCreditCard size="46px" className="icon__avatar"/></div>
                     <div class="avatar__intro">
-                      <h4 class="avatar__name">Payment</h4>
+                      <h4 class="avatar__name">Payment kit</h4>
                       <small class="avatar__subtitle">
-                        Stripe Integration
+                        Transactions
                       </small>
                     </div>
                   </div>
                 </div>
                 <div class="card__body">
-                    <p>Visa. Mastercard. Discover. Refunds.</p>
+                    <p>Payments. Payouts. Business Payouts.</p>
                 </div>
                 <div class="card__footer">
                   <div class="button-group button-group--block">
                     <button class="button button--info">Use</button>
-                    <button class="button button--outline button--info">Fork</button>
                   </div>
                 </div>
               </div>
@@ -392,9 +397,9 @@ function Home() {
                   <div class="avatar">
                     <div class="avatar__photo"><FaMailBulk size="46px" className="icon__avatar"/></div>
                     <div class="avatar__intro">
-                      <h4 class="avatar__name">Communication</h4>
+                      <h4 class="avatar__name">Comms Kit</h4>
                       <small class="avatar__subtitle">
-                        SendGrid Integration
+                        Notifications
                       </small>
                     </div>
                   </div>
@@ -405,7 +410,6 @@ function Home() {
                 <div class="card__footer">
                   <div class="button-group button-group--block">
                   <button class="button button--info">Use</button>
-                  <button class="button button--outline button--info">Fork</button>
                   </div>
                 </div>
               </div>

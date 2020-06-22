@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Better way to build backends',
-  tagline: 'Design, develop and deploy backends 10x faster.',
+  tagline: 'Design, develop and deploy backends incredibly faster.',
   url: 'https://particle.codes/',
   baseUrl: '/facade/',
   favicon: 'favicon/ico',
