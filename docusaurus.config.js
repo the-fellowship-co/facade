@@ -60,7 +60,7 @@ module.exports = {
           items: [
             {
               label: 'Slack',
-              href: 'https://join.slack.com/t/trusstalk/shared_invite/zt-eihpmvs6-w3mVxeKbtvwynF0qpcVwkQ',
+              href: 'https://join.slack.com/t/letsbyld/shared_invite/zt-eof91hhg-UixoDOiNumWOkk_e17a09w',
               target: "_blank",
             },
           ],
