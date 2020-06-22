@@ -84,9 +84,7 @@ class User < ActiveRecord::Base
   inf(ID) {User}
   def self.activate(id)
     user = User.find(id)
-    user.active = true
-    user.save!
-    user
+    user.enable!
   end
 end
 ```
