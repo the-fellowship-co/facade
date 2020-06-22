@@ -256,8 +256,8 @@ function Home() {
                 'button button--outline button--secondary button--lg button--blue',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/getting_started/quick_start')}>
-              Get started for free
+              to={useBaseUrl('docs/getting_started/intro')}>
+              Try it for free
             </Link>
             <Link
               className={classnames(

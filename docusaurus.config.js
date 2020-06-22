@@ -34,9 +34,9 @@ module.exports = {
         //   className: 'link--click'
         // },
         {
-          to: 'docs/getting_started/quick_start',
+          to: 'docs/getting_started/intro',
           activeBasePath: 'docs',
-          label: 'Get started for free',
+          label: 'Try it for free',
           position: 'right',
           className: 'link--blue',
         },
@@ -49,7 +49,7 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Get started for free',
+              label: 'Try it for free',
               to: 'docs/getting_started/quick_start',
               className: 'footer--blue',
             },
@@ -76,7 +76,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Truss`,
+      copyright: `Copyright © ${new Date().getFullYear()} The Fellowship Co`,
     },
     googleAnalytics: {
       trackingID: 'UA-55212147-2',

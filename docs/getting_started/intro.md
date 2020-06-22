@@ -1,18 +1,17 @@
 ---
 id: intro
-title: What's Byld ?
-sidebar_label: What's Byld ?
+title: What's Byld?
+sidebar_label: What's Byld?
 ---
 
-Byld is a tool to design, develop and deploy backends in a remarkably fast way.
+Byld is a tool to design, develop and deploy backends in a incredibly fast way.
 
-**How it works?**
+### How it works?
 
-
-- Architect with blocks
-- Communicate between blocks
-- Expose blocks with gates
-- Deploy block and gates
+1. **Architect with blocks**: Use blocks to bootstrap the individual units of abstraction in your business/organisation.
+2. **Communicate between blocks**: Make the blocks communicate in both asynchronous and synchronous way. 
+3. **Expose blocks with gates**: Expose the blocks using to variety of frontends using gates.
+4. **Deploy block and gates**: Instantly deploy the blocks and gates using a single cli command.
 
 ## Setting it up
 
