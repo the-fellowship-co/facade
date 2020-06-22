@@ -89,7 +89,32 @@ end`
 
 const deploy_tabs = [{
       title: "Deploy",
-      code: `$ byld deploy`
+      code: `$ byld deploy
+🤞 Deploying order...
+👌 Deployment triggered!`
+
+    },{
+      title: "Status",
+      code: `$ byld status
+
+amazon
+
+gate
+
++------+---------+---------------------+------------------------------+
+| name | status  | url                 | docs                         |
++------+---------+---------------------+------------------------------+
+| gate | running | amazon.byldapps.com | amazon.byldapps.com/graphiql |
++------+---------+---------------------+------------------------------+
+
+blocks
+
++----------+------------+
+| name     | status     |
++----------+------------+
+| order    | running    |
+| identity | running    |
++----------+------------+`
 
     }];
 
