@@ -75,7 +75,7 @@ module.exports = {
           items: [
             {
               label: 'Request Demo',
-              to: "https://calendly.com/trytruss/demo",
+              to: "https://calendly.com/letsbyld/demo",
               target: "_blank",
             },
           ],
