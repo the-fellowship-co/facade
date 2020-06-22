@@ -101,11 +101,11 @@ amazon
 
 gate
 
-+------+---------+---------------------+------------------------------+
-| name | status  | url                 | docs                         |
-+------+---------+---------------------+------------------------------+
-| gate | running | amazon.byldapps.com | amazon.byldapps.com/graphiql |
-+------+---------+---------------------+------------------------------+
++-------------------------------+------------------------------+
+| status  | url                 | docs                         |
++--------------------------------+-----------------------------+
+| running | amazon.byldapps.com | amazon.byldapps.com/graphiql |
++---------+---------------------+------------------------------+
 
 blocks
 
@@ -164,7 +164,7 @@ class TabbedCodeBlock extends React.Component {
   constructor(props) {
     console.log(props)
     super(props);
-    this.state = {activeTab : 0};
+    this.state = {activeTab : props.activeTab ? props.activeTab : 0};
   }
   render() {
 
@@ -357,7 +357,7 @@ function Home() {
           <div className="col col--6 ">
             <div className="row">
             <div className="col col--12 ">
-              <TabbedCodeBlock tabs={expose_tabs} />
+              <TabbedCodeBlock tabs={expose_tabs}/>
             </div>
             </div>
           </div>
@@ -464,23 +464,22 @@ function Home() {
       </div>
       <div className="container highlight__section">
         <div className="row">
-          <div className="col col--6 ">
+          <div className="col col--7 ">
             <div className="row">
             <div className="col col--12 ">
-            <TabbedCodeBlock tabs={deploy_tabs} />
+            <TabbedCodeBlock tabs={deploy_tabs}  activeTab={1}/>
             </div>
             </div>
           </div>
-          <div className="col col--6 feature__block">
+          <div className="col col--4 feature__block">
             <div className="row">
-            <div className="col col--4"></div>
-            <div className="col col--8">
+            <div className="col col--2"></div>
+            <div className="col col--10">
               <p className="highlight__title">Deploy</p>
               <h1 className="feature__text">Don't sweat to deploy and scale.</h1>
               <p className="feature__detail">Instantly deploy
               and scale without any infrastructure setups.</p>
             </div>
-            <div className="col col--2 "></div>
             </div>
           </div>
         </div>
