@@ -407,7 +407,7 @@ function Home() {
                 </div>
                 <div class="card__footer">
                   <div class="button-group button-group--block">
-                    <button class="button button--info">Use</button>
+                    <button class="button button---blue" disabled>Use</button>
                   </div>
                 </div>
               </div>
@@ -430,7 +430,7 @@ function Home() {
                 </div>
                 <div class="card__footer">
                   <div class="button-group button-group--block">
-                    <button class="button button--info">Use</button>
+                    <button class="button button---blue" disabled>Use</button>
                   </div>
                 </div>
               </div>
@@ -453,7 +453,7 @@ function Home() {
                 </div>
                 <div class="card__footer">
                   <div class="button-group button-group--block">
-                  <button class="button button--info">Use</button>
+                  <button class="button button---blue" disabled>Use</button>
                   </div>
                 </div>
               </div>

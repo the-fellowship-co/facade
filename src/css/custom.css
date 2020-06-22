@@ -117,7 +117,9 @@
   margin-right: 10px;
 }
 
-
+.button---blue {
+  background-color: var(--color-blue);
+}
 .button--blue {
   background-color: var(--color-blue);
   margin-right: 10px;
