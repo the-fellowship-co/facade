@@ -14,7 +14,14 @@
   --ifm-color-primary-light: rgb(70, 203, 174);
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --color-blue: #d2e3fc;
+  /*--color-blue: #ffbc3a;*/
+  /*--color-blue: #bc4639;*/
+  /*--color-blue: #88bbd6;*/
+  /*--color-blue: #99badd;*/
+  --color-blue: #b4d0e7;
+  /*--color-blue: #0FA958;*/
+  --color-compliment: #fff;
+  --ifm-navbar-background-color: var(--color-compliment);
   --ifm-code-font-size: 95%;
   --ifm-link-color: #1a73e8;
 }
@@ -36,7 +43,8 @@
 }
 
 .hero--primary {
-  --ifm-hero-background-color: rgb(255,255,255);
+  /*--ifm-hero-background-color: rgb(255,255,255);*/
+  --ifm-hero-background-color: var(--color-compliment);
   --ifm-hero-text-color: var(--ifm-font-color-base);
 }
 

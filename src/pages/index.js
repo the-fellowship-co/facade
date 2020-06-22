@@ -66,7 +66,7 @@ const expose_tabs = [{
       title: "Edge",
       code: `class OrderEdge < Particle::Edge
   include Orders
-  
+
   inf(ID) {Order}
   def get_order(id)
     OrderService.client.get(id)
@@ -82,7 +82,7 @@ end` }, {
   def customer(order)
     UserService.client.get(order.customer_id)
   end
-  
+
   ...
 end`
 }];
@@ -146,7 +146,7 @@ class TabbedCodeBlock extends React.Component {
     return (<><ul class="pills">
       {this.props.tabs.map((tab, idx) => (<li key={idx} onClick={()=>this.handleOnClick(idx)} className={`pills__item ${idx == this.state.activeTab ? "pills__item--active" : ""}`}>{tab.title}</li>))}
       </ul>
-    <CodeBlock className="python">
+    <CodeBlock className="ruby">
       {this.props.tabs[this.state.activeTab].code}
     </CodeBlock>
     </>);
@@ -264,7 +264,7 @@ function Home() {
                 'button button--outline button--secondary button--lg button--blue-border',
                 styles.getStarted,
               )}
-              to="https://calendly.com/trytruss/demo"
+              to="https://calendly.com/letsbyld/demo"
               target="_blank">
               Request Demo
             </Link>
