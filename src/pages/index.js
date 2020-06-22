@@ -370,7 +370,7 @@ function Home() {
                   <div class="avatar">
                     <div class="avatar__photo"><FaUsersCog size="46px" className="icon__avatar"/></div>
                     <div class="avatar__intro">
-                      <h4 class="avatar__name">Identity kit</h4>
+                      <h4 class="avatar__name">identity-kit</h4>
                       <small class="avatar__subtitle">
                         User Management
                       </small>
@@ -378,7 +378,7 @@ function Home() {
                   </div>
                 </div>
                 <div class="card__body">
-                    <p>Login. Authentication. Authorization.</p>
+                    <p>Users. Authentication. Authorization.</p>
                 </div>
                 <div class="card__footer">
                   <div class="button-group button-group--block">
@@ -393,7 +393,7 @@ function Home() {
                   <div class="avatar">
                     <div class="avatar__photo"><FaRegCreditCard size="46px" className="icon__avatar"/></div>
                     <div class="avatar__intro">
-                      <h4 class="avatar__name">Payment kit</h4>
+                      <h4 class="avatar__name">payments-kit</h4>
                       <small class="avatar__subtitle">
                         Transactions
                       </small>
@@ -401,7 +401,7 @@ function Home() {
                   </div>
                 </div>
                 <div class="card__body">
-                    <p>Payments. Payouts. Business Payouts.</p>
+                    <p>Payments. Payouts. Refunds.</p>
                 </div>
                 <div class="card__footer">
                   <div class="button-group button-group--block">
@@ -416,15 +416,15 @@ function Home() {
                   <div class="avatar">
                     <div class="avatar__photo"><FaMailBulk size="46px" className="icon__avatar"/></div>
                     <div class="avatar__intro">
-                      <h4 class="avatar__name">Comms Kit</h4>
+                      <h4 class="avatar__name">comms-kit</h4>
                       <small class="avatar__subtitle">
-                        Notifications
+                        Messaging
                       </small>
                     </div>
                   </div>
                 </div>
                 <div class="card__body">
-                    <p>Emails. Text Messages. Retries. Reconciliation.</p>
+                    <p>Conversations. Inbounds. Outbounds.</p>
                 </div>
                 <div class="card__footer">
                   <div class="button-group button-group--block">
