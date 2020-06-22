@@ -416,29 +416,6 @@ function Home() {
               <div class="card">
                 <div class="card__header">
                   <div class="avatar">
-                    <div class="avatar__photo"><FaRegCreditCard size="46px" className="icon__avatar"/></div>
-                    <div class="avatar__intro">
-                      <h4 class="avatar__name">payments-kit</h4>
-                      <small class="avatar__subtitle">
-                        Transactions
-                      </small>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__body">
-                    <p>Payins. Payouts. Refunds. Ledgers.</p>
-                </div>
-                <div class="card__footer">
-                  <div class="button-group button-group--block">
-                    <button class="button button---blue" disabled>Use</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div class="card">
-                <div class="card__header">
-                  <div class="avatar">
                     <div class="avatar__photo"><FaMailBulk size="46px" className="icon__avatar"/></div>
                     <div class="avatar__intro">
                       <h4 class="avatar__name">comms-kit</h4>
@@ -454,6 +431,29 @@ function Home() {
                 <div class="card__footer">
                   <div class="button-group button-group--block">
                   <button class="button button---blue" disabled>Use</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div class="card">
+                <div class="card__header">
+                  <div class="avatar">
+                    <div class="avatar__photo"><FaRegCreditCard size="46px" className="icon__avatar"/></div>
+                    <div class="avatar__intro">
+                      <h4 class="avatar__name">payments-kit</h4>
+                      <small class="avatar__subtitle">
+                        Transactions
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__body">
+                    <p>Payins. Payouts. Refunds. Ledgers.</p>
+                </div>
+                <div class="card__footer">
+                  <div class="button-group button-group--block">
+                    <button class="button button---blue" disabled>Use</button>
                   </div>
                 </div>
               </div>
