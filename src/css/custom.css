@@ -140,7 +140,6 @@
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px;
-
 }
 
 .link--click {
@@ -221,7 +220,7 @@
   .hero__button .button {
     margin-top: 10px;
     margin-left: 0px;
-    margin-right: 0px;
+    margin-right: 10px;
     width: 200px;
   }
   
