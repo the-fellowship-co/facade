@@ -363,7 +363,7 @@ function Home() {
           </div>
           <div className="col col--6 feature__block">
             <div className="row">
-            <div className="col col--4"></div>
+            <div className="col col--2"></div>
             <div className="col col--8">
               <p className="highlight__title">Expose</p>
               <h1 className="feature__text">Flexible to all frontends.</h1>

@@ -210,10 +210,6 @@
     padding-bottom: 50px;
   }
   
-  .navbar__title {
-    padding-left: 5px;
-  }
-
   .hero__title {
     font-size: 4rem;
   }
@@ -223,7 +219,8 @@
   }
 
   .hero__button .button {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
+  
 }
 
