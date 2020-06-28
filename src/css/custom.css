@@ -219,7 +219,10 @@
   }
 
   .hero__button .button {
-    font-size: 0.8rem;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 200px;
   }
   
 }
