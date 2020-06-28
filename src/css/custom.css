@@ -103,7 +103,6 @@
   padding-bottom: 100px;
 }
 
-
 .navbar__title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -198,5 +197,33 @@
 .install {
   margin-top: 2.5rem;
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .reverse {
+    flex-direction: column-reverse;
+  }
+
+  .highlight__section {
+    min-height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .navbar__title {
+    padding-left: 5px;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero__button .button {
+    font-size: 1rem;
+  }
 }
 

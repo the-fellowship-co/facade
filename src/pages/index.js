@@ -308,7 +308,7 @@ function Home() {
       <main>
       <section className="highlight__block">
       <div className="container highlight__section">
-        <div className="row">
+        <div className="row reverse">
           <div className="col col--6 ">
             <div className="row">
             <div className="col col--12 ">
@@ -353,7 +353,7 @@ function Home() {
         </div>
       </div>
       <div className="container highlight__section">
-        <div className="row">
+        <div className="row reverse">
           <div className="col col--6 ">
             <div className="row">
             <div className="col col--12 ">
@@ -463,7 +463,7 @@ function Home() {
         </div>
       </div>
       <div className="container highlight__section">
-        <div className="row">
+        <div className="row reverse">
           <div className="col col--8">
             <div className="row">
             <div className="col col--12 ">
