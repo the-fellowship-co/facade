@@ -9,7 +9,6 @@ sidebar_label: Communicating between blocks
 Blocks could access the marked up interface methods from the another block in a synchronous manner. In below case `Stock` model in `inventory` block exposes a bunch of methods.
 
 ```ruby
-
 class Stock < ActiveRecord::Base
   expose only: [:get, :update]
 
