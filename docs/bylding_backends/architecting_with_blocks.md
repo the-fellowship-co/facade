@@ -6,7 +6,7 @@ sidebar_label: Architecting with blocks
 
 ### Create your first project
 
-Let's try to create a barebones versions of amazon.com's backend with byld. Use `byld new [project-name]` to create a new project. 
+Use `byld new [project-name]` to create a new project. 
 
 ```sh
 $ byld new amazon
@@ -16,15 +16,15 @@ Now there is a new directory created with the name `amazon/`. Switch into the ne
 
 ### Create your first block
 
-Block are fundamental units of abstractions of your business/organizations. Lets start with identity block which abstracts users, roles and groups. 
-
-Use `byld block new [block-name]` to create a new block.
+Use `byld block new [block-name]` to create a new block. Lets start with identity block which abstracts users and identity management.
 
 ```sh
-$ byld b new identity
+$ byld block new identity
 ```
 
-### Structure of a block
+#### Structure of a block
+
+Block are fundamental units of abstractions of your business/organizations. ...
 
 ```sh
 identity/
@@ -81,6 +81,23 @@ That’s pretty much it. You’re all set up to deploy your first block.
 
 ### Deploy your block
 
-Use `byld deploy` from the block directory to deploy it. Use `byld console` and `byld logs` commands to test and debug the block after deploying.
+Use `byld deploy` from the block directory to deploy it. Check the status of the deployment using `byld status` command. 
 
-Similarily other blocks could be created this way.
+```sh
+$ byld status
+
+amazon
+
+blocks
+
++----------+----------+
+| name     | status   |
++----------+----------+
+| identity | active   |
++----------+----------+
+
+```
+
+### Test and debug your block
+
+`byld console` and `byld logs` commands come in handy to test and debug the block after deploying. 
