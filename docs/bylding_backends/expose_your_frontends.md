@@ -76,9 +76,9 @@ Use `byld status` to see the status of the gate and blocks.
 ```sh
 $ byld status
 ```
-Use the `/graphiql` endpoint to interact with the endpoints in browser.
+Use the `/graphiql` url to interact with the endpoints in browser.
 
-You can use the`/graphql` endpoint to power your UI across different platforms.
+You can use the hosted url to power your UI across different platforms.
 
 ```graphql
 query {
