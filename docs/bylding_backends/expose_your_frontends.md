@@ -53,6 +53,10 @@ end
 
 ```ruby
 class OrderEdge < Byld::Edge
+  include Order
+  include Identity
+
+  ...
 
   join User
   def customer(order)
