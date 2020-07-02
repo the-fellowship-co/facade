@@ -37,7 +37,7 @@ identity/
 Use the `byld b g:model [model-name]` to create a model.
 
 ```sh
-$ byld b g:model users
+$ byld b g:model user
 ```
 
 It creates two files the actual model and the db migration for the model.
