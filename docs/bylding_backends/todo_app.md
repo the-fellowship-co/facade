@@ -293,12 +293,13 @@ $ byld status
 
 blocks
 
-+-------------+------------+
-| name        | status     |
-+-------------+------------+
-| identity    | running    |
-| todos       | running    |
-+-------------+------------+
++---------------+------------+
+| name          | status     |
++---------------+------------+
+| identity      | running    |
+| todos         | running    |
+| notifications | running    |
++---------------+------------+
 ```
 
 Use the `todoist.letsbyld.com/graphiql` url to to view docs and test out your endpoints. You can use `todoist.letsbyld.com` url to power your UI across different platforms.
