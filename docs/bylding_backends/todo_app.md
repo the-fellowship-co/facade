@@ -90,15 +90,15 @@ blocks
 `byld console` and `byld logs` commands come in handy to test and debug the
 block after deploying.
 
-## Create todo block
+## Create todos block
 
 ```sh
-$ byld block new todo
+$ byld block new todos
 ```
 
 Switch into the newly created `todos/` directory.
 
-### Create todo_item model
+### Create todo item model
 
 ```sh
 $ byld block g:model todo_item
