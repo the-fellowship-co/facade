@@ -113,7 +113,7 @@ class TodoItem < Byld::Model
 end
 ```
 
-Let's add title, description and status fiels for TodoItem in the migration
+Let's add title, description and status fields for TodoItem in the migration
 file.
 
 ```ruby
