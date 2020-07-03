@@ -4,7 +4,7 @@ title: What's Byld?
 sidebar_label: What's Byld?
 ---
 
-Byld is a tool to design, develop and deploy backends in a incredibly fast way.
+Byld is a tool to design, develop and deploy backends in an incredibly fast way.
 
 ### How it works?
 

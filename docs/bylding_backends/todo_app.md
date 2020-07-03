@@ -309,6 +309,6 @@ blocks
 +---------------+------------+
 ```
 
-Use the `todoist.letsbyld.com/graphiql` url to to view docs and test out your endpoints. You can use `todoist.letsbyld.com` url to power your UI across different platforms.
+Use the `todoist.letsbyld.com/graphiql` url to view docs and test out your endpoints. You can use `todoist.letsbyld.com` url to power your UI across different platforms.
 
 
