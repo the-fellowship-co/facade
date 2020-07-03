@@ -7,7 +7,6 @@ module.exports = {
   organizationName: 'the-fellowship-co', // Usually your GitHub org/user name.
   projectName: 'facade', // Usually your repo name.
   plugins: ['@docusaurus/plugin-google-analytics'],
-  cname: 'letsbyld.com',
   themeConfig: {
     usePrism: true,
     defaultLang: 'js',
