@@ -89,8 +89,6 @@ $ byld status
 ```
 Use the `/graphiql` url to start GraphiQL in your browser, there you could view docs and test out your endpoints. 
 
-Finally use the hosted url to power your frontends.
-
 ```graphql
 query {
   getOrder(id: "z3dsbjn3223") {
@@ -118,3 +116,5 @@ query {
   }
 }
 ```
+
+Finally use the hosted url to power your frontends.
