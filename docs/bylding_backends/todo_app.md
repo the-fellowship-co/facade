@@ -1,23 +1,23 @@
 ---
 id: todo_app
 title: Let's build a Todo App
-sidebar_label: Let's build a Todo App
+sidebar_label: Let's build a todo app
 ---
 
-This tutorial will help you build and deploy a Todo application. For this you
+This tutorial will help you build and deploy a backend for todo app. For this you
 will create a project with two blocks and one gate to expose them.
 
 #### Blocks
 1. Identity
-2. Todo
+2. Todos
 
-### Create [yourname]-todo project
+### Create todoist project
 
 ```sh
-$ byld new [yourname]-todo
+$ byld new todoist
 ```
 
-Now there is a new directory created with the name `[yourname]-todo/`. Switch
+Now there is a new directory created with the name `todoist/`. Switch
 into the newly created directory.
 
 ## Create identity block
@@ -62,7 +62,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
 end
 ```
 
-
 ### Deploy identity block
 
 Now, let us deploy the identity block and check its status.
@@ -97,7 +96,7 @@ block after deploying.
 $ byld block new todo
 ```
 
-Switch into the newly created `todo/` directory.
+Switch into the newly created `todos/` directory.
 
 ### Create todo_item model
 
@@ -157,14 +156,14 @@ $ byld deploy
 
 $ byld status
 
-[yourname]-todo
+todoist
 
 blocks
 
 +----------+----------+
 | name     | status   |
 +----------+----------+
-| identity | active   |
+| identity | running  |
 | todo     | running  |
 +----------+----------+
 
@@ -177,7 +176,7 @@ block after deploying.
 
 ## Expose identity and todo block
 
-From the `[yourname]-todo/` directory, run to create a gate for your project.
+From the `todoist/` directory, run to create a gate for your project.
 
 ```sh
 $ byld gate new
@@ -216,7 +215,7 @@ $ byld status
 +----------------------------------------+---------------------------------------+
 | status  | url                          | docs                                  |
 +----------------------------------------+---------------------------------------+
-| running | [yourname]-todo.letsbyld.com | [yourname]-todo.letsbyld.com/graphiql |
+| running | todoist.letsbyld.com         | todoist.letsbyld.com/graphiql         |
 +---------+------------------------------+---------------------------------------+
 
 blocks
@@ -228,9 +227,9 @@ blocks
 | todo        | running    |
 +-------------+------------+
 ```
-You can use `[yourname]-todo.letsbyld.com` url to power your UI across
+You can use `todoist.letsbyld.com` url to power your UI across
 different platforms.
 
-Use the `[yourname]-todo.letsbyld.com/graphiql` url to to view docs and
+Use the `todoist.letsbyld.com/graphiql` url to to view docs and
 test out your endpoints.
 
