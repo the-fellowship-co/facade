@@ -54,7 +54,7 @@ markup `inf(RequestType) {ReturnType}` over it.
 
 
 Supported request and return types are: `ID`, ~~String~~, ~~Integer~~,
-~~Float~~, ~~Bool~~, `Byld Messages` and `Byld Models`.
+~~Float~~, ~~Bool~~, `Byld Messages`[1] and `Byld Models`.
 
 `Byld::Model` is an extension of active record, so all of active record methods
  are available to use on it.
@@ -109,3 +109,6 @@ blocks
 ### Test and debug your block
 
 `byld console` and `byld logs` commands come in handy to test and debug the block after deploying.
+
+
+[1] `Byld::Message` can be inherited to use custom classes as return and request types.
