@@ -38,15 +38,9 @@ $ byld block g:model user
 It creates two files the actual model and the db changes needed for the new
 model.
 
-Let's add `publisher on: :user_events` to `User` model to publish
-`:user_created`, `:user_updated` and `:user_destroyed` events to other blocks.
-Later, you will use `:user_destroyed` event to delete all the todo items when
-the user is destroyed.
-
 ```ruby
 class User < Byld::Model
   expose only: [:get, :create, :update, :delete, :list]
-  publisher on: :user_events
 end
 ```
 
@@ -58,6 +52,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     create_table :users do |t|
       t.string :first_name
       t.string :last_name
+      t.string :email
     end
   end
 end
@@ -106,11 +101,13 @@ $ byld block g:model todo_item
 ```
 
 It creates two files the actual model and the db changes needed for the new
-model.
+model. Let's add `publisher on: :todo_item_events` to the model to publish `:todo_item_created`, `:todo_item_updated` and `:todo_item_destroyed` events to other blocks. Later, you will use `:todo_item_created` event to send emails to the assigned user.
+
 
 ```ruby
 class TodoItem < Byld::Model
   expose only: [:get, :create, :update, :delete, :list]
+  publisher on: :todo_item_events
 end
 ```
 
@@ -125,9 +122,35 @@ class CreateTodoItems < ActiveRecord::Migration[5.2]
       t.string :description
       t.boolean :status
       t.integer :assignee_id
+      t.datetime :completed_at
+      t.timestamps
     end
   end
 end
+```
+
+### Deploy todos block
+
+Now, let us deploy the todos block and check its status.
+
+```sh
+$ byld deploy
+🤞 Deploying order...
+👌 Deployment triggered!
+
+$ byld status
+
+todoist
+
+blocks
+
++----------+----------+
+| name     | status   |
++----------+----------+
+| identity | running  |
+| todos    | running  |
++----------+----------+
+
 ```
 
 ## Create notifications block
@@ -138,7 +161,7 @@ $ byld block new notifications
 
 Switch into the newly created `notifications/` directory.
 
-### Create todo item model
+### Create communication model
 
 ```sh
 $ byld block g:model communication
@@ -170,10 +193,11 @@ class CreateCommunications < ActiveRecord::Migration[5.2]
 end
 ```
 
-Now, let's subscribe to `:todo_item_created` event to send
+Now, let's subscribe to `:todo_item_created` event to send emails to the assigned user. Before that we need to connect notifications with todos blocks to the fetch todos, use `byld connect todos` to do that.
 
 ```ruby
 class Communication < Byld::Model
+  include Todos
   expose only: [:get, :create, :update, :delete, :list]
 
   subscriber
@@ -183,19 +207,19 @@ class Communication < Byld::Model
       todo_item = TodoItemService.client.get(event.source_id)
       log.info 'Sending email'
 
-      communication = Communication.create!(type: 'EMAIL', to_id: todo_item.assignee_id, from_id: 'no-reply@todoist.com', body: 'New todo assigned to you')
+      communication = Communication.create!(type: 'EMAIL', to_id: todo_item.assignee_id, from_id: 'no-reply@todoist.com', body: 'New todo assigned to you')      
       communication.send!
   end
-
+  
   def send!
    # insert code to send emails
   end
 end
 ```
 
-### Deploy todos block
+### Deploy notifications block
 
-Now, let us deploy the todos block and check its status.
+Now, let us deploy the notifications block and check its status.
 
 ```sh
 $ byld deploy
@@ -208,12 +232,13 @@ todoist
 
 blocks
 
-+----------+----------+
-| name     | status   |
-+----------+----------+
-| identity | running  |
-| todos    | running  |
-+----------+----------+
++---------------+----------+
+| name          | status   |
++---------------+----------+
+| identity      | running  |
+| todos         | running. |
+| notifications | running  |
++---------------+----------+
 
 ```
 
@@ -252,9 +277,6 @@ When the block changes, you need to expose the block and deploy the gate again.
 ```sh
 $ byld deploy
 ```
-
-*Woohoo!!* We have successfully built and deployed the backend for the todoist
-application.
 
 ### Querying the gate
 
