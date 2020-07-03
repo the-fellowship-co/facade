@@ -10,6 +10,7 @@ will create a project with two blocks and one gate to expose them.
 #### Blocks
 1. Identity
 2. Todos
+3. Notifications
 
 ### Create todoist project
 
@@ -57,7 +58,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     create_table :users do |t|
       t.string :first_name
       t.string :last_name
-
     end
   end
 end
@@ -124,25 +124,71 @@ class CreateTodoItems < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :description
       t.boolean :status
-      t.assingee_id :integer
+      t.integer :assignee_id
     end
   end
 end
 ```
 
-Now, let's subscribe to `:user_destroyed` event to delete all the todo items
-when the user is deleted.
+## Create notifications block
+
+```sh
+$ byld block new notifications
+```
+
+Switch into the newly created `notifications/` directory.
+
+### Create todo item model
+
+```sh
+$ byld block g:model communication
+```
+
+It creates two files the actual model and the db changes needed for the new
+model.
 
 ```ruby
-class TodoItem < Byld::Model
+class Communication < Byld::Model
+  expose only: [:get, :create, :update, :delete, :list]
+end
+```
+
+Let's add fields to communications in the migration file.
+
+```ruby
+class CreateCommunications < ActiveRecord::Migration[5.2]
+  def change
+    create_table :communications do |t|
+      t.integer :type
+      t.integer :from_id
+      t.integer :to_id
+      t.string :body
+      t.string :status
+      t.timestamps
+    end
+  end
+end
+```
+
+Now, let's subscribe to `:todo_item_created` event to send 
+
+```ruby
+class Communication < Byld::Model
   expose only: [:get, :create, :update, :delete, :list]
 
   subscriber
-  def self.handle_user_events(event)
+  def self.handle_todo_item_events(event)
     case event.type
-    when :user_destroyed
-      user = UserService.client.get(event.source_id)
-      TodoItem.where(user_id: user.assignee_id).delete_all
+    when :todo_item_created
+      todo_item = TodoItemService.client.get(event.source_id)
+      log.info 'Sending email'
+
+      communication = Communication.create!(type: 'EMAIL', to_id: todo_item.assignee_id, from_id: 'no-reply@todoist.com', body: 'New todo assigned to you')      
+      communication.send!
+  end
+  
+  def send!
+   # insert code to send emails
   end
 end
 ```
