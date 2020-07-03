@@ -54,7 +54,7 @@ markup `inf(RequestType) {ReturnType}` over it.
 
 
 Supported request and return types are: `ID`, ~~String~~, ~~Integer~~,
-~~Float~~, ~~Bool~~, [Byld Messages][1] and `Byld Models`.
+~~Float~~, ~~Bool~~, [Byld Messages] [1] and `Byld Models`.
 
 `Byld::Model` is an extension of active record, so all of active record methods
  are available to use on it.
