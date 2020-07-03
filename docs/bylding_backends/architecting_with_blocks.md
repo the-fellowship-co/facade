@@ -37,7 +37,7 @@ identity/
 Use the `byld block g:model [model-name]` to create a model. 
 
 ```sh
-$ byld block g:model users
+$ byld block g:model user
 ```
 
 It creates two files the actual model and the db changes needed for the new model.
