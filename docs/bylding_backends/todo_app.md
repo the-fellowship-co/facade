@@ -5,7 +5,7 @@ sidebar_label: Let's build a backend for todoist
 ---
 
 This tutorial will help you build and deploy a backend for todoist. For this you
-will create a project with two blocks and one gate to expose them.
+will create a project with three blocks and one gate to expose them.
 
 #### Blocks
 1. Identity
@@ -74,7 +74,7 @@ $ byld deploy
 
 $ byld status
 
-[yourname]-todo
+todoist
 
 blocks
 
@@ -149,7 +149,7 @@ model.
 
 ```ruby
 class Communication < Byld::Model
-  expose only: [:get, :create, :update, :delete, :list]
+  expose only: [:get, :create]
 end
 ```
 
