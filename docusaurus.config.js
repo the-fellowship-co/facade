@@ -55,7 +55,7 @@ module.exports = {
           items: [
             {
               label: 'Try it for free',
-              to: 'docs/getting_started/quick_start',
+              to: 'docs/getting_started/intro',
               className: 'footer--blue',
             },
           ],

@@ -9,7 +9,7 @@ Use `byld gate expose [block-name]` to generate an edge to the frontend.
 ```sh
 $ byld gate expose order
 ```
-### Structure of a gate
+#### Structure of a gate
 
 ```sh
 gate/

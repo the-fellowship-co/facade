@@ -9,7 +9,7 @@ sidebar_label: Communicating between blocks
 Blocks could access the marked up interface methods from the another block in a synchronous manner. In below case `Stock` model in `inventory` block exposes a bunch of methods.
 
 ```ruby
-class Stock < ActiveRecord::Base
+class Stock < Byld::Model
   expose only: [:get, :update]
 
   inf(ID) {Bool}
@@ -46,7 +46,7 @@ Use `publish(:event_name)` to send a message to multiples blocks using our
 pub/sub system.
 
 ```ruby
-class Order < ActiveRecord::Base
+class Order < Byld::Model
   publisher on: order_events
 
   def place!
@@ -62,7 +62,7 @@ to subscribe events from a particular channel. Event object passed to the
 subscriber method contains `type` and `source_id` of the model publishing it.
 
 ```ruby
-class Stock < ActiveRecord::Base
+class Stock < Byld::Model 
   ...
 
   subscriber

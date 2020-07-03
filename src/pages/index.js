@@ -34,7 +34,7 @@ const architect_tabs = [{
 
     },{
       title: "Model",
-      code: `class Order < ActiveRecord::Base
+      code: `class Order < Byld::Model
   expose allow: [:get, :create, :update, :delete, :list]
   publisher on: :order_events
 
@@ -64,7 +64,7 @@ const expose_tabs = [{
 
     },{
       title: "Edge",
-      code: `class OrderEdge < Particle::Edge
+      code: `class OrderEdge < Byld::Edge
   include Orders
 
   inf(ID) {Order}
@@ -75,7 +75,7 @@ const expose_tabs = [{
   ...
 end` }, {
   title: "Join",
-  code: `class OrderEdge < Particle::Edge
+  code: `class OrderEdge < Byld::Edge
   include Identity
 
   join Customer
@@ -104,7 +104,7 @@ gate
 +-------------------------------+------------------------------+
 | status  | url                 | docs                         |
 +--------------------------------+-----------------------------+
-| running | amazon.byldapps.com | amazon.byldapps.com/graphiql |
+| running | amazon.letsbyld.com | amazon.letsbyld.com/graphiql |
 +---------+---------------------+------------------------------+
 
 blocks
@@ -120,7 +120,7 @@ blocks
 
 const comms_tabs = [{
       title: "Sync",
-      code: `class Order < ActiveRecord::Base
+      code: `class Order < Byld::Model
 
   inf(ID) {Order}
   def confirm!(id)
@@ -132,7 +132,7 @@ const comms_tabs = [{
 end`
     },{
       title: "Async: Publisher",
-      code: `class Order < ActiveRecord::Base
+      code: `class Order < Byld::Model
   publisher on: order_events
 
   def confirm!
@@ -143,7 +143,7 @@ end`
     },
     {
       title: 'Async: Subscriber',
-      code: `class Stock < ActiveRecord::Base
+      code: `class Stock < Byld::Model
 
   subscriber
   def self.handle_order_events(event)

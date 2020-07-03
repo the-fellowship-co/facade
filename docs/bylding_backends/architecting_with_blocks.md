@@ -16,15 +16,15 @@ Now there is a new directory created with the name `amazon/`. Switch into the ne
 
 ### Create your first block
 
-Use `byld block new [block-name]` to create a new block. Lets start with identity block which abstracts users and identity management.
+Use `byld block new [block-name]` to create a new block. Lets start with an identity block which abstracts users and identity management for your business/organisation.
 
 ```sh
 $ byld block new identity
 ```
 
-#### Structure of a block
+Switch into the newly created `identity/` directory.
 
-Block are fundamental units of abstractions of your business/organizations. ...
+#### Structure of a block
 
 ```sh
 identity/
@@ -34,32 +34,37 @@ identity/
 
 ### Create your first model
 
-Use the `byld b g:model [model-name]` to create a model.
+Use the `byld block g:model [model-name]` to create a model. 
 
 ```sh
-$ byld b g:model user
+$ byld block g:model users
 ```
 
-It creates two files the actual model and the db migration for the model.
+It creates two files the actual model and the db changes needed for the new model.
 
 ```ruby
-class User < ActiveRecord::Base
+class User < Byld::Model
   expose only: [:get, :create, :update, :delete, :list]
 end
 ```
 
 The model by default has `get`, `create`, `update`, `delete` and `list`
-implemented. You could add additional methods using this interface markup
-`inf(RequestType) {ReturnType}` over it.
+are implemented. You could add additional methods using this interface markup
+`inf(RequestType) {ReturnType}` over it. 
+
+Supported request and return types are: `ID`, `String`, `Integer`, `Float`, `Bool`, `Byld Messages` and `ActiveRecord Models`.
+
+`Byld::Model` is an extension of active record, so all of active record methods are available to use on it. 
 
 ```ruby
-class User < ActiveRecord::Base
+class User < Byld::Model
   expose only: [:get, :create, :update, :delete, :list]
 
   inf(ID) {User}
   def self.activate(id)
     user = User.find(id)
-    user.enable!
+    user.active = true
+    user.save!
   end
 end
 ```
@@ -81,7 +86,7 @@ That’s pretty much it. You’re all set up to deploy your first block.
 
 ### Deploy your block
 
-Use `byld deploy` from the block directory to deploy it. Check the status of the deployment using `byld status` command. 
+Use `byld deploy` from the block directory to deploy it. And check the status of the deployment using `byld status` command. 
 
 ```sh
 $ byld status
