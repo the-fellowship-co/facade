@@ -1,10 +1,10 @@
 ---
 id: todo_app
-title: Let's build a backend for Todo app
-sidebar_label: Let's build a backend for Todo app
+title: Let's build a backend for a todo app
+sidebar_label: Let's build a backend for a todo app
 ---
 
-This tutorial will help you build and deploy a backend for todoist. For this you
+This tutorial will help you build and deploy a backend for a todo app. For this you
 will create a project with three blocks and one gate to expose them.
 
 #### Blocks
