@@ -176,7 +176,7 @@ blocks
 `byld console` and `byld logs` commands come in handy to test and debug the
 block after deploying.
 
-## Expose identity and todos block
+## Expose identity and todos blocks
 
 From the `todoist/` directory, run to create a gate for your project.
 
@@ -230,9 +230,6 @@ blocks
 +-------------+------------+
 ```
 
-Use the `todoist.letsbyld.com/graphiql` url to to view docs and
-test out your endpoints. 
-
-You can use `todoist.letsbyld.com` url to power your UI across different platforms.
+Use the `todoist.letsbyld.com/graphiql` url to to view docs and test out your endpoints. You can use `todoist.letsbyld.com` url to power your UI across different platforms.
 
 
