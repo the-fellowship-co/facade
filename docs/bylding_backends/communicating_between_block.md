@@ -6,7 +6,9 @@ sidebar_label: Communicating between blocks
 
 ### Synchronous Communication
 
-Blocks could access the marked up interface methods from the another block in a synchronous manner. In below case `Stock` model in `inventory` block exposes a bunch of methods.
+Blocks could access the marked up interface methods from the another block in
+a synchronous manner. In below case `Stock` model in `inventory` block exposes
+`get`, `update` and `available?` method.
 
 ```ruby
 class Stock < Byld::Model
@@ -43,11 +45,12 @@ on the channel.
 #### Publisher
 
 Use `publish(:event_name)` to send a message to multiples blocks using our
-pub/sub system.
+pub/sub system. By default, `:order_created`, `:order_updated` and
+`:order_destroyed` events will be published.
 
 ```ruby
 class Order < Byld::Model
-  publisher on: order_events
+  publisher on: :order_events
 
   def place!
     ...
@@ -62,7 +65,7 @@ to subscribe events from a particular channel. Event object passed to the
 subscriber method contains `type` and `source_id` of the model publishing it.
 
 ```ruby
-class Stock < Byld::Model 
+class Stock < Byld::Model
   ...
 
   subscriber

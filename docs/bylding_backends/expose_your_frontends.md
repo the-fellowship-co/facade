@@ -4,7 +4,8 @@ title: Expose your blocks
 sidebar_label: Expose your blocks
 ---
 
-Use `byld gate expose [block-name]` to generate an edge to the frontend.
+Use `byld gate expose [block-name]` to generate an edge to the frontend. We
+will generate one edge for every `Byld::Model` in the block.
 
 ```sh
 $ byld gate expose order
@@ -21,7 +22,8 @@ gate/
     └── payment_edge.rb
     └── communication_edge.rb
 ```
-You could add additional methods using this interface markup `inf(RequestType) {ReturnType}` over it.
+You could add additional methods using this interface markup
+`inf(RequestType) {ReturnType}` over it.
 
 ```ruby
 class OrderEdge < Byld::Edge
@@ -51,6 +53,13 @@ end
 
 ### Joining blocks
 
+Use join markup `join [ReturnType]` to include attributes of models across
+different blocks.
+
+
+`join User` This allows you to get customer details as part of order requests.
+
+
 ```ruby
 class OrderEdge < Byld::Edge
   include Order
@@ -68,7 +77,8 @@ end
 
 ### Deploy your gate
 
-Use `byld deploy` to deploy the gate. This exposes all the blocks to the frontends via GraphQL endpoints.
+Use `byld deploy` to deploy the gate. This exposes all the blocks to the
+frontends via GraphQL endpoints.
 
 ```sh
 $ byld deploy

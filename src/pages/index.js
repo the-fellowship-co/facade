@@ -133,7 +133,7 @@ end`
     },{
       title: "Async: Publisher",
       code: `class Order < Byld::Model
-  publisher on: order_events
+  publisher on: :order_events
 
   def confirm!
     ...

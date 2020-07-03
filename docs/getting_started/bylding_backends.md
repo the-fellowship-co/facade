@@ -8,7 +8,7 @@ sidebar_label: Bylding Backends
 
 ### Create your first project
 
-Let's try to create a barebones versions of amazon.com's backend with byld. Use `byld new [project-name]` to create a new project. 
+Let's try to create a barebones versions of amazon.com's backend with byld. Use `byld new [project-name]` to create a new project.
 
 ```sh
 $ byld new amazon
@@ -18,7 +18,7 @@ Now there is a new directory created with the name `amazon/`. Switch into the ne
 
 ### Create your first block
 
-Block are fundamental units of abstractions of your business/organizations. Lets start with identity block which abstracts users, roles and groups. 
+Block are fundamental units of abstractions of your business/organizations. Lets start with identity block which abstracts users, roles and groups.
 
 Use `byld block new [block-name]` to create a new block.
 
@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
 end
 ```
 
-The model by default has `get`, `create`, `update`, `delete` and `list`
+The model by default has `get`, `create`, `update`, `delete` and `list` methods
 implemented. You could add additional methods using this interface markup
 `inf(RequestType) {ReturnType}` over it.
 
