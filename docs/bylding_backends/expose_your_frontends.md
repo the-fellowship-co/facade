@@ -4,11 +4,14 @@ title: Expose your blocks
 sidebar_label: Expose your blocks
 ---
 
-Use `byld gate expose [block-name]` to generate an edge to the frontend. It'll generate one edge for every `Byld::Model` in that block. Edge is collection of queries, mutations and joins for that model.
+Use `byld gate expose [block-name]` to generate an edge to the frontend. It'll generate one edge for every `Byld::Model` in that block. 
+
+Edge is collection of queries, mutations and joins for that model.
 
 ```sh
 $ byld gate expose order
 ```
+
 #### Structure of a gate
 
 ```sh
