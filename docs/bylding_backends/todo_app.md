@@ -170,7 +170,7 @@ class CreateCommunications < ActiveRecord::Migration[5.2]
 end
 ```
 
-Now, let's subscribe to `:todo_item_created` event to send 
+Now, let's subscribe to `:todo_item_created` event to send
 
 ```ruby
 class Communication < Byld::Model
@@ -183,10 +183,10 @@ class Communication < Byld::Model
       todo_item = TodoItemService.client.get(event.source_id)
       log.info 'Sending email'
 
-      communication = Communication.create!(type: 'EMAIL', to_id: todo_item.assignee_id, from_id: 'no-reply@todoist.com', body: 'New todo assigned to you')      
+      communication = Communication.create!(type: 'EMAIL', to_id: todo_item.assignee_id, from_id: 'no-reply@todoist.com', body: 'New todo assigned to you')
       communication.send!
   end
-  
+
   def send!
    # insert code to send emails
   end
@@ -252,6 +252,9 @@ When the block changes, you need to expose the block and deploy the gate again.
 ```sh
 $ byld deploy
 ```
+
+*Woohoo!!* We have successfully built and deployed the backend for the todoist
+application.
 
 ### Querying the gate
 
