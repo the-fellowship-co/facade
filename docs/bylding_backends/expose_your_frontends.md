@@ -89,7 +89,7 @@ $ byld status
 ```
 Use the `/graphiql` url to start GraphiQL in your browser, there you could view docs and test out your endpoints. 
 
-And use the hosted url to power your frontends.
+Finally use the hosted url to power your frontends.
 
 ```graphql
 query {
