@@ -1,7 +1,7 @@
 ---
 id: todo_app
-title: Let's build a backend for todoist
-sidebar_label: Let's build a backend for todoist
+title: Let's build a backend for Todo app
+sidebar_label: Let's build a backend for Todo app
 ---
 
 This tutorial will help you build and deploy a backend for todoist. For this you
@@ -35,7 +35,7 @@ Switch into the newly created `identity/` directory.
 $ byld block g:model user
 ```
 
-It creates two files the actual model and the db changes needed for the new
+It creates two files, the actual model and the db changes needed for the new
 model.
 
 ```ruby
@@ -44,7 +44,7 @@ class User < Byld::Model
 end
 ```
 
-Let's add first_name  and last_name fiels for User in the migration file.
+Let's add first_name  and last_name fields for User in the migration file.
 
 ```ruby
 class CreateUsers < ActiveRecord::Migration[5.2]
@@ -100,8 +100,8 @@ Switch into the newly created `todos/` directory.
 $ byld block g:model todo_item
 ```
 
-It creates two files the actual model and the db changes needed for the new
-model. Let's add `publisher on: :todo_item_events` to the model to publish `:todo_item_created`, `:todo_item_updated` and `:todo_item_destroyed` events to other blocks. Later, you will use `:todo_item_created` event to send emails to the assigned user.
+It creates two files, the actual model and the db changes needed for the new
+model. Let's add `publisher on: :todo_item_events` to the model. This will publish `:todo_item_created`, `:todo_item_updated` and `:todo_item_destroyed` events to other blocks. Later, you will use `:todo_item_created` event to send emails to the assigned user.
 
 
 ```ruby
@@ -167,7 +167,7 @@ Switch into the newly created `notifications/` directory.
 $ byld block g:model communication
 ```
 
-It creates two files the actual model and the db changes needed for the new
+It creates two files, the actual model and the db changes needed for the new
 model.
 
 ```ruby
@@ -195,7 +195,7 @@ end
 
 Now, let's subscribe to `:todo_item_created` event to send emails to the
 assigned user. For this,  we need to connect notifications with todos block
- to the fetch todos for sending emails, use `byld connect [block]` to do that.
+ to fetch todos for sending emails. Use `byld connect [block]` to do that.
 
 ```sh
 $ byld connect todos
