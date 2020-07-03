@@ -193,12 +193,15 @@ class CreateCommunications < ActiveRecord::Migration[5.2]
 end
 ```
 
-Now, let's subscribe to `:todo_item_created` event to send emails to the assigned user. Before that we need to connect notifications with todos blocks to the fetch todos for send emails, use `byld connect [block]` to do that.
+Now, let's subscribe to `:todo_item_created` event to send emails to the
+assigned user. For this,  we need to connect notifications with todos block
+ to the fetch todos for sending emails, use `byld connect [block]` to do that.
 
 ```sh
 $ byld connect todos
 ```
 
+Now, let's implement the handler to process `:todo_item_created` event.
 ```ruby
 class Communication < Byld::Model
   include Todos
@@ -211,10 +214,10 @@ class Communication < Byld::Model
       todo_item = TodoItemService.client.get(event.source_id)
       log.info 'Sending email'
 
-      communication = Communication.create!(type: 'EMAIL', to_id: todo_item.assignee_id, from_id: 'no-reply@todoist.com', body: 'New todo assigned to you')      
+      communication = Communication.create!(type: 'EMAIL', to_id: todo_item.assignee_id, from_id: 'no-reply@todoist.com', body: 'New todo assigned to you')
       communication.send!
   end
-  
+
   def send!
    # insert code to send emails
   end
