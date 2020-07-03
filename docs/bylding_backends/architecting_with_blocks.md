@@ -52,7 +52,7 @@ The model by default has `get`, `create`, `update`, `delete` and `list`
 are implemented. You could add additional methods using this interface markup
 `inf(RequestType) {ReturnType}` over it. 
 
-Supported request and return types are: `ID`, `~~String~~`, `~~Integer~~`, `~~Float~~`, `~~Bool~~`, `Byld Messages` and `Byld Models`.
+Supported request and return types are: `ID`, ~~String~~, ~~Integer~~, ~~Float~~, ~~Bool~~, `Byld Messages` and `Byld Models`.
 
 Also `Byld::Model` is an extension of active record, so all of active record methods are available to use on it. 
 
