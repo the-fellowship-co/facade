@@ -4,7 +4,7 @@ title: Expose your blocks
 sidebar_label: Expose your blocks
 ---
 
-Use `byld gate expose [block-name]` to generate an edge to the frontend. It'll generate a edge for every `Byld::Model` in that block. 
+Use `byld gate expose [block-name]` to generate an edge to the frontend. It'll generate a edge for every `Byld::Model` in that block.
 
 ```sh
 $ byld gate expose order
@@ -77,6 +77,8 @@ end
 
 Use `byld deploy` to deploy the gate.
 
+When the block changes, you need to expose the block and deploy the gate again.
+
 ```sh
 $ byld deploy
 ```
@@ -86,8 +88,27 @@ Use `byld status` to see the status of the gate and blocks.
 
 ```sh
 $ byld status
+
++-------------------------------+------------------------------+
+| status  | url                 | docs                         |
++--------------------------------+-----------------------------+
+| running | amazon.letsbyld.com | amazon.letsbyld.com/graphiql |
++---------+---------------------+------------------------------+
+
+blocks
+
++----------+------------+
+| name     | status     |
++----------+------------+
+| order    | running    |
+| identity | running    |
++----------+------------+
 ```
-Use the `/graphiql` url to start GraphiQL in your browser, there you could view docs and test out your endpoints. 
+You can use `amazon.letsbyld.com` url to power your UI across different
+platforms.
+
+Use the `amazon.letsbyld.com/graphiql` url to view docs and test out your
+endpoints.
 
 ```graphql
 query {
