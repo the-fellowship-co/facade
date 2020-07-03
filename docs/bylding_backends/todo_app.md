@@ -57,6 +57,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     create_table :users do |t|
       t.string :first_name
       t.string :last_name
+
     end
   end
 end
@@ -123,6 +124,7 @@ class CreateTodoItems < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :description
       t.boolean :status
+      t.assingee_id :integer
     end
   end
 end
@@ -140,14 +142,14 @@ class TodoItem < Byld::Model
     case event.type
     when :user_destroyed
       user = UserService.client.get(event.source_id)
-      TodoItem.where(user_id: user.id).delete_all
+      TodoItem.where(user_id: user.assignee_id).delete_all
   end
 end
 ```
 
-### Deploy todo block
+### Deploy todos block
 
-Now, let us deploy the todo block and check its status.
+Now, let us deploy the todos block and check its status.
 
 ```sh
 $ byld deploy
@@ -164,7 +166,7 @@ blocks
 | name     | status   |
 +----------+----------+
 | identity | running  |
-| todo     | running  |
+| todos    | running  |
 +----------+----------+
 
 ```
@@ -174,7 +176,7 @@ blocks
 `byld console` and `byld logs` commands come in handy to test and debug the
 block after deploying.
 
-## Expose identity and todo block
+## Expose identity and todos block
 
 From the `todoist/` directory, run to create a gate for your project.
 
@@ -185,14 +187,14 @@ $ byld gate new
 Now there is a new directory created with the name `gate/`. Switch into the
 newly created directory.
 
-Now, expose identity and todo block using,
+Now, expose identity and todos block using,
 
 ```sh
 $ byld gate expose identity
 ```
 
 ```sh
-$ byld gate expose todo
+$ byld gate expose todos
 ```
 ### Deploy gate
 
@@ -224,7 +226,7 @@ blocks
 | name        | status     |
 +-------------+------------+
 | identity    | running    |
-| todo        | running    |
+| todos       | running    |
 +-------------+------------+
 ```
 You can use `todoist.letsbyld.com` url to power your UI across
