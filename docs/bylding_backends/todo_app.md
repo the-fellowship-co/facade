@@ -236,7 +236,7 @@ blocks
 | name          | status   |
 +---------------+----------+
 | identity      | running  |
-| todos         | running. |
+| todos         | running  |
 | notifications | running  |
 +---------------+----------+
 
