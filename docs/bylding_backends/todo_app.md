@@ -12,7 +12,7 @@ will create a project with three blocks and one gate to expose them.
 2. Todos
 3. Notifications
 
-### Create todoist project
+## Create todoist project
 
 ```sh
 $ byld new todoist
