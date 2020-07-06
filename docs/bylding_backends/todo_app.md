@@ -12,6 +12,18 @@ will create a project with three blocks and one gate to expose them.
 2. Todos
 3. Notifications
 
+## Login
+
+Use `byld login` to authenicate. If you don't have a token yet it. [Request your token](https://forms.gle/2VGp3jgdndogwM939).
+
+```sh
+$ byld login
+
+Your email: xxx@xxx.com
+Your token: xxxxx
+```
+You’re all set for building your first project.
+
 ## Create todoist project
 
 ```sh
@@ -212,7 +224,7 @@ class Communication < Byld::Model
     case event.type
     when :todo_item_created
       log.info 'Sending email...'
-      
+
       todo_item = TodoItemService.client.get(event.source_id)
       communication = Communication.create!(type: 'EMAIL', to_id: todo_item.assignee_id, from_id: 'no-reply@todoist.com', body: 'New todo assigned to you')
       communication.send!

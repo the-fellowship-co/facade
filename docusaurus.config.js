@@ -25,6 +25,11 @@ module.exports = {
           label: 'Docs',
           position: 'right',
         },
+        {
+          to: 'https://calendly.com/letsbyld/demo',
+          label: 'Request Demo',
+          position: 'right',
+        },
         // {
         //   to: 'pricing/',
         //   // activeBasePath: 'facade',
@@ -39,7 +44,7 @@ module.exports = {
         //   className: 'link--click'
         // },
         {
-          to: 'docs/getting_started/intro',
+          to: 'https://forms.gle/2VGp3jgdndogwM939',
           activeBasePath: 'docs',
           label: 'Try it for free',
           position: 'right',
@@ -51,11 +56,11 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Byld',
           items: [
             {
               label: 'Try it for free',
-              to: 'docs/getting_started/intro',
+              to: 'https://forms.gle/2VGp3jgdndogwM939',
               className: 'footer--blue',
             },
           ],

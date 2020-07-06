@@ -281,7 +281,7 @@ function Home() {
                 'button button--outline button--secondary button--lg button--blue',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/getting_started/intro')}>
+              to='https://forms.gle/2VGp3jgdndogwM939'>
               Try it for free
             </Link>
             <Link
@@ -289,9 +289,9 @@ function Home() {
                 'button button--outline button--secondary button--lg button--blue-border',
                 styles.getStarted,
               )}
-              to="https://calendly.com/letsbyld/demo"
+              to={useBaseUrl('docs/bylding_backends/todo_app')}
               target="_blank">
-              Request Demo
+              Quick Start
             </Link>
           </div>
           </div>
