@@ -26,6 +26,12 @@ module.exports = {
           position: 'right',
         },
         {
+          to: 'docs/bylding_backends/todo_app',
+          activeBasePath: 'docs',
+          label: 'Quick Start',
+          position: 'right',
+        },
+        {
           to: 'https://calendly.com/letsbyld/demo',
           label: 'Request Demo',
           position: 'right',
