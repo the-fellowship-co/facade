@@ -29,7 +29,7 @@ Use `byld login` to authenicate. If you don't have a token yet it. [Request your
 ```sh
 $ byld login
 
-Your email: xxx@xxx.com
+Your email: someone@example.com
 Your token: xxxxx
 ```
 You’re all set for building your first project.
