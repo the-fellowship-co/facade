@@ -1,63 +1,66 @@
 ---
-id: architecting_with_blocks
-title: Architecting with blocks
-sidebar_label: Architecting with blocks
+id: architecte_with_blocks
+title: Architect with blocks
+sidebar_label: Architect with blocks
 ---
 
-### Create your first project
+## Project
+
+Project is a collection of your blocks and a gate. Blocks are individual units
+of abstraction in your business. Gate is a GraphQL based gateway to expose all
+the blocks to your frontends.
 
 Use `byld new [project-name]` to create a new project.
 
+In case of simplified amazon, project would have the following blocks:
 ```sh
-$ byld new amazon
+amazon/
+├── identity/
+└── orders/
+└── payments/
+└── communication/
+└── inventory/
+└── catalog/
+└── shipping/
+└── gate/
 ```
 
-Now there is a new directory created with the name `amazon/`. Switch into the newly created directory.
+## Blocks
 
-### Create your first block
+Block is an individual unit of abstraction in your business. Compared to
+traditional backends, block eliminates all the boilerplate code for transport,
+routing and persistence. In blocks, you need only models to organize your
+business logic.
 
-Use `byld block new [block-name]` to create a new block. Lets start with an identity block which abstracts users and identity management for your business/organisation.
+Use `byld block new [block-name]` to create a new block.
 
-```sh
-$ byld block new identity
-```
-
-Switch into the newly created `identity/` directory.
-
-#### Structure of a block
+### Structure of a block
 
 ```sh
 identity/
 ├── Gemfile
 └── models/
+    └── user.rb
+    └── contact_info.rb
 ```
-
-### Create your first model
-
-Use the `byld block g:model [model-name]` to create a model.
-
-```sh
-$ byld block g:model user
-```
-
-It creates two files the actual model and the db changes needed for the new model.
-
-```ruby
-class User < Byld::Model
-  expose only: [:get, :create, :update, :delete, :list]
-end
-```
-
-The model by default has `get`, `create`, `update`, `delete` and `list`
-methods implemented. You could add additional methods using this interface
-markup `inf(RequestType) {ReturnType}` over it.
+### Models
+Model is place to implement your business logic. Methods defined in models
+ can be exposed to other blocks and frontends . Model by default has
+ `get`, `create`, `update`, `delete` and `list` interface methods. You can
+ also add additional methods and control what needs to be exposed using `inf` markup.
 
 
-Supported request and return types are: `ID`, ~~String~~, ~~Integer~~,
-~~Float~~, ~~Bool~~, [Byld Messages] [1] and `Byld Models`.
 
-`Byld::Model` is an extension of active record, so all of active record methods
- are available to use on it.
+#### Interface Markup
+You could add additional interface methods using `inf(RequestType) {ReturnType}`
+ over it. Supported request and return types are: `ID`, ~~String~~,
+ ~~Integer~~, ~~Float~~, ~~Bool~~, `Byld::Messages` and `Byld::Model`.
+
+Model's interface methods are wrapped in a `[Model]Service` object which can be
+used from other blocks and gates to invoke them.
+
+Also, `Byld::Model` is an extension of active record, so all of its methods
+are available to use on it.
 
 ```ruby
 class User < Byld::Model
@@ -71,7 +74,14 @@ class User < Byld::Model
   end
 end
 ```
-Use the migration file to fill the necessary fields for the model.
+
+Use the `byld block g:model [model-name]` to generate a model. It creates two
+files the actual model and the db migration needed for the new model.
+
+#### Migration
+Migration files are used create the schema for the models. You can define the
+necessary fields for the model and add further migrations to add/ remove
+fields, create primary keys, indexes etc..
 
 ```ruby
 class CreateUsers < ActiveRecord::Migration[5.2]
@@ -85,30 +95,31 @@ class CreateUsers < ActiveRecord::Migration[5.2]
 end
 ```
 
-That’s pretty much it. You’re all set up to deploy your first block.
+## Deploying a block
 
-### Deploy your block
+Blocks eliminates all the infrasturcture related code needed to deploy your
+block and database. Your migration scripts will be run automatically before
+deployment.
 
-Use `byld deploy` from the block directory to deploy it. And check the status of the deployment using `byld status` command.
+Use `byld deploy` from the block directory to deploy it. And check the status
+of the deployment using `byld status` command.
 
-```sh
-$ byld status
 
-amazon
+## Testing a block
 
-blocks
+After deploying, you can test/ debug your blocks from your local command line.
 
-+----------+----------+
-| name     | status   |
-+----------+----------+
-| identity | active   |
-+----------+----------+
+### Using interactive console
 
+Use `byld console` to connect to your block's console. All the models are
+loaded for testing.
+
+```ruby
+req = CreateUserReq.new(first_name: 'foo', last_name: 'bar')
+user = UserService.client.create(req)
+UserService.client.activate(user.id)
 ```
 
-### Test and debug your block
+### Viewing logs
 
-`byld console` and `byld logs` commands come in handy to test and debug the block after deploying.
-
-
-[1]: `Byld::Message` can be inherited to use custom classes as return and request types.
+Use `byld logs` to view your block's logs in your command line.

@@ -20,7 +20,7 @@ const architect_tabs = [{
 |-- inventory/
 |-- catalog/
 |-- shipping/
-|-- gateway/
+|-- gate/
 `
 
     },{
