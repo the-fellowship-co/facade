@@ -52,7 +52,7 @@ module.exports = {
         {
           to: 'https://forms.gle/2VGp3jgdndogwM939',
           activeBasePath: 'docs',
-          label: 'Try it for free',
+          label: 'Get Access',
           position: 'right',
           className: 'link--blue',
         },
@@ -65,7 +65,7 @@ module.exports = {
           title: 'Byld',
           items: [
             {
-              label: 'Try it for free',
+              label: 'Get Access',
               to: 'https://forms.gle/2VGp3jgdndogwM939',
               className: 'footer--blue',
             },

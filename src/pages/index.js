@@ -282,7 +282,7 @@ function Home() {
                 styles.getStarted,
               )}
               to='https://forms.gle/2VGp3jgdndogwM939'>
-              Try it for free
+              Get Access
             </Link>
             <Link
               className={classnames(
