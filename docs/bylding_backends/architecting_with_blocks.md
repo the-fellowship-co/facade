@@ -1,5 +1,5 @@
 ---
-id: architecte_with_blocks
+id: architect_with_blocks
 title: Architect with blocks
 sidebar_label: Architect with blocks
 ---

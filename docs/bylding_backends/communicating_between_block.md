@@ -3,6 +3,12 @@ id: communicating_between_blocks
 title: Communicating between blocks
 sidebar_label: Communicating between blocks
 ---
+Communication between blocks is made very simple compared to traditional backends. Synchronous requests to other blocks is a simple function call. For asynchronous requests, you can use the in built pub/sub system without any additional setup.
+
+### Connecting a block
+
+You need to connect to a block from another block to invoke all its interface methods. Use `byld connect [block-name]` to enable sync communication between blocks.
+
 
 ### Synchronous Communication
 
@@ -23,13 +29,13 @@ class Stock < Byld::Model
 end
 ```
 
-Use `byld connect [block-name]` to enable sync communication between blocks.
+From order block connect to inventory block using,
 
 ```sh
 $ byld connect inventory
 ```
 
-After this you should be able to call all the exposed methods (`:get`, `:update`, `:available?`) from `Stock` in another block using the `[Model]Service.client`.
+After this you should be able to call all the exposed methods (`:get`, `:update`, `:available?`) from Stock in order block using the StockService.client.
 
 ```ruby
 StockService.client.available?(productId)
