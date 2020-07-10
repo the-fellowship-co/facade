@@ -6,13 +6,10 @@ sidebar_label: Architect with blocks
 
 ## Project
 
-Project is a collection of your blocks and a gate. Blocks are individual units
-of abstraction in your business. Gate is a GraphQL based gateway to expose all
-the blocks to your frontends.
-
-Use `byld new [project-name]` to create a new project.
+Project is a collection of your blocks and a gate. Use `byld new [project-name]` to create a new project.
 
 In case of simplified amazon, project would have the following blocks:
+
 ```sh
 amazon/
 ├── identity/
