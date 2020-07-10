@@ -31,11 +31,11 @@ module.exports = {
           label: 'Quick Start',
           position: 'right',
         },
-        {
-          to: 'https://calendly.com/letsbyld/demo',
-          label: 'Request Demo',
-          position: 'right',
-        },
+        // {
+        //   to: 'https://calendly.com/letsbyld/demo',
+        //   label: 'Request Demo',
+        //   position: 'right',
+        // },
         // {
         //   to: 'pricing/',
         //   // activeBasePath: 'facade',
