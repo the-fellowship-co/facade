@@ -1,10 +1,13 @@
 module.exports = {
   someSidebar: {
-    "Getting Started": ['getting_started/intro'],
-    "Bylding Backend": ['bylding_backends/architect_with_blocks',
+    "GETTING STARTED": ['getting_started/intro', 'getting_started/faq'],
+    "BYLDING BACKENDS": ['bylding_backends/organize_your_project',
+    'bylding_backends/working_with_blocks',
+    'bylding_backends/working_with_models',
+    'bylding_backends/deploying_and_testing_blocks',
     'bylding_backends/communicating_between_blocks',
     'bylding_backends/expose_your_blocks','bylding_backends/custom'],
-    "Examples":['bylding_backends/todo_app'],
-    "References": ['references/cli', 'references/ruby', 'references/graphql'],
+    "EXAMPLES":['bylding_backends/todo_app'],
+    "REFERENCES": ['references/cli', 'references/ruby', 'references/graphql'],
   },
 };

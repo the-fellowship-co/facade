@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Better way to build backends',
-  tagline: 'Design, develop and deploy backends incredibly faster.',
+  tagline: 'Design, develop and deploy backends incredibly fast.',
   url: 'https://letsbyld.com',
   baseUrl: '/',
   favicon: 'favicon/ico',
@@ -85,8 +85,8 @@ module.exports = {
           title: 'Contact Us',
           items: [
             {
-              label: 'Request Demo',
-              to: "https://calendly.com/letsbyld/demo",
+              label: 'Talk to us',
+              to: "https://calendly.com/letsbyld/talktous",
               target: "_blank",
             },
           ],

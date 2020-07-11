@@ -1,7 +1,7 @@
 ---
 id: expose_your_blocks
-title: Expose your blocks
-sidebar_label: Expose your blocks
+title: Exposing blocks to frontend
+sidebar_label: Exposing blocks to frontend
 ---
 
 Use `byld gate expose [block-name]` to generate an edge to the frontend. It'll generate a edge for every `Byld::Model` in that block.

@@ -8,10 +8,12 @@ Byld is a tool to design, develop and deploy backends in an incredibly fast way.
 
 ### How it works?
 
-1. **Architect with blocks**: Use blocks to bootstrap the individual units of abstraction in your business/organisation.
-2. **Communicate between blocks**: Make the blocks communicate in both asynchronous and synchronous way.
-3. **Expose blocks with gates**: Expose the blocks to variety of frontends using gates.
-4. **Deploy block and gates**: Instantly deploy the blocks and gates using a single cli command.
+1. **Architect with blocks** to abstract individual business units like order, payment, shipping etc..
+2. **Communicate between blocks** using a simple function call or publishing/subscribing to events via in built pub/sub system.
+3. **Expose blocks to frontends** using a GraphQL gateway.
+4. **Deploy blocks and gates** instantly using a single cli.
+
+Byld isn't just a framework, though – we eliminate a lot of boilerplate code that application backends tend to require like transport, routing, pub/sub  and infrastructure setup. Byld simplifies the building backends with making you write only code that matters and let's you instantly deploy your backends without any additional setups.
 
 ## Setting it up
 
@@ -20,7 +22,7 @@ Byld is a tool to design, develop and deploy backends in an incredibly fast way.
 ```sh
 $ gem install byld-cli
 ```
-If you don’t have ruby on your machine. We recommend using RVM for installing it.
+You need  to install `ruby 2.6.6` or newer  version. We recommend using [RVM](https://rvm.io/rvm/install) for installing it.
 
 ### Login
 
