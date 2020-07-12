@@ -8,6 +8,10 @@ sidebar_label: FAQs
 
 Byld is a tool to design, develop and deploy backends in an incredibly fast way.
 
+### How is Byld different from?
+
+Byld isn't just a framework, though – we eliminate a lot of boilerplate code that application backends tend to require like transport, routing, pub/sub and infrastructure setup. Byld simplifies building backends by making you only write code that matters and let's you instantly deploy your backends without any additional setups.
+
 ### How long does it take to learn Byld ?
 
 It generally takes an engineer around ten minutes to understand the concepts of Byld., and 30 mins to develop and deploy your first backend. [Quick Start](../bylding_backends/todo_app)
