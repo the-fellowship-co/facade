@@ -95,7 +95,7 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} The Fellowship Co`,
     },
     googleAnalytics: {
-      trackingID: 'UA-55212147-2',
+      trackingID: 'UA-171802618-1',
       anonymizeIP: true,
     },
   },
