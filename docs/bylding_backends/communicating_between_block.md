@@ -3,7 +3,7 @@ id: communicating_between_blocks
 title: Communicating between blocks
 sidebar_label: Communicating between blocks
 ---
-Communication between blocks is made very simple compared to traditional backends. Synchronous requests to other blocks is a simple function call. For asynchronous requests, you can use the in built pub/sub system without any additional setup.
+Communication between blocks is made very simple compared to traditional backends. Synchronous requests to other blocks is a simple function call. For asynchronous requests, you can send and receive messages using the in built messaing system without any additional setup.
 
 ### Connecting a block
 
@@ -14,14 +14,14 @@ You need to connect to a block from another block to invoke all its interface me
 
 Blocks could access the marked up interface methods from the another block in
 a synchronous manner. In below case `Stock` model in `inventory` block exposes
-`get`, `update` and `available?` method.
+`get`, `update` and `is_available` method.
 
 ```ruby
 class Stock < Byld::Model
   expose only: [:get, :update]
 
   inf(ID) {Bool}
-  def self.available?(product_id)
+  def self.is_available(product_id)
     stock = Stock.find(product_id: id)
     stock.qty > 0
   end
@@ -35,10 +35,10 @@ From order block connect to inventory block using,
 $ byld connect inventory
 ```
 
-After this you should be able to call all the exposed methods (`:get`, `:update`, `:available?`) from Stock in order block using the StockService.client.
+After this you should be able to call all the exposed methods (`:get`, `:update`, `:is_available`) from Stock in order block using the Stock.client.
 
 ```ruby
-StockService.client.available?(productId)
+Stock.client.available?(productId)
 ```
 
 ### Asynchronous Communication
@@ -51,8 +51,8 @@ on the channel.
 #### Publisher
 
 Use `publish(:event_name)` to send a message to multiples blocks using our
-pub/sub system. By default, `:order_created`, `:order_updated` and
-`:order_destroyed` events will be published.
+messaging system. By default, `:order_created`, `:order_updated` and
+`:order_destroyed` events will be published when you add `publisher on: :[model]_events` to your model.
 
 ```ruby
 class Order < Byld::Model

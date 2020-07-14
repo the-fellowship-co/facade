@@ -20,12 +20,13 @@ After deploying, you can test/ debug your blocks from your local command line.
 ### Using interactive console
 
 Use `byld console` to connect to your block's console. All the models are
-loaded for testing.
+loaded for testing. You can use the block docs link from `byld status` to
+see all the interface method signature and defintions of the request and response types.
 
 ```ruby
 req = CreateUserReq.new(first_name: 'foo', last_name: 'bar')
-user = UserService.client.create(req)
-UserService.client.activate(user.id)
+user = User.client.create(req)
+User.client.activate(user.id)
 ```
 
 ### Viewing logs

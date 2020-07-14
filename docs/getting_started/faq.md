@@ -8,7 +8,7 @@ sidebar_label: FAQs
 
 Byld is a tool to design, develop and deploy backends in an incredibly fast way.
 
-### How is Byld different from?
+### How is Byld different from rails?
 
 Byld isn't just a framework, though – we eliminate a lot of boilerplate code that application backends tend to require like transport, routing, pub/sub and infrastructure setup. Byld simplifies building backends by making you only write code that matters and let's you instantly deploy your backends without any additional setups.
 
@@ -27,6 +27,13 @@ Yes, you only need basic ruby concepts to build sophisticated backends. Byld eli
 ### What databases does Byld support?
 
 Byld currently supports SQLite database. MySQL support is coming very soon.
+
+### What is the infrastructure specification for Byld blocks ?
+
+Each byld blocks is deployed with,
+
+- 0.25 CPU
+- 256MB memory
 
 ### Can I build UI with Byld?
 
