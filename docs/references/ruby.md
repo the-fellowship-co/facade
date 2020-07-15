@@ -10,6 +10,6 @@ sidebar_label: Ruby Development
 [Ruby beginner guide](https://rubymonk.com/learning/books/1-ruby-primer)
 
 ## Active Record
-[Active Record](https://guides.rubyonrails.org/active_record_basics.html)
+[Active Record](https://guides.rubyonrails.org/active_record_basics.html#what-is-active-record-questionmark)
 
 [Active Record Migration](https://guides.rubyonrails.org/active_record_migrations.html)

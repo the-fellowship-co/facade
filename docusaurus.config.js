@@ -7,7 +7,9 @@ module.exports = {
   organizationName: 'the-fellowship-co', // Usually your GitHub org/user name.
   projectName: 'facade', // Usually your repo name.
   plugins: ['@docusaurus/plugin-google-analytics'],
-
+  scripts : [
+    "https://use.fontawesome.com/0a4cd9deaa.js"
+  ],
   themeConfig: {
     usePrism: true,
     defaultLang: 'js',

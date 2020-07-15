@@ -14,7 +14,7 @@ You could add additional interface methods using `inf(RequestType) {ReturnType}`
 
 Model's interface methods can be accessed like   `[Model].client.[method_name]` from other blocks and gates.
 
-Also, `Byld::Model` is an extension of [ActiveRecord](https://guides.rubyonrails.org/active_record_basics.html), so all of its methods are available to use on it. You can learn more about CRUD methods and querying an Active Record model in the [CRUD methods guide](https://guides.rubyonrails.org/active_record_basics.html#crud-reading-and-writing-data) and [Query Interface guide](https://guides.rubyonrails.org/active_record_querying.html).
+Also, `Byld::Model` is an extension of <a href="https://guides.rubyonrails.org/active_record_basics.html" target="_blank" rel="noopener noreferrer">ActiveRecord</a>, so all of its methods are available to use on it. You can learn more about CRUD methods and querying an Active Record model in the <a href="https://guides.rubyonrails.org/active_record_basics.html#crud-reading-and-writing-data" target="_blank" rel="noopener noreferrer">CRUD methods guide</a> and <a href="https://guides.rubyonrails.org/active_record_querying.html" target="_blank" rel="noopener noreferrer">Query Interface guide</a>.
 
 ```ruby
 class User < Byld::Model
@@ -48,7 +48,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
   end
 end
 ```
-You can learn more about writing database migrations in [ActiveRecord migration guide](https://guides.rubyonrails.org/active_record_migrations.html).
+You can learn more about writing database migrations in <a href="https://guides.rubyonrails.org/active_record_migrations.html" target="_blank" rel="noopener noreferrer">ActiveRecord migration guide</a>.
 
 ### In built methods
 
@@ -83,8 +83,7 @@ Use ActiveRecord valiations to write all your validations logic. Before saving a
 
 You can also run these validations on your own. valid? triggers your validations and returns true if no errors were found in the object, and false otherwise.
 
-You can learn more about writing validation in [ActiveRecord validation guide](https://guides.rubyonrails.org/active_record_validations.html).
-
+You can learn more about writing validation in <a href="https://guides.rubyonrails.org/active_record_validations.html" target="_blank" rel="noopener noreferrer">ActiveRecord validation guide</a>.
 ```ruby
 class User < Byld::Model
   validates :first_name, presence: true
@@ -98,8 +97,7 @@ User.create(first_name: nil).valid? # => false
 
 An association is a connection between two Byld::Model in the same block. Why do we need associations between models? Because they make data representation and common operations easier in your code.
 
-Byld supports `belongs_to`, `has_one` and all types of `has_many` associations.
-[ActiveRecord association guide](https://guides.rubyonrails.org/association_basics.html#why-associations-questionmark)
+Byld supports `belongs_to`, `has_one` and all types of `has_many` associations. You can learn more about associations in <a href="https://guides.rubyonrails.org/association_basics.html#why-associations-questionmark" target="_blank" rel="noopener noreferrer">ActiveRecord association guide</a>.
 
 For example, Order model will have many line items, you can represent this association like
 

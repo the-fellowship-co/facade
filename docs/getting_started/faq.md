@@ -8,7 +8,7 @@ sidebar_label: FAQs
 
 Byld is a tool to design, develop and deploy backends in an incredibly fast way.
 
-### How is Byld different from rails?
+### How is Byld different from Rails?
 
 Byld isn't just a framework, though – we eliminate a lot of boilerplate code that application backends tend to require like transport, routing, pub/sub and infrastructure setup. Byld simplifies building backends by making you only write code that matters and let's you instantly deploy your backends without any additional setups.
 
