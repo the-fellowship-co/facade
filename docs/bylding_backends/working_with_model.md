@@ -93,3 +93,21 @@ end
 User.create(first_name: "John Doe").valid? # => true
 User.create(first_name: nil).valid? # => false
 ```
+
+### Associations
+
+An association is a connection between two Byld::Model in the same block. Why do we need associations between models? Because they make data representation and common operations easier in your code.
+
+Byld supports `belongs_to`, `has_one` and all types of `has_many` associations.
+[ActiveRecord association guide](https://guides.rubyonrails.org/association_basics.html#why-associations-questionmark)
+
+For example, Order model will have many line items, you can represent this association like
+
+```ruby
+class Order < Byld::Model
+  has_many :line_items
+end
+
+class LineItem < Byld::Model
+end
+```
