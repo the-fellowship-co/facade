@@ -5,12 +5,12 @@ sidebar_label: Communicating between blocks
 ---
 Communication between blocks is made very simple compared to traditional backends. Synchronous requests to other blocks is a simple function call. For asynchronous requests, you can send and receive messages using the in built messaing system without any additional setup.
 
-### Connecting a block
+## Connecting a block
 
 You need to connect to a block from another block to invoke all its interface methods. Use `byld connect [block-name]` to enable sync communication between blocks.
 
 
-### Synchronous Communication
+## Synchronous Communication
 
 Blocks could access the marked up interface methods from the another block in
 a synchronous manner. In below case `Stock` model in `inventory` block exposes
@@ -41,14 +41,14 @@ After this you should be able to call all the exposed methods (`:get`, `:update`
 Stock.client.available?(productId)
 ```
 
-### Asynchronous Communication
+## Asynchronous Communication
 
 Mark any model as publisher using the `publisher on: [channel_name]` markup.
 By default model’s creation, update and deletion events are published when the
 model is marked. Use `publish(:event_name, model)`  to publish custom events
 on the channel.
 
-#### Publisher
+### Publisher
 
 Use `publish(:event_name)` to send a message to multiples blocks using our
 messaging system. By default, `:order_created`, `:order_updated` and
@@ -64,7 +64,7 @@ class Order < Byld::Model
   end
 end
 ```
-#### Subscriber
+### Subscriber
 
 Use the `subscriber` markup and name the method this way `handle_[channel_name]`
 to subscribe events from a particular channel. Event object passed to the
@@ -78,7 +78,7 @@ class Stock < Byld::Model
   def self.handle_order_events(event)
     case event.type
     when :order_placed
-      order = OrderService.client.get(event.source_id)
+      order = Order.client.get(event.source_id)
       order.lineitem.each |item|
          stock = Stock.find(product_id: item.product_id)
          stock.quantity -= item.quantity
