@@ -69,7 +69,7 @@ const expose_tabs = [{
 
   inf(ID) {Order}
   def get_order(id)
-    OrderService.client.get(id)
+    Order.client.get(id)
   end
 
   ...
@@ -80,7 +80,7 @@ end` }, {
 
   join Customer
   def customer(order)
-    UserService.client.get(order.customer_id)
+    User.client.get(order.customer_id)
   end
 
   ...
@@ -125,7 +125,7 @@ const comms_tabs = [{
   inf(ID) {Order}
   def confirm!(id)
     order = Order.find(id)
-    if StockService.client.available? order.lineitems
+    if Stock.client.available? order.lineitems
       ...
     end
   end
@@ -149,7 +149,7 @@ end`
   def self.handle_order_events(event)
     case event.type
     when :order_confirmed
-      order = OrderService.client.get(event.source_id)
+      order = Order.client.get(event.source_id)
       Stock.decrement_qty! order.lineitem
     ...
   end
