@@ -225,7 +225,7 @@ class Communication < Byld::Model
     when :todo_item_created
       log.info 'Sending email...'
 
-      todo_item = TodoItemService.client.get(event.source_id)
+      todo_item = TodoItem.client.get(event.source_id)
       communication = Communication.create!(type: 'EMAIL', to_id: todo_item.assignee_id, from_id: 'no-reply@todoist.com', body: 'New todo assigned to you')
       communication.send!
   end
