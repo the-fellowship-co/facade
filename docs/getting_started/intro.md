@@ -8,7 +8,7 @@ Byld is a tool to design, develop and deploy backends in an incredibly fast way.
 
 ### How it works?
 
-1. **Architect with blocks** to abstract individual business units like order, payment, shipping etc..
+1. **Architect with blocks** to abstract different domains of your business
 2. **Communicate between blocks** either synchronously or asynchronously with just a function call.
 3. **Expose blocks to frontends** using gate, a GraphQL gateway.
 4. **Deploy blocks and gates** instantly using a single cli command.
