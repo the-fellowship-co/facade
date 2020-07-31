@@ -35,7 +35,7 @@ const architect_tabs = [{
     },{
       title: "Model",
       code: `class Order < Byld::Model
-  expose allow: [:get, :create, :update, :delete, :list]
+  enable only: [:get, :create]
   publisher on: :order_events
 
   inf(ID) {Order}
@@ -67,7 +67,7 @@ const expose_tabs = [{
       code: `class OrderEdge < Byld::Edge
   include Orders
 
-  inf(ID) {Order}
+  query(ID) {Order}
   def get_order(id)
     Order.client.get(id)
   end

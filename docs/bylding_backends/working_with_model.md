@@ -18,7 +18,7 @@ Also, `Byld::Model` is an extension of <a href="https://guides.rubyonrails.org/a
 
 ```ruby
 class User < Byld::Model
-  expose only: [:get, :create, :update, :delete, :list]
+  enable only: [:get, :create]
 
   inf(ID) {User}
   def self.activate(id)
