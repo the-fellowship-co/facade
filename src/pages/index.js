@@ -74,11 +74,11 @@ const expose_tabs = [{
 
   ...
 end` }, {
-  title: "Join",
+  title: "Extension",
   code: `class OrderEdge < Byld::Edge
   include Identity
 
-  join Customer
+  extension Customer
   def customer(order)
     User.client.get(order.customer_id)
   end
