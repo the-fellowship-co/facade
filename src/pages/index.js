@@ -338,7 +338,7 @@ function Home() {
               <p className="highlight__title">Communicate</p>
               <h1 className="feature__text">Communicate with ease.</h1>
               <p className="feature__detail">Synchronous and asynchronous communication
-              between blocks is always a simple function call.</p>
+              between blocks is just a simple function call.</p>
             </div>
             <div className="col col--2 "></div>
             </div>
