@@ -1,16 +1,16 @@
 ---
 id: todo_app
-title: Let's build a backend for a todo app
-sidebar_label: Let's build a backend for a todo app
+title: Backend for a todo app
+sidebar_label: Backend for a todo app
 ---
 
 This tutorial will help you build and deploy a backend for a todo app. For this you
-will create a project with three blocks and one gate to expose them.
+will create a project with three blocks and a gate to expose them.
 
 #### Blocks
 1. Identity
 2. Todos
-3. Notifications
+3. Communications
 
 ## Login
 
@@ -165,13 +165,13 @@ blocks
 
 ```
 
-## Create notifications block
+## Create communications block
 
 ```sh
-$ byld block new notifications
+$ byld block new comms
 ```
 
-Switch into the newly created `notifications/` directory.
+Switch into the newly created `comms/` directory.
 
 ### Create communication model
 
@@ -206,7 +206,7 @@ end
 ```
 
 Now, let's subscribe to `:todo_item_created` event to send emails to the
-assigned user. For this,  we need to connect notifications with todos block
+assigned user. For this,  we need to connect comms with todos block
  to fetch todos for sending emails. Use `byld connect [block]` to do that.
 
 ```sh
@@ -236,9 +236,9 @@ class Communication < Byld::Model
 end
 ```
 
-### Deploy notifications block
+### Deploy communications block
 
-Now, let us deploy the notifications block and check its status.
+Now, let us deploy the comms block and check its status.
 
 ```sh
 $ byld deploy
@@ -256,7 +256,7 @@ blocks
 +---------------+----------+
 | identity      | running  |
 | todos         | running  |
-| notifications | running  |
+| comms         | running  |
 +---------------+----------+
 
 ```
@@ -317,7 +317,7 @@ blocks
 +---------------+------------+
 | identity      | running    |
 | todos         | running    |
-| notifications | running    |
+| comms         | running    |
 +---------------+------------+
 ```
 
