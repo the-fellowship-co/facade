@@ -13,7 +13,7 @@ Byld is a tool to design, develop and deploy backends in an incredibly fast way.
 3. **Expose blocks to frontends** using gate, a GraphQL gateway.
 4. **Deploy blocks and gates** instantly using a single cli command.
 
-Byld isn't just a framework, though – we eliminate a lot of boilerplate code that tradinational backends require like transport, routing, messaging and infrastructure setup. Byld simplifies building backends by making you only write code that matters and let's you instantly deploy your backends without any additional setups.
+Byld isn't just a framework, though – we eliminate a lot of boilerplate code that tradinational backends require like transport, routing, messaging and infrastructure setup. It simplifies building backends by making you only write code that matters and let's you instantly deploy your backends without any additional setups.
 
 ## Setting it up
 
