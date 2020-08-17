@@ -52,7 +52,7 @@ model.
 
 ```ruby
 class User < Byld::Model
-  expose only: [:get, :create, :update, :delete, :list]
+  enable only: [:get, :create]
 end
 ```
 
@@ -118,7 +118,7 @@ model. Let's add `publisher on: :todo_item_events` to the model. This will publi
 
 ```ruby
 class TodoItem < Byld::Model
-  expose only: [:get, :create, :update, :delete, :list]
+  enable only: [:get, :create, :update, :delete]
   publisher on: :todo_item_events
 end
 ```
@@ -184,7 +184,7 @@ model.
 
 ```ruby
 class Communication < Byld::Model
-  expose only: [:get, :create]
+  enable only: [:get, :create]
 end
 ```
 
