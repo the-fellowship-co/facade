@@ -24,7 +24,7 @@ gate/
 
 ## Edge
 
-Edge is a layer between your frontends and blocks. Edge can be used to create powerful APIs aggregating multiple interface methods from different blocks. For example, to power the order summary UI we need to aggregate `get_order` from order block, `get_payment` from payment block and `shipping_status` from shipping block based on `order_id`. Our `join` markup  simplifies aggregations further by eliminating a need to write a separate method for each complex API.
+Edge is a layer between your frontends and blocks. Edge can be used to create powerful APIs aggregating multiple interface methods from different blocks. For example, to power the order summary page we need to aggregate `get_order` from order block, `get_payment` from payment block and `shipping_status` from shipping block based on `order_id`. Our `join` markup  simplifies aggregations further by eliminating a need to write a separate method for each complex API.
 
 
 ### Creating edges
@@ -60,29 +60,28 @@ class OrderEdge < Byld::Edge
 end
 ```
 
-### Joining models
+### Extending models
 
-Use join markup `join [ReturnType]` to aggregate models across different blocks, doing that would include the joining model as part of the parent model. For instance `join User` allows you to get customer model as part of order model. Now, you can get any customer fields in response along with the order.
+Use extension markup `extension [ReturnType]` to aggregate models across different blocks, doing that would include the extension model as part of the parent model. For instance `extension User` allows you to get customer model as part of order model. Now, you can get any customer fields in response along with the order.
 
-Below `OrderEdge` is joined with `User`, `Payment`, `Shipping` to power the order summary UI.
+Below `OrderEdge` is extended with `User`, `Payment`, `Shipping` to power the order summary UI.
 ```ruby
 class OrderEdge < Byld::Edge
   include Order
   include Identity
-
   ...
 
-  join User
+  extension User
   def customer(order)
     User.client.get(order.user_id)
   end
 
-  join Payment
+  extension Payment
   def payment(order)
     Payment.client.get(order.payment_id)
   end
 
-  join Shipping
+  extension Shipping
   def delivery(order)
     Shipping.client.get(order.shipping_id)
   end
@@ -112,7 +111,7 @@ query {
         }
       }
       payment {
-        transaction_status
+        payment_status
       }
       delivery {
         shipping_status

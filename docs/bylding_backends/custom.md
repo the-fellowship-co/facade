@@ -1,15 +1,16 @@
 ---
 id: custom
-title: Custom components
-sidebar_label: Custom messages and services
+title: Messages and Services
+sidebar_label: Messages and Services
 ---
 
-## Create custom messages
+## Create Messages
 
 Use `Byld::Message` to create a custom messages. Custom messages can be used as
 request / reponse type in your additional methods.
 
 Custom types will be exported across blocks with `byld connect [block-name]`.
+
 ```ruby
 class CalculateTaxReq < Byld::Message
   field :country, String
@@ -24,7 +25,7 @@ end
 ```
 
 
-## Create custom services
+## Create Services
 
 Inside a block, use `Byld::Service` to create a custom service. All models
 and custom messages can be used in custom services.

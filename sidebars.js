@@ -2,6 +2,7 @@ module.exports = {
   someSidebar: {
     "GETTING STARTED": [
       'getting_started/intro',
+      'getting_started/quick_start',
       'getting_started/faq'
     ],
     "BYLDING BACKENDS": [

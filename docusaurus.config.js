@@ -29,7 +29,7 @@ module.exports = {
           position: 'right',
         },
         {
-          to: 'docs/bylding_backends/todo_app',
+          to: 'docs/getting_started/quick_start',
           activeBasePath: 'docs',
           label: 'Quick Start',
           position: 'right',

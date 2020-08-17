@@ -289,7 +289,7 @@ function Home() {
                 'button button--outline button--secondary button--lg button--blue-border',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/bylding_backends/todo_app')}
+              to={useBaseUrl('docs/bylding_backends/quick_start')}
               target="_blank">
               Quick Start
             </Link>

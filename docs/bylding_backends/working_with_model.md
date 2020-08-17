@@ -20,8 +20,8 @@ Also, `Byld::Model` is an extension of <a href="https://guides.rubyonrails.org/a
 class User < Byld::Model
   enable only: [:get, :create]
 
-  inf(ID) {User}
-  def self.activate(id)
+  inf(ID) {Bool}
+  def self.activate!(id)
     user = User.find(id)
     user.active = true
     user.save!
@@ -50,10 +50,9 @@ end
 ```
 You can learn more about writing database migrations in <a href="https://guides.rubyonrails.org/active_record_migrations.html" target="_blank" rel="noopener noreferrer">ActiveRecord migration guide</a>.
 
-### In built methods
+### Built-in methods
 
-The block docs contains the details of all in built methods, their request and response types. The block docs will be generated automatically once you deploy.
-After deploying, you use `byld status` to get the link to access your docs. Documentation will have all the interface method signature and defintions of the request and response types.
+The block docs contains the details of all built-in methods, their request and response types. The block docs will be generated automatically once you deploy. After deploying, you use `byld status` to get the link to access your docs. Documentation will have all the interface method signature and defintions of the request and response types.
 
 Model's interface methods can be accessed via the client [Model].client.[method_name] from other blocks and gates.
 
@@ -76,6 +75,22 @@ blocks
 +----------+------------+
 ```
 
+### Associations
+
+An association is a connection between two Byld::Model in the same block. Why do we need associations between models? Because they make data representation and common operations easier in your code.
+
+Byld supports `belongs_to`, `has_one` and all types of `has_many` associations. You can learn more about associations in <a href="https://guides.rubyonrails.org/association_basics.html#why-associations-questionmark" target="_blank" rel="noopener noreferrer">ActiveRecord association guide</a>.
+
+For example, Order model will have many line items, you can represent this association like
+
+```ruby
+class Order < Byld::Model
+  has_many :line_items
+end
+
+class LineItem < Byld::Model
+end
+```
 
 ### Validations
 
@@ -93,19 +108,3 @@ User.create(first_name: "John Doe").valid? # => true
 User.create(first_name: nil).valid? # => false
 ```
 
-### Associations
-
-An association is a connection between two Byld::Model in the same block. Why do we need associations between models? Because they make data representation and common operations easier in your code.
-
-Byld supports `belongs_to`, `has_one` and all types of `has_many` associations. You can learn more about associations in <a href="https://guides.rubyonrails.org/association_basics.html#why-associations-questionmark" target="_blank" rel="noopener noreferrer">ActiveRecord association guide</a>.
-
-For example, Order model will have many line items, you can represent this association like
-
-```ruby
-class Order < Byld::Model
-  has_many :line_items
-end
-
-class LineItem < Byld::Model
-end
-```
