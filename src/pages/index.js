@@ -39,7 +39,7 @@ const architect_tabs = [{
   publisher on: :order_events
 
   inf(ID) {Order}
-  def confirm!(id)
+  def self.confirm!(id)
     order = Order.find(id)
     ...
   end
@@ -123,9 +123,9 @@ const comms_tabs = [{
       code: `class Order < Byld::Model
 
   inf(ID) {Order}
-  def confirm!(id)
+  def self.confirm!(id)
     order = Order.find(id)
-    if Stock.client.available? order.lineitems
+    if Stock.client.available? order.lineitems.map(&:id)
       ...
     end
   end
@@ -150,7 +150,7 @@ end`
     case event.type
     when :order_confirmed
       order = Order.client.get(event.source_id)
-      Stock.decrement_qty! order.lineitem
+      Stock.decrement_qty! order.lineitems
     ...
   end
 end`

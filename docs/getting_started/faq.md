@@ -10,11 +10,11 @@ Byld is a tool to design, develop and deploy backends in an incredibly fast way.
 
 ### How is Byld different from Rails?
 
-Byld isn't just a framework, though – we eliminate a lot of boilerplate code that application backends tend to require like transport, routing, pub/sub and infrastructure setup. Byld simplifies building backends by making you only write code that matters and let's you instantly deploy your backends without any additional setups.
+Byld isn't just a framework, though – we eliminate a lot of boilerplate code that application backends tend to require like transport, routing, messaging and infrastructure setup. Byld simplifies building backends by making you only write code that matters and let's you instantly deploy your backends without any additional setups.
 
 ### How long does it take to learn Byld ?
 
-It generally takes an engineer around ten minutes to understand the concepts of Byld., and 30 mins to develop and deploy your first backend. [Quick Start](../bylding_backends/todo_app)
+It generally takes an engineer around ten minutes to understand the concepts of Byld., and 30 mins to develop and deploy your first backend. [Quick Start](../getting_started/quick_start)
 
 ### What programming languages does Byld support?
 
@@ -28,7 +28,7 @@ Yes, you only need basic ruby concepts to build sophisticated backends. Byld eli
 
 Byld currently supports SQLite database. MySQL support is coming very soon.
 
-### What is the infrastructure specification for Byld blocks ?
+### What is the infrastructure spec for blocks?
 
 Each byld blocks is deployed with,
 

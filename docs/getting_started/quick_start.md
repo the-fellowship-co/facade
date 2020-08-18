@@ -119,7 +119,7 @@ Use `byld connect [block-name]` to establish communication across blocks. After 
 
 Use the publisher markup to emit events from a model. By default create, update and delete events are published.
 
-```
+```ruby
 class Order < Byld::Model
   publisher on: :order_events
 
@@ -144,7 +144,7 @@ class Stock < Byld::Model
       order.lineitems.each |item|
          stock = Stock.find(product_id: item.product_id)
          stock.quantity -= item.quantity
-         stock.save
+         stock.save!
       end
     ...
   end
