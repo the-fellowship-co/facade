@@ -79,7 +79,7 @@ class Stock < Byld::Model
     case event.type
     when :order_placed
       order = Order.client.get(event.source_id)
-      order.lineitem.each |item|
+      order.lineitems.each |item|
          stock = Stock.find(product_id: item.product_id)
          stock.quantity -= item.quantity
          stock.save
