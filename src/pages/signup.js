@@ -123,7 +123,7 @@ export default function SignUp() {
           headers: new Headers({
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'x-user-email': userDetails.email,
+            'x-user-email': 'bot@byld.com',
             'x-user-token': '7B9BbsH2wqNG-zLSHzfp'
           }),
           body: JSON.stringify({user: userDetails})
