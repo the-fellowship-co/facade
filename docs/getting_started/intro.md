@@ -26,7 +26,7 @@ You need to install `ruby-v2.6.6` or a newer version. We recommend using [RVM](h
 
 ### Login
 
-Use `byld login` to authenicate. If you don't have a token yet, request your token [here](https://forms.gle/2VGp3jgdndogwM939).
+Use `byld login` to authenicate.
 
 ```sh
 $ byld login
