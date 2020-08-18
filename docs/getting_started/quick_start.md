@@ -8,7 +8,7 @@ Get a quick walkthrough of Byld and how it works.
 
 ### Setup
 
-Use `byld login` to login. If you don't have a token yet, sign up.
+Use `byld login` to login.
 
 ```sh
 $ byld login
