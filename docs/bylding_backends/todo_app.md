@@ -217,7 +217,7 @@ Now, let's implement the handler to process `:todo_item_created` event.
 ```ruby
 class Communication < Byld::Model
   include Todos
-  expose only: [:get, :create, :update, :delete, :list]
+  enable only: [:get, :create]
 
   subscriber
   def self.handle_todo_item_events(event)
