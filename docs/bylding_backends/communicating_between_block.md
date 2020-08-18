@@ -14,7 +14,7 @@ You need to connect to a block from another block to invoke all its interface me
 
 Blocks could access the marked up interface methods from the another block in
 a synchronous manner. In below case `Stock` model in `inventory` block exposes
-`get`, `update` and `is_available` method.
+`get`, `update` and `available?` method.
 
 ```ruby
 class Stock < Byld::Model
