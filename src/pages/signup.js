@@ -117,7 +117,7 @@ export default function SignUp() {
     e.preventDefault()
     try {
       const response = await fetch(
-        'http://api.letsbyld.com/users',
+        'https://api.letsbyld.com/users',
         {
           method: 'POST',
           headers: new Headers({
