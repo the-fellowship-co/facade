@@ -53,9 +53,9 @@ module.exports = {
         //   className: 'link--click'
         // },
         {
-          to: 'https://forms.gle/2VGp3jgdndogwM939',
+          to: 'signup',
           activeBasePath: 'docs',
-          label: 'Get Access',
+          label: 'Start for free',
           position: 'right',
           className: 'link--blue',
         },
@@ -68,8 +68,8 @@ module.exports = {
           title: 'Byld',
           items: [
             {
-              label: 'Get Access',
-              to: 'https://forms.gle/2VGp3jgdndogwM939',
+              label: 'Start for free',
+              to: 'signup',
               className: 'footer--blue',
             },
           ],

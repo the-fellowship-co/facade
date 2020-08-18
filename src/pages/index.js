@@ -281,8 +281,8 @@ function Home() {
                 'button button--outline button--secondary button--lg button--blue',
                 styles.getStarted,
               )}
-              to='https://forms.gle/2VGp3jgdndogwM939'>
-              Get Access
+              to={useBaseUrl('signup')}>
+              Start for free
             </Link>
             <Link
               className={classnames(
