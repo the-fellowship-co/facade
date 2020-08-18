@@ -56,7 +56,7 @@ class User < Byld::Model
   enable only: [:get, :create]
 
   inf(ID) {Bool}
-  def activate!(id)
+  def self.activate!(id)
     user = User.find(id)
     user.active = true
     user.save!
