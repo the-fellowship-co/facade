@@ -3,7 +3,7 @@ id: communicating_between_blocks
 title: Communicating between blocks
 sidebar_label: Communicating between blocks
 ---
-Communication between blocks is made very simple compared to traditional backends. Synchronous requests to other blocks is a simple function call. For asynchronous requests, you can send and receive messages using the in built messaing system without any additional setup.
+Communication between blocks is made simple compared to traditional backends. Synchronous requests to other blocks is a simple function call. For asynchronous requests, you can send and receive messages using the built-in messaging system without any additional setup.
 
 ## Connecting a block
 
