@@ -18,7 +18,7 @@ a synchronous manner. In below case `Stock` model in `inventory` block exposes
 
 ```ruby
 class Stock < Byld::Model
-  expose only: [:get, :update]
+  enable only: [:get, :update]
 
   inf(ID) {Bool}
   def self.available?(product_id)
