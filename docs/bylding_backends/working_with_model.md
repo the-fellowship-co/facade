@@ -81,7 +81,7 @@ An association is a connection between two Byld::Model in the same block. Why do
 
 Byld supports `belongs_to`, `has_one` and all types of `has_many` associations. You can learn more about associations in <a href="https://guides.rubyonrails.org/association_basics.html#why-associations-questionmark" target="_blank" rel="noopener noreferrer">ActiveRecord association guide</a>.
 
-For example, Order model will have many line items, you can represent this association like
+For example, Order model will have many lineitems, you can represent this association like
 
 ```ruby
 class Order < Byld::Model
