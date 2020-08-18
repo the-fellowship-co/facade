@@ -21,7 +21,7 @@ class Stock < Byld::Model
   expose only: [:get, :update]
 
   inf(ID) {Bool}
-  def self.is_available(product_id)
+  def self.available?(product_id)
     stock = Stock.find(product_id: id)
     stock.qty > 0
   end
