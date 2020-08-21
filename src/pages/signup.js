@@ -8,10 +8,23 @@ import Box from '@material-ui/core/Box'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import CheckIcon from '@material-ui/icons/Check'
 import Typography from '@material-ui/core/Typography'
+import { createMuiTheme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/core/styles'
+import { ThemeProvider } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Layout from '@theme/Layout'
 import { green, red } from '@material-ui/core/colors'
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#b4d0e7'
+    },
+    secondary: {
+      main: '#303846',
+    },
+  },
+})
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -70,7 +83,7 @@ function SuccessContent({email, apiKey}) {
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.successIcon}>
-          <CheckIcon />
+          <CheckIcon/>
         </Avatar>
         <Typography component="h1" variant="h5">
           Success
@@ -79,7 +92,7 @@ function SuccessContent({email, apiKey}) {
           <Typography component="h7" variant="body1">
               Your account has been created successfully
           </Typography>
-          <code className={classes.apiKeyBlock}>Your API Key: {apiKey}</code>
+          <code className={classes.apiKeyBlock}>Your token: {apiKey}</code>
         </div>
 
         <div className={classes.subContent}>
@@ -95,7 +108,7 @@ function SuccessContent({email, apiKey}) {
 
         <div className={classes.subContent}>
           <Typography component="h7" variant="body1">
-            A copy of these instructions along with the API key has been sent to your email <code>{email}</code>
+            A copy of these instructions along with the token has been sent to your email <code>{email}</code>
           </Typography>
         </div>
       </div>
@@ -103,7 +116,7 @@ function SuccessContent({email, apiKey}) {
   )
 }
 
-export default function SignUp() {
+function SignUp() {
   const classes = useStyles()
   const [userDetails, setUserDetails] = useState({})
   const [userCreated, setUserCreated] = useState({})
@@ -212,3 +225,9 @@ export default function SignUp() {
     </Layout>
   )
 }
+
+const SignupContainer = () => (
+  <ThemeProvider theme={theme}><SignUp/></ThemeProvider>
+)
+
+export default SignupContainer
