@@ -25,7 +25,6 @@ loaded for testing.
 ```ruby
 >> req = CreateUserReq.new(first_name: 'foo', last_name: 'bar')
 >> user = User.client.create!(req)
->> User.client.activate(user.id)
 ```
 
 You can use the block docs link from `byld status` to see all the interface method signature and defintions of the request and response types.
