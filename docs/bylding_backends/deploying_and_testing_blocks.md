@@ -25,7 +25,7 @@ see all the interface method signature and defintions of the request and respons
 
 ```ruby
 >> req = CreateUserReq.new(first_name: 'foo', last_name: 'bar')
->> user = User.client.create(req)
+>> user = User.client.create!(req)
 >> User.client.activate(user.id)
 ```
 
