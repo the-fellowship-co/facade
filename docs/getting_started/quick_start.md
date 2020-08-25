@@ -14,7 +14,7 @@ $ gem install byld-cli
 
 You need to have a Ruby with v2.6 or higher. We recommend using [RVM](https://rvm.io/rvm/install) for installing it.
 
-Use `byld login` to login. If you don't a token yet, get it [here](https://letsbyld.com/signup).
+Use `byld login` to login. If you don't have a token yet, get it [here](https://letsbyld.com/signup).
 
 ```sh
 $ byld login
