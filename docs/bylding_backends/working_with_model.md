@@ -89,6 +89,7 @@ class Order < Byld::Model
 end
 
 class LineItem < Byld::Model
+  belongs_to :order
 end
 ```
 
