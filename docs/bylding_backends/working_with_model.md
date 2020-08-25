@@ -3,7 +3,7 @@ id: working_with_models
 title: Working with models
 sidebar_label: Working with models
 ---
-Model is the place to implement all your business logic. Methods defined in models can be exposed to other blocks and frontends . Model by default has
+Model is the place to implement all your business logic. Methods defined in models can be exposed to other blocks and frontends. Model by default has
  `get`, `create`, `update`, `delete` and `list` interface methods. You can
  also add additional methods and control what needs to be exposed using `inf` markup.
 
