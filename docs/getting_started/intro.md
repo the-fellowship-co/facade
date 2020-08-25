@@ -28,7 +28,7 @@ You need to have a Ruby with v2.6 or higher. We recommend using [RVM](https://rv
 
 ### Login
 
-Use `byld login` to authenicate.
+Use `byld login` to login. If you don't have a token yet, get it [here](https://letsbyld.com/signup).
 
 ```sh
 $ byld login
@@ -36,5 +36,4 @@ $ byld login
 Your email: someone@example.com
 Your token: xxxxx
 ```
-You’re all set for building your first project.
 
