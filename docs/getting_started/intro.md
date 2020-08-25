@@ -22,7 +22,9 @@ Byld isn't just a framework, though – we eliminate a lot of boilerplate code t
 ```sh
 $ gem install byld-cli
 ```
-You need to install `ruby-v2.6.6` or a newer version. We recommend using [RVM](https://rvm.io/rvm/install) for installing it.
+
+You need to have a Ruby with v2.6 or higher. We recommend using [RVM](https://rvm.io/rvm/install) for installing it.
+
 
 ### Login
 
