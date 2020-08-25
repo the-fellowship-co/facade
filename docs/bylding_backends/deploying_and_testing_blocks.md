@@ -5,7 +5,7 @@ sidebar_label: Deploying and testing blocks
 ---
 ## Deploying a block
 
-Blocks eliminates all the infrasturcture related code needed to deploy your
+Byld eliminates all the infrasturcture related code needed to deploy your
 block. Your migration will be run automatically before
 deployment.
 
@@ -20,11 +20,13 @@ After deploying, you can test/debug your blocks from your local command line.
 ### Using interactive console
 
 Use `byld console` to connect to your block's console. All the models are
-loaded for testing.
+loaded for interactive testing.
 
 ```ruby
 >> req = CreateUserReq.new(first_name: 'foo', last_name: 'bar')
+<CreateUserReq first_name="foo", last_name="bar">
 >> user = User.client.create!(req)
+<User id: 1, first_name: "Foo", last_name: "Bar">
 ```
 
 You can use the block docs link from `byld status` to see all the interface method signature and defintions of the request and response types.
