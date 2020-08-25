@@ -8,7 +8,13 @@ Get a quick walkthrough of Byld and how it works.
 
 ### Setup
 
-Use `byld login` to login.
+```sh
+$ gem install byld-cli
+```
+
+You need to have a Ruby with v2.6 or higher. We recommend using [RVM](https://rvm.io/rvm/install) for installing it.
+
+Use `byld login` to login. If you don't a token yet, get it [here](https://letsbyld.com/signup).
 
 ```sh
 $ byld login
