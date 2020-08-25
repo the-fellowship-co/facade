@@ -59,11 +59,13 @@ Model's interface methods can be accessed via the client [Model].client.[method_
 ```sh
 $ byld status
 
-+-------------------------------+------------------------------+--------------------------+
-| status  | url                 | gate docs                    | blocks docs              |
-+-------------------------------+------------------------------+--------------------------+
-| running | amazon.letsbyld.com | amazon.letsbyld.com/graphiql | amazon.letsbyld.com/docs |
-+---------+---------------------+------------------------------+--------------------------+
+gate
+
++-------------------------------+------------------------------+
+| status  | url                 | docs                         |
++-------------------------------+------------------------------+
+| running | amazon.letsbyld.com | amazon.letsbyld.com/graphiql |
++---------+---------------------+------------------------------+
 
 blocks
 
