@@ -12,7 +12,7 @@ You could add additional interface methods using `inf(RequestType) {ReturnType}`
  over it. Supported request and return types are: `ID`, `String`,
  `Integer`, `Float`, `Bool`, `Byld::Messages` and `Byld::Model`.
 
-Model's interface methods can be accessed like   `[Model].client.[method_name]` from other blocks and gates.
+Model's interface methods can be accessed like `[Model].client.[method_name]` from other blocks and gates.
 
 Also, `Byld::Model` is an extension of <a href="https://guides.rubyonrails.org/active_record_basics.html" target="_blank" rel="noopener noreferrer">ActiveRecord</a>, so all of its methods are available to use on it. You can learn more about CRUD methods and querying an Active Record model in the <a href="https://guides.rubyonrails.org/active_record_basics.html#crud-reading-and-writing-data" target="_blank" rel="noopener noreferrer">CRUD methods guide</a> and <a href="https://guides.rubyonrails.org/active_record_querying.html" target="_blank" rel="noopener noreferrer">Query Interface guide</a>.
 
@@ -54,7 +54,7 @@ You can learn more about writing database migrations in <a href="https://guides.
 
 The block docs contains the details of all built-in methods, their request and response types. The block docs will be generated automatically once you deploy. After deploying, you use `byld status` to get the link to access your docs. Documentation will have all the interface method signature and defintions of the request and response types.
 
-Model's interface methods can be accessed via the client [Model].client.[method_name] from other blocks and gates.
+Model's interface methods can be accessed via the client `[Model].client.[method_name]` from other blocks and gates.
 
 ```sh
 $ byld status
