@@ -35,7 +35,7 @@ From order block connect to inventory block using,
 $ byld connect inventory
 ```
 
-After this you should be able to call all the exposed methods (`:get`, `:update`, `:available?`) from Stock in order block using the Stock.client.
+After this you should be able to call all the exposed methods (`:get`, `:update`, `:available?`) from Stock in order block using the `Stock.client`.
 
 ```ruby
 Stock.client.available?(productId)
