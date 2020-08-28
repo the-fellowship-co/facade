@@ -64,7 +64,7 @@ end
 
 Use extension markup `extension [ReturnType]` to aggregate models across different blocks, doing that would include the extension model as part of the parent model. For instance `extension User` allows you to get customer model as part of order model. Now, you can get any customer fields in response along with the order.
 
-Below `OrderEdge` is extended with `User`, `Payment`, `Shipping` to power the order summary UI.
+Below `OrderEdge` is extended with `User`, `Payment`, `Shipping` to power the Order Summary UI.
 ```ruby
 class OrderEdge < Byld::Edge
   include Order
