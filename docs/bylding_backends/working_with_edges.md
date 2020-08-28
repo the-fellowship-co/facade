@@ -5,7 +5,7 @@ sidebar_label: Working with edges
 ---
 ## Gate
 
-Gate is a single GraphQL based API gateway for different frontends like web, mobile and desktop. GraphQL eliminates the need for having a separate gateway for each frontend. GraphQL let's you customize your response by returning only the data you ask. Gate is a collection of edges.
+Gate is a single GraphQL based gateway for different frontends like web, mobile and desktop. GraphQL eliminates the need for having a separate gateway for each frontend. GraphQL let's you customize your response by returning only the data you ask. Gate is a collection of edges.
 
 You can learn more about GraphQL in [GraphQL guide](https://graphql.org/)
 
@@ -24,7 +24,7 @@ gate/
 
 ## Edge
 
-Edge is a layer between your frontends and blocks. Edge can be used to create powerful APIs aggregating multiple interface methods from different blocks. For example, to power the order summary page we need to aggregate `get_order` from order block, `get_payment` from payment block and `shipping_status` from shipping block based on `order_id`. Our `join` markup  simplifies aggregations further by eliminating a need to write a separate method for each complex API.
+Edge is a layer between your frontends and blocks. Edge can be used to create powerful endpoints aggregating multiple interface methods from different blocks. For example, to power the order summary page we need to aggregate `get_order` from order block, `get_payment` from payment block and `shipping_status` from shipping block based on `order_id`. Our `join` markup  simplifies aggregations further by eliminating a need to write a separate method for each complex endpoint.
 
 
 ### Creating edges
@@ -89,7 +89,7 @@ class OrderEdge < Byld::Edge
 end
 ```
 
-Now to from the order summary UI, the following GraphQL query can be issued. Similarly, multiple complex APIs can be powered without creating a separate method.
+Now to build the Order Summary UI, the following GraphQL query can be fired. Similarly, multiple complex UIs can be powered without creating a separate methods.
 
 ```graphql
 query {
