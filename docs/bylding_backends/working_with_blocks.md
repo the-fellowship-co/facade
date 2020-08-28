@@ -19,7 +19,7 @@ amazon/
 └── gate/
 ```
 
-Use `byld new [project-name]` to create a new project. Your project name should be unique across our customers. Running this will create your project in Byld infrastructure  and a new local directory `[project-name]/`. Switch into the newly created directory for further development.
+Use `byld new [project-name]` to create a new project. Your project name should be unique across our customers. Running this will create your project in Byld and a new local directory `[project-name]/`. Switch into the newly created directory for further development.
 
 ## Creating Blocks
 
