@@ -111,7 +111,7 @@ query {
         }
       }
       payment {
-        payment_status
+        status
       }
       delivery {
         shipping_status
