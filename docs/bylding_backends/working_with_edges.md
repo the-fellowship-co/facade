@@ -24,7 +24,7 @@ gate/
 
 ## Edge
 
-Edge is a layer between your frontends and blocks. Edge can be used to create powerful endpoints aggregating multiple interface methods from different blocks. For example, to power the order summary page we need to aggregate `get_order` from order block, `get_payment` from payment block and `shipping_status` from shipping block based on `order_id`. Our `join` markup  simplifies aggregations further by eliminating a need to write a separate method for each complex endpoint.
+Edge is a layer between your frontends and blocks. Edge can be used to create powerful endpoints aggregating multiple interface methods from different blocks. For example, to power the order summary page we need to aggregate `get_order` from order block, `get_payment` from payment block and `shipping_status` from shipping block based on `order_id`. Our `extension` markup  simplifies aggregations further by eliminating a need to write a separate method for each complex endpoint.
 
 
 ### Creating edges
