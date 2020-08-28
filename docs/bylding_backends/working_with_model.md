@@ -10,7 +10,7 @@ Model is the place to implement all your business logic. Methods defined in mode
 ### Interface Markup
 You could add additional interface methods using `inf(RequestType) {ReturnType}`
  over it. Supported request and return types are: `ID`, `String`,
- `Integer`, `Float`, `Bool`, `Byld::Messages` and `Byld::Model`.
+ `Integer`, `Float`, `Bool`, `Byld::Messages`, `Byld::Model` and Array `([ID|String|...])`.
 
 Model's interface methods can be accessed like `[Model].client.[method_name]` from other blocks and gates.
 
