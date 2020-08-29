@@ -24,16 +24,16 @@ Byld currently supports `Ruby v2.6` or newer.
 
 Yes, you only need basic ruby concepts to build sophisticated backends. Byld eliminates the need to learn lot of framework details. [Ruby guide](../references/ruby)
 
-### What databases does Byld support?
-
-Byld currently supports SQLite database. MySQL support is coming very soon.
-
 ### What is the infrastructure spec for blocks?
 
 Each byld blocks is deployed with,
 
 - 0.25 CPU
 - 256MB memory
+
+### What databases does Byld support?
+
+Byld currently supports SQLite database. MySQL support is coming very soon.
 
 ### Can I build UI with Byld?
 
