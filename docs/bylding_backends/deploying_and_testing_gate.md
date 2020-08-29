@@ -40,7 +40,7 @@ You can use `amazon.letsbyld.com` url to power your UI across different
 platforms. Use the `amazon.letsbyld.com/graphiql` url to view docs and test out your
 endpoints.
 
-You can learn more about using GraphQL in [GraphQL queries and mutations guide](https://graphql.org/learn/queries/)
+You can learn more about using GraphQL in [GraphQL queries and mutations guide](https://graphql.org/learn/queries/).
 
 ```graphql
 query {
