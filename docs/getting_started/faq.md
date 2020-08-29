@@ -18,7 +18,7 @@ It generally takes an engineer around ten minutes to understand the concepts of 
 
 ### What programming languages does Byld support?
 
-Byld currently supports `ruby 2.6.6` or newer.
+Byld currently supports `Ruby v2.6` or newer.
 
 ### I am new to Ruby, Will I be able to use Byld?
 
