@@ -37,6 +37,8 @@ Migration files are used create the schema for the models. You can define the
 necessary fields for the model and add further migrations to add/remove
 fields, create primary keys, indexes etc..
 
+You could place all the migrations under `models/migrations/`.
+
 ```ruby
 class CreateUsers < ActiveRecord::Migration[5.2]
   def change
