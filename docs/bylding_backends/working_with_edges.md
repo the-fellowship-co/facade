@@ -7,7 +7,7 @@ sidebar_label: Working with edges
 
 Gate is a unified GraphQL based gateway to power different frontends like web, mobile and desktop. GraphQL eliminates the need for having a separate backend for each frontend. GraphQL let's you customize your response by returning only the data you ask.
 
-You can learn more about GraphQL in [GraphQL guide](https://graphql.org/)
+You can learn more about GraphQL in [GraphQL guide](https://graphql.org/).
 
 ### Structure of a gate
 
