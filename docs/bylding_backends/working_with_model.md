@@ -34,7 +34,7 @@ files the actual model and the database migration needed for the new model.
 
 ### Migration
 Migration files are used create the schema for the models. You can define the
-necessary fields for the model and add further migrations to add/ remove
+necessary fields for the model and add further migrations to add/remove
 fields, create primary keys, indexes etc..
 
 ```ruby
