@@ -34,24 +34,6 @@ module.exports = {
           label: 'Quick Start',
           position: 'right',
         },
-        // {
-        //   to: 'https://calendly.com/letsbyld/demo',
-        //   label: 'Request Demo',
-        //   position: 'right',
-        // },
-        // {
-        //   to: 'pricing/',
-        //   // activeBasePath: 'facade',
-        //   label: 'Pricing',
-        //   position: 'right',
-        // },
-        // {to: 'blog', label: 'Blog', position: 'left'},
-        // {
-        //   to: 'login/',
-        //   label: 'Sign In',
-        //   position: 'right',
-        //   className: 'link--click'
-        // },
         {
           to: 'signup',
           activeBasePath: 'docs',
@@ -75,21 +57,16 @@ module.exports = {
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Slack',
-              href: 'https://join.slack.com/t/letsbyld/shared_invite/zt-eof91hhg-UixoDOiNumWOkk_e17a09w',
-              target: "_blank",
-            },
-          ],
-        },
-        {
           title: 'Contact Us',
           items: [
             {
-              label: 'Talk to us',
+              label: 'Request Demo',
               to: "https://calendly.com/letsbyld/talktous",
+              target: "_blank",
+            },
+            {
+              label: 'team@letsbyld.com',
+              to: "mailto:team@letsbyld.com",
               target: "_blank",
             },
           ],
