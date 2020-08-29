@@ -4,7 +4,7 @@ title: Working with blocks
 sidebar_label: Working with blocks
 ---
 
-Byld project is a collection of your blocks and a gate. Identify your business units and abstract all its logic inside blocks. Organizing as different blocks make it easy to build and manage, increases productivity and economical to scale based on different needs. Blocks are exposed to the frontend via single GraphQL based gate (gateway). Gates can be used to control what should be exposed to the frontend and power different frontends.
+Your project is a collection of your blocks and a gate. Identify your business units and abstract all its logic inside blocks. Organizing as different blocks make it easy to build and manage, increases productivity and economical to scale based on different needs. Blocks are exposed to the frontend via GraphQL based gateway called gate. Gates can be used to control what should be exposed to the frontend and power different kinds of them.
 
 In case of simplified amazon, project would have the following blocks:
 
