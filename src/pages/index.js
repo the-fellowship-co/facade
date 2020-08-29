@@ -125,7 +125,7 @@ const comms_tabs = [{
   inf(ID) {Order}
   def self.confirm!(id)
     order = Order.find(id)
-    if Stock.client.available? order.lineitems.map(&:id)
+    if Stock.client.available? order.lineitems.map(&:product_id)
       ...
     end
   end
@@ -150,7 +150,7 @@ end`
     case event.type
     when :order_confirmed
       order = Order.client.get(event.source_id)
-      Stock.decrement_qty! order.lineitems
+      Stock.decrement_qty! order.lineitems.map(&:product_id)
     ...
   end
 end`
