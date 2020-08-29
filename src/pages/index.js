@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import Layout from '@theme/Layout';
 import CodeBlock from '@theme/CodeBlock';
 import Link from '@docusaurus/Link';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
@@ -272,6 +273,7 @@ function Home() {
     <Layout
       title="Byld"
       description="Byld, a better way to build backends<head/>">
+      <CssBaseline />
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
         <div className="row">

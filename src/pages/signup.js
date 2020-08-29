@@ -14,6 +14,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Layout from '@theme/Layout'
 import { green, red } from '@material-ui/core/colors'
+import { Paper } from '@material-ui/core'
 
 const theme = createMuiTheme({
   palette: {
@@ -111,6 +112,12 @@ function SuccessContent({email, apiKey}) {
             A copy of these instructions along with the token has been sent to your email <code>{email}</code>
           </Typography>
         </div>
+
+        <Paper style={{marginTop: 20, padding: 20}}>
+          Please note that this is a alpha version and not the final version of the product. Therefore we do not guarantee an absense of errors that may disrupt the services and/or result in data loss.
+          <p></p>
+          <p>Your account token is valid for 30 days. Please reach out to us at <a href="mailto:support@letsbyld.com">support@letsbyld.com</a> if you require further extension or have any other queries.</p>
+        </Paper>
       </div>
     </Container>
   )
