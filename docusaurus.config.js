@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Better way to build backends',
-  tagline: 'Design, develop and deploy backends incredibly fast.',
+  tagline: 'Design, develop and deploy modular backends incredibly fast.',
   url: 'https://letsbyld.com',
   baseUrl: '/',
   favicon: 'favicon/ico',
