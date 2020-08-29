@@ -5,7 +5,7 @@ sidebar_label: Working with edges
 ---
 ## Gate
 
-Gate is a single GraphQL based gateway for different frontends like web, mobile and desktop. GraphQL eliminates the need for having a separate gateway for each frontend. GraphQL let's you customize your response by returning only the data you ask. Gate is a collection of edges.
+Gate is a unified GraphQL based gateway to power different frontends like web, mobile and desktop. GraphQL eliminates the need for having a separate backend for each frontend. GraphQL let's you customize your response by returning only the data you ask.
 
 You can learn more about GraphQL in [GraphQL guide](https://graphql.org/)
 
@@ -24,7 +24,7 @@ gate/
 
 ## Edge
 
-Edge is a layer between your frontends and blocks. Edge can be used to create powerful endpoints aggregating multiple interface methods from different blocks. For example, to power the order summary page we need to aggregate `get_order` from order block, `get_payment` from payment block and `shipping_status` from shipping block based on `order_id`. Our `extension` markup  simplifies aggregations further by eliminating a need to write a separate method for each complex endpoint.
+Gate has a collection of edges. Edge is a layer between your frontends and blocks. It can be used to create powerful endpoints aggregating multiple interface methods from different blocks. For example, to power the order summary page we need to aggregate `get_order` from order block, `get_payment` from payment block and `status` from shipping block based on `order_id`. Our `extension` markup  simplifies aggregations further by eliminating a need to write a separate method for each complex endpoint.
 
 
 ### Creating edges
@@ -64,7 +64,7 @@ end
 
 Use extension markup `extension [ReturnType]` to aggregate models across different blocks, doing that would include the extension model as part of the parent model. For instance `extension User` allows you to get customer model as part of order model. Now, you can get any customer fields in response along with the order.
 
-Below `OrderEdge` is extended with `User`, `Payment`, `Shipping` to power the Order Summary UI.
+Below `OrderEdge` is extended with `User`, `Payment`, `Shipping` to power the order summary page.
 ```ruby
 class OrderEdge < Byld::Edge
   include Order
@@ -89,7 +89,7 @@ class OrderEdge < Byld::Edge
 end
 ```
 
-Now to build the Order Summary UI, the following GraphQL query can be fired. Similarly, multiple complex UIs can be powered without creating a separate methods.
+Now to build the order summary page, the following GraphQL query can be fired. Similarly, multiple complex UIs can be powered without creating a separate methods.
 
 ```graphql
 query {
