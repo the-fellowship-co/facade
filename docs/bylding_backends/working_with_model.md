@@ -30,7 +30,7 @@ end
 ```
 
 Use the `byld block g:model [model-name]` to generate a model. It creates two
-files the actual model and the db migration needed for the new model.
+files the actual model and the database migration needed for the new model.
 
 ### Migration
 Migration files are used create the schema for the models. You can define the
