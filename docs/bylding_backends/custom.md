@@ -7,7 +7,7 @@ sidebar_label: Messages and Services
 ## Create Messages
 
 Use `Byld::Message` to create a custom messages. Custom messages can be used as
-request / reponse type in your additional methods.
+request/reponse type in your additional methods.
 
 Custom types will be exported across blocks with `byld connect [block-name]`.
 
@@ -28,7 +28,7 @@ end
 ## Create Services
 
 Inside a block, use `Byld::Service` to create a custom service. All models
-and custom messages can be used in custom services.
+and custom messages can be used in custom services. Services need to placed in the same directory as `models/`.
 
 Custom services will be exported across blocks with
 `byld connect [block-name]`. You can also expose custom services to frontends
