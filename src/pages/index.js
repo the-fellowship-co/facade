@@ -125,10 +125,11 @@ const comms_tabs = [{
   inf(ID) {Order}
   def self.confirm!(id)
     order = Order.find(id)
-    if Stock.client.available? order.lineitems.map(&:product_id)
+    if order.lineitems.all? { |item| Stock.client.available?(item.id) }
       ...
     end
   end
+
 end`
     },{
       title: "Async: Publisher",
@@ -150,7 +151,9 @@ end`
     case event.type
     when :order_confirmed
       order = Order.client.get(event.source_id)
-      Stock.decrement_qty! order.lineitems.map(&:product_id)
+      order.lineitems.each do |lineitem|
+        Stock.decrement_qty! lineitem
+      end
     ...
   end
 end`
