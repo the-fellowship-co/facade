@@ -125,7 +125,7 @@ const comms_tabs = [{
   inf(ID) {Order}
   def self.confirm!(id)
     order = Order.find(id)
-    if order.lineitems.all? { |item| Stock.client.available?(item.id) }
+    if Stock.client.available? order.lineitems.map(&:product_id)
       ...
     end
   end
