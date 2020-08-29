@@ -4,7 +4,7 @@ title: Working with blocks
 sidebar_label: Working with blocks
 ---
 
-Your project is a collection of your blocks and a gate. Identify your business units and abstract all its logic inside blocks. Organizing as different blocks make it easy to build and manage, increases productivity and economical to scale based on different needs. Blocks are exposed to the frontend via GraphQL based gateway called gate. Gates can be used to control what should be exposed to the frontend and power different kinds of them.
+Your project is a collection of your blocks and a gate. Identify your business units and abstract all its logic inside blocks. Organizing as different blocks make it easy to build and manage, increases productivity and economical to scale based on different needs. Blocks are exposed to the frontend via GraphQL based gateway (gate). Gates can be used to control what should be exposed to the frontend and power different kinds of them.
 
 In case of simplified amazon, project would have the following blocks:
 
@@ -21,7 +21,7 @@ amazon/
 
 Use `byld new [project-name]` to create a new project. Your project name should be unique across our customers. Running this will create your project in Byld and a new local directory `[project-name]/`. Switch into the newly created directory for further development.
 
-## Creating Blocks
+## Blocks
 
 Block are used to abstract all the business capabilities. Compared to
 traditional backends, block eliminates all the boilerplate code for transport,
