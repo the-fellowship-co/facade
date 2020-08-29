@@ -57,18 +57,17 @@ module.exports = {
           ],
         },
         {
+          title: '',
+          items: []
+        },
+        {
           title: 'Contact Us',
           items: [
             {
-              label: 'Request Demo',
-              to: "https://calendly.com/letsbyld/talktous",
+              label: 'support@letsbyld.com',
+              to: "mailto:support@letsbyld.com",
               target: "_blank",
-            },
-            {
-              label: 'team@letsbyld.com',
-              to: "mailto:team@letsbyld.com",
-              target: "_blank",
-            },
+            }
           ],
         },
       ],
