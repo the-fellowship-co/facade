@@ -93,7 +93,7 @@ Now to build the Order Summary UI, the following GraphQL query can be fired. Sim
 
 ```graphql
 query {
-  getOrder(id: "z3dsbjn3223") {
+  getOrder(id: 1) {
     id
     totalPrice
     lineItems {
@@ -114,8 +114,9 @@ query {
         status
       }
       delivery {
-        shipping_status
-        estimated_delivery
+        status
+        eta
+        location         
       }
   }
 }
