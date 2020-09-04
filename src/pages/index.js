@@ -125,7 +125,9 @@ const comms_tabs = [{
   inf(ID) {Order}
   def self.confirm!(id)
     order = Order.find(id)
-    if Stock.client.available? order.lineitems.map(&:product_id)
+    products = order.lineitems.map(&:product_id)
+    
+    if Stock.client.available? products
       ...
     end
   end
@@ -151,9 +153,9 @@ end`
     case event.type
     when :order_confirmed
       order = Order.client.get(event.source_id)
-      order.lineitems.each do |lineitem|
-        Stock.decrement_qty! lineitem
-      end
+      products = order.lineitems.map(&:product_id)
+      
+      Stock.decrement_qty! products
     ...
   end
 end`
@@ -470,7 +472,7 @@ function Home() {
               <p className="highlight__title">Deploy</p>
               <h1 className="feature__text">Don't sweat to deploy.</h1>
               <p className="feature__detail">Instantly deploy
-              and scale without any infrastructure setups.</p>
+              and scale without any setups.</p>
             </div>
             </div>
           </div>
