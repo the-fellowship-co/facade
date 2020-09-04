@@ -287,24 +287,13 @@ function Home() {
               to={useBaseUrl('signup')}>
               Try for free
             </Link>
-            <Link
-              className={classnames(
-                'button button--outline button--secondary button--lg button--white-border',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/getting_started/quick_start')}
-              target="_blank">
-              Quick Start
-            </Link>
           </div>
           </div>
           </div>
           <div className="row install">
-            <div className="col col--4"></div>
-            <div className="col col--4">
-              <CodeBlock className="sh">gem install byld-cli</CodeBlock>
+            <div className="col col--12">
+              <img src="img/diagram.svg"/>
             </div>
-            <div className="col col--4"></div>
           </div>
         </div>
       </header>
@@ -325,7 +314,7 @@ function Home() {
             <div className="col col--8 ">
               <p className="highlight__title">Design</p>
               <h1 className="feature__text">Architect in minutes.</h1>
-              <p className="feature__detail">Model the different domains of your business instantly using <b>byld blocks</b>, an abstraction that only lets you write code that matters.
+              <p className="feature__detail">Model the different domains of your business instantly using <b>blocks</b>, an abstraction that only lets you write code that matters.
               </p>
             </div>
             <div className="col col--2 "></div>
@@ -371,7 +360,7 @@ function Home() {
               <p className="highlight__title">Expose</p>
               <h1 className="feature__text">Flexible to all frontends.</h1>
               <p className="feature__detail">Power different web and mobile
-              user interfaces with a great deal of flexibility using <b>byld gates</b>, a
+              user interfaces with a great deal of flexibility using <b>gates</b>, a
               GraphQL based gateway.</p>
             </div>
             <div className="col col--2 "></div>

@@ -1,9 +1,9 @@
 module.exports = {
   title: 'Better way to build backends',
-  tagline: 'Design, develop and deploy modular backends incredibly fast.',
+  tagline: 'Design and deploy modular backends incredibly fast.',
   url: 'https://letsbyld.com',
   baseUrl: '/',
-  favicon: 'favicon/ico',
+  favicon: 'img/favicon.png',
   organizationName: 'the-fellowship-co', // Usually your GitHub org/user name.
   projectName: 'facade', // Usually your repo name.
   plugins: ['@docusaurus/plugin-google-analytics'],
@@ -18,21 +18,15 @@ module.exports = {
       title: 'Byld',
       links: [
         {
-          to: 'docs/getting_started/intro',
+          to: 'docs/getting_started/quick_start',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'right',
         },
         {
-          to: 'docs/getting_started/quick_start',
-          activeBasePath: 'docs',
-          label: 'Quick Start',
-          position: 'right',
-        },
-        {
           to: 'signup',
           activeBasePath: 'docs',
-          label: 'Start for free',
+          label: 'Try for free',
           position: 'right',
           className: 'link--blue',
         },
@@ -66,7 +60,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} The Fellowship Co`,
+      copyright: `Copyright © ${new Date().getFullYear()} Byld`,
     },
     googleAnalytics: {
       trackingID: 'UA-171802618-1',
