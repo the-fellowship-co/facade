@@ -281,15 +281,15 @@ function Home() {
           <div className="hero__button">
             <Link
               className={classnames(
-                'button button--outline button--secondary button--lg button--blue',
+                'button button--outline button--secondary button--lg button--white-border',
                 styles.getStarted,
               )}
               to={useBaseUrl('signup')}>
-              Start for free
+              Try for free
             </Link>
             <Link
               className={classnames(
-                'button button--outline button--secondary button--lg button--blue-border',
+                'button button--outline button--secondary button--lg button--white-border',
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/getting_started/quick_start')}
@@ -325,7 +325,7 @@ function Home() {
             <div className="col col--8 ">
               <p className="highlight__title">Design</p>
               <h1 className="feature__text">Architect in minutes.</h1>
-              <p className="feature__detail">Model the different domains of your business instantly using <b>byld blocks</b>, an abstraction that only lets you write code that matters and eliminates the rest.
+              <p className="feature__detail">Model the different domains of your business instantly using <b>byld blocks</b>, an abstraction that only lets you write code that matters.
               </p>
             </div>
             <div className="col col--2 "></div>
@@ -479,7 +479,7 @@ function Home() {
             <div className="col col--2"></div>
             <div className="col col--10">
               <p className="highlight__title">Deploy</p>
-              <h1 className="feature__text">Don't sweat to deploy and scale.</h1>
+              <h1 className="feature__text">Don't sweat to deploy.</h1>
               <p className="feature__detail">Instantly deploy
               and scale without any infrastructure setups.</p>
             </div>
