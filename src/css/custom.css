@@ -52,12 +52,12 @@
 }
 
 .hero__title {
-  font-size: 5rem;
+  font-size: 4rem;
   /*margin-block-start: 0em;*/
   /*margin-block-end: 0em;*/
 }
 .hero__subtitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-bottom: 15px;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .feature__text {
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-align: left;
   align-items: center;
   margin-bottom: 0px;
@@ -98,7 +98,7 @@
 
 .highlight__title {
   margin-bottom: 0px;
-  font-size: 1.35rem;
+  font-size: 1.2rem;
 }
 
 .highlight__section {
@@ -108,7 +108,7 @@
 }
 
 .navbar__title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 .navbar__brand {
@@ -170,7 +170,7 @@
 }
 
 .pricing--cost {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 0px;
 }
 
@@ -221,11 +221,11 @@
   }
 
   .hero__title {
-    font-size: 3.8rem;
+    font-size: 3.5rem;
   }
 
   .hero__subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .hero__button .button {
