@@ -16,7 +16,7 @@ module.exports = {
     disableDarkMode: true,
     navbar: {
       title: 'Byld',
-
+      links: [
         {
           to: 'docs/getting_started/quick_start',
           activeBasePath: 'docs',
