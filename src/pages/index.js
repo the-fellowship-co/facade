@@ -315,7 +315,7 @@ function Home() {
             <div className="col col--2"></div>
             <div className="col col--8 ">
               <p className="highlight__title">Design</p>
-              <h1 className="feature__text">Architect in minutes.</h1>
+              <h1 className="feature__text">Architect instantly.</h1>
               <p className="feature__detail">Model the different domains of your business instantly using <b>blocks</b>, an abstraction that only lets you write code that matters.
               </p>
             </div>
