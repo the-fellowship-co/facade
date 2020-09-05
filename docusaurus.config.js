@@ -53,8 +53,8 @@ module.exports = {
           title: 'Contact Us',
           items: [
             {
-              label: 'support@letsbyld.com',
-              to: "mailto:support@letsbyld.com",
+              label: 'team@letsbyld.com',
+              to: "mailto:team@letsbyld.com",
               target: "_blank",
             }
           ],
