@@ -18,6 +18,7 @@
     "copy-text-to-clipboard": "^2.2.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-google-recaptcha": "^2.1.0",
     "react-icons": "^3.10.0"
   },
   "browserslist": {

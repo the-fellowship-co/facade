@@ -15,6 +15,7 @@ import Container from '@material-ui/core/Container'
 import Layout from '@theme/Layout'
 import { green, red } from '@material-ui/core/colors'
 import { Paper } from '@material-ui/core'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const theme = createMuiTheme({
   palette: {
@@ -124,6 +125,7 @@ function SuccessContent({email, apiKey}) {
 }
 
 function SignUp() {
+  const recaptchaRef = React.createRef()
   const classes = useStyles()
   const [userDetails, setUserDetails] = useState({})
   const [userCreated, setUserCreated] = useState({})
@@ -135,6 +137,10 @@ function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    const recaptchaValue = recaptchaRef.current.getValue()
+    console.log('recaptchaValue', recaptchaValue)
+    
     try {
       const response = await fetch(
         'https://api.letsbyld.com/users',
@@ -209,6 +215,13 @@ function SignUp() {
                   name="email"
                   onChange={handleChange}
                   autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="Your client site key"
+                  onChange={onChange}
                 />
               </Grid>
             </Grid>
