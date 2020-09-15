@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     width: 300,
     textAlign: 'center',
     fontWeight: 'bold'
-  },  
+  },
   codeBlock: {
     width: 300,
     marginTop: theme.spacing(2),
@@ -129,10 +129,14 @@ function SignUp() {
   const classes = useStyles()
   const [userDetails, setUserDetails] = useState({})
   const [userCreated, setUserCreated] = useState({})
+  const [captchaVerified, setCaptchaVerified] = useState(false)
   const [error, setError] = useState(null)
 
   const handleChange = (e) => {
     setUserDetails({...userDetails, [e.target.name]: e.target.value})
+  }
+  const handleCaptchaChange = (e) => {
+    setCaptchaVerified(e)
   }
 
   const handleSubmit = async (e) => {
@@ -140,7 +144,7 @@ function SignUp() {
 
     const recaptchaValue = recaptchaRef.current.getValue()
     console.log('recaptchaValue', recaptchaValue)
-    
+
     try {
       const response = await fetch(
         'https://api.letsbyld.com/users',
@@ -186,7 +190,7 @@ function SignUp() {
                   name="firstName"
                   onChange={handleChange}
                   variant="outlined"
-                  required                  
+                  required
                   fullWidth
                   id="firstName"
                   label="First Name"
@@ -220,8 +224,8 @@ function SignUp() {
               <Grid item xs={12}>
                 <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey="Your client site key"
-                  onChange={onChange}
+                  sitekey="6Lcqp8wZAAAAABwrEN9P8N6ZtExkp9YuHuY481sB"
+                  onChange={handleCaptchaChange}
                 />
               </Grid>
             </Grid>
@@ -231,6 +235,7 @@ function SignUp() {
               variant="contained"
               color="primary"
               className={classes.submit}
+              disabled={!captchaVerified}
             >
               Sign Up
             </Button>
@@ -241,7 +246,7 @@ function SignUp() {
           <Copyright />
         </Box>
       </Container>}
-      {userCreated.authenticationToken && <SuccessContent email={userCreated.email} apiKey={userCreated.authenticationToken} />}      
+      {userCreated.authenticationToken && <SuccessContent email={userCreated.email} apiKey={userCreated.authenticationToken} />}
     </Layout>
   )
 }
