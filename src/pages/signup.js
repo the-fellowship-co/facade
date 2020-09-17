@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {`Copyright © ${new Date().getFullYear()} The Fellowship Co`}
+      {`Copyright © ${new Date().getFullYear()} Byld`}
     </Typography>
   )
 }
@@ -135,6 +135,7 @@ function SignUp() {
   const handleChange = (e) => {
     setUserDetails({...userDetails, [e.target.name]: e.target.value})
   }
+  
   const handleCaptchaChange = (e) => {
     setCaptchaVerified(e)
   }
@@ -143,7 +144,6 @@ function SignUp() {
     e.preventDefault()
 
     const recaptchaValue = recaptchaRef.current.getValue()
-    console.log('recaptchaValue', recaptchaValue)
 
     try {
       const response = await fetch(
@@ -152,11 +152,9 @@ function SignUp() {
           method: 'POST',
           headers: new Headers({
             'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'x-user-email': 'bot@byld.com',
-            'x-user-token': '7B9BbsH2wqNG-zLSHzfp'
+            'Content-Type': 'application/json'
           }),
-          body: JSON.stringify({user: userDetails})
+          body: JSON.stringify({user: userDetails, 'g_recaptcha_response': recaptchaValue })
         }
       )
       const responseJson = await response.json()
