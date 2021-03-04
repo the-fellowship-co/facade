@@ -291,12 +291,7 @@ function Home() {
             </Link>
           </div>
           </div>
-          </div>
-          <div className="row install">
-            <div className="col col--12">
-              <img src="img/diagram.svg"/>
-            </div>
-          </div>
+          </div>          
         </div>
       </header>
       <main>
